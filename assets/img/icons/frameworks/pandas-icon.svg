@@ -1,0 +1,195 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="pandas-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#130654"/>
+      <stop offset="100%" stop-color="#150458"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="64" cy="64" r="58" fill="url(#pandas-gradient)" stroke="#150458" stroke-width="2"/>
+
+  <!-- Pandas Logo Representation -->
+  <g transform="translate(64, 35)">
+    <!-- Stylized pandas with two bars -->
+    <rect x="-15" y="-25" width="10" height="50" rx="2" fill="#E70488" stroke="#FFFFFF" stroke-width="0.5"/>
+    <rect x="5" y="-25" width="10" height="50" rx="2" fill="#E70488" stroke="#FFFFFF" stroke-width="0.5"/>
+    
+    <!-- Connecting elements -->
+    <rect x="-15" y="-15" width="30" height="6" rx="2" fill="#FFFFFF" stroke="#130654" stroke-width="0.5"/>
+    <rect x="-15" y="9" width="30" height="6" rx="2" fill="#FFFFFF" stroke="#130654" stroke-width="0.5"/>
+    
+    <!-- Optional python snake hint intertwined -->
+    <path d="M -20,-28 C -25,-15 -25,15 -20,28 C -10,30 25,30 20,28 C 25,15 25,-15 20,-28 C 10,-30 -10,-30 -20,-28 Z" 
+          fill="none" stroke="#FFCA00" stroke-width="0.8" stroke-dasharray="2,1.5"/>
+  </g>
+  
+  <!-- DataFrame Visualization -->
+  <g transform="translate(30, 80)">
+    <rect x="-15" y="-10" width="30" height="20" rx="2" fill="#130654" stroke="#FFFFFF" stroke-width="0.5"/>
+    <text x="0" y="-14" font-family="monospace" font-size="3.5" fill="#FFFFFF" text-anchor="middle">DATAFRAME</text>
+    
+    <!-- Table visualization -->
+    <g>
+      <rect x="-12" y="-8" width="24" height="16" fill="#150458" stroke="#FFFFFF" stroke-width="0.2"/>
+      
+      <!-- Header row -->
+      <rect x="-12" y="-8" width="24" height="3" fill="#E70488" stroke="#FFFFFF" stroke-width="0.2"/>
+      
+      <!-- Column lines -->
+      <line x1="-4" y1="-8" x2="-4" y2="8" stroke="#FFFFFF" stroke-width="0.2"/>
+      <line x1="4" y1="-8" x2="4" y2="8" stroke="#FFFFFF" stroke-width="0.2"/>
+      
+      <!-- Row lines -->
+      <line x1="-12" y1="-5" x2="12" y2="-5" stroke="#FFFFFF" stroke-width="0.2"/>
+      <line x1="-12" y1="-2" x2="12" y2="-2" stroke="#FFFFFF" stroke-width="0.2"/>
+      <line x1="-12" y1="1" x2="12" y2="1" stroke="#FFFFFF" stroke-width="0.2"/>
+      <line x1="-12" y1="4" x2="12" y2="4" stroke="#FFFFFF" stroke-width="0.2"/>
+      
+      <!-- Column headers -->
+      <text x="-8" y="-6" font-family="monospace" font-size="2" fill="#FFFFFF" text-anchor="middle">A</text>
+      <text x="0" y="-6" font-family="monospace" font-size="2" fill="#FFFFFF" text-anchor="middle">B</text>
+      <text x="8" y="-6" font-family="monospace" font-size="2" fill="#FFFFFF" text-anchor="middle">C</text>
+      
+      <!-- Index and content -->
+      <text x="-13" y="-3.5" font-family="monospace" font-size="1.8" fill="#FFFFFF" text-anchor="end">0</text>
+      <text x="-13" y="-0.5" font-family="monospace" font-size="1.8" fill="#FFFFFF" text-anchor="end">1</text>
+      <text x="-13" y="2.5" font-family="monospace" font-size="1.8" fill="#FFFFFF" text-anchor="end">2</text>
+      <text x="-13" y="5.5" font-family="monospace" font-size="1.8" fill="#FFFFFF" text-anchor="end">3</text>
+      <text x="-13" y="8.5" font-family="monospace" font-size="1.8" fill="#FFFFFF" text-anchor="end">4</text>
+    </g>
+  </g>
+  
+  <!-- Data Operations Visualization -->
+  <g transform="translate(95, 80)">
+    <rect x="-15" y="-10" width="30" height="20" rx="2" fill="#130654" stroke="#FFFFFF" stroke-width="0.5"/>
+    <text x="0" y="-14" font-family="monospace" font-size="3.5" fill="#FFFFFF" text-anchor="middle">DATA OPERATIONS</text>
+    
+    <!-- Data transformation/operation visualization -->
+    <g>
+      <!-- Input dataframe (small) -->
+      <rect x="-12" y="-8" width="8" height="6" fill="#150458" stroke="#FFFFFF" stroke-width="0.2"/>
+      <rect x="-12" y="-8" width="8" height="1.5" fill="#E70488" stroke="#FFFFFF" stroke-width="0.2"/>
+      
+      <!-- Operations symbols -->
+      <g transform="translate(0, -5)">
+        <rect x="-2" y="-1.5" width="4" height="3" rx="0.5" fill="#FFCA00" stroke="#FFFFFF" stroke-width="0.2"/>
+        <text x="0" y="0" font-family="monospace" font-size="2" fill="#150458" text-anchor="middle">agg</text>
+      </g>
+      
+      <g transform="translate(0, 0)">
+        <rect x="-2" y="-1.5" width="4" height="3" rx="0.5" fill="#FFCA00" stroke="#FFFFFF" stroke-width="0.2"/>
+        <text x="0" y="0" font-family="monospace" font-size="2" fill="#150458" text-anchor="middle">sort</text>
+      </g>
+      
+      <g transform="translate(0, 5)">
+        <rect x="-2" y="-1.5" width="4" height="3" rx="0.5" fill="#FFCA00" stroke="#FFFFFF" stroke-width="0.2"/>
+        <text x="0" y="0" font-family="monospace" font-size="2" fill="#150458" text-anchor="middle">join</text>
+      </g>
+      
+      <!-- Arrow to output -->
+      <path d="M 4,0 L 8,0" stroke="#FFFFFF" stroke-width="0.3"/>
+      <polygon points="8,0 7,-0.5 7,0.5" fill="#FFFFFF"/>
+      
+      <!-- Output dataframe (small) -->
+      <rect x="10" y="-8" width="8" height="16" fill="#150458" stroke="#FFFFFF" stroke-width="0.2"/>
+      <rect x="10" y="-8" width="8" height="1.5" fill="#E70488" stroke="#FFFFFF" stroke-width="0.2"/>
+    </g>
+  </g>
+  
+  <!-- Time Series Visualization -->
+  <g transform="translate(30, 105)">
+    <rect x="-15" y="-6" width="30" height="12" rx="2" fill="#130654" stroke="#FFFFFF" stroke-width="0.5"/>
+    <text x="0" y="-10" font-family="monospace" font-size="3.5" fill="#FFFFFF" text-anchor="middle">TIME SERIES</text>
+    
+    <!-- Time series line chart -->
+    <g>
+      <!-- Axes -->
+      <line x1="-12" y1="4" x2="12" y2="4" stroke="#FFFFFF" stroke-width="0.2"/>
+      <line x1="-12" y1="4" x2="-12" y2="-4" stroke="#FFFFFF" stroke-width="0.2"/>
+      
+      <!-- Time series line -->
+      <polyline points="-12,0 -9,1 -6,-2 -3,0 0,-3 3,2 6,0 9,-1 12,1" 
+               fill="none" stroke="#E70488" stroke-width="0.5"/>
+      
+      <!-- Timeindex markers -->
+      <g font-family="monospace" font-size="1.5" fill="#FFFFFF" text-anchor="middle">
+        <text x="-12" y="6">t0</text>
+        <text x="-6" y="6">t1</text>
+        <text x="0" y="6">t2</text>
+        <text x="6" y="6">t3</text>
+        <text x="12" y="6">t4</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Data Cleaning Visualization -->
+  <g transform="translate(95, 105)">
+    <rect x="-15" y="-6" width="30" height="12" rx="2" fill="#130654" stroke="#FFFFFF" stroke-width="0.5"/>
+    <text x="0" y="-10" font-family="monospace" font-size="3.5" fill="#FFFFFF" text-anchor="middle">DATA CLEANING</text>
+    
+    <!-- Data cleaning visualization -->
+    <g>
+      <!-- Data with missing values -->
+      <g transform="translate(-9, 0)">
+        <rect x="-3" y="-4" width="6" height="8" fill="#150458" stroke="#FFFFFF" stroke-width="0.2"/>
+        <rect x="-3" y="-4" width="6" height="1.5" fill="#E70488" stroke="#FFFFFF" stroke-width="0.2"/>
+        <!-- Missing value x marks -->
+        <g stroke="#FFCA00" stroke-width="0.3">
+          <path d="M -2,-1 L 0,1 M -2,1 L 0,-1" />
+          <path d="M 2,3 L 0,1 M 2,1 L 0,3" />
+        </g>
+      </g>
+      
+      <!-- Arrow -->
+      <path d="M -3,0 L 3,0" stroke="#FFFFFF" stroke-width="0.3"/>
+      <polygon points="3,0 2,-0.5 2,0.5" fill="#FFFFFF"/>
+      
+      <!-- Clean data -->
+      <g transform="translate(9, 0)">
+        <rect x="-3" y="-4" width="6" height="8" fill="#150458" stroke="#FFFFFF" stroke-width="0.2"/>
+        <rect x="-3" y="-4" width="6" height="1.5" fill="#E70488" stroke="#FFFFFF" stroke-width="0.2"/>
+        <!-- Filled values (green checkmarks) -->
+        <g stroke="#00FF00" stroke-width="0.3">
+          <path d="M -2,0 L -1,1 L 0,-1" />
+          <path d="M 0,2 L 1,3 L 2,1" />
+        </g>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Core Pandas Features -->
+  <g transform="translate(64, 45)">
+    <text x="0" y="50" font-family="monospace" font-size="3.5" fill="#FFFFFF" text-anchor="middle">CORE FEATURES</text>
+    
+    <g font-family="monospace" font-size="2.5" fill="#FFFFFF" text-anchor="middle">
+      <text x="-25" y="55">DATA ALIGNMENT</text>
+      <text x="0" y="55">GROUPBY</text>
+      <text x="25" y="55">INDEXING</text>
+      <text x="-25" y="60">RESHAPING</text>
+      <text x="0" y="60">MERGING</text>
+      <text x="25" y="60">PIVOTING</text>
+    </g>
+  </g>
+  
+  <!-- Pandas Code Snippet -->
+  <g transform="translate(64, 72)">
+    <rect x="-25" y="-6" width="50" height="12" rx="2" fill="#130654" stroke="#FFFFFF" stroke-width="0.5"/>
+    <text x="0" y="-10" font-family="monospace" font-size="3" fill="#FFFFFF" text-anchor="middle">CODE EXAMPLE</text>
+    
+    <g font-family="monospace" font-size="2" fill="#FFFFFF" text-anchor="left">
+      <text x="-23" y="-3">import pandas as pd</text>
+      <text x="-23" y="0">df = pd.read_csv('data.csv')</text>
+      <text x="-23" y="3">result = df.groupby('category').agg({</text>
+      <text x="-23" y="6">  'value': ['mean', 'sum', 'count']</text>
+      <text x="-23" y="9">})</text>
+    </g>
+  </g>
+
+  <!-- Label -->
+  <g transform="translate(64, 120)">
+    <rect x="-30" y="-9" width="60" height="18" rx="5" fill="#150458" stroke="#FFFFFF" stroke-width="1"/>
+    <text x="0" y="0" font-family="Arial" font-size="10" fill="#FFFFFF" text-anchor="middle" font-weight="bold">PANDAS</text>
+    <text x="0" y="9" font-family="monospace" font-size="6" fill="#FFFFFF" text-anchor="middle">94%</text>
+  </g>
+</svg> 

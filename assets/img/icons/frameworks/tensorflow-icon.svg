@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="tensorflow-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF6F00"/>
+      <stop offset="100%" stop-color="#E65100"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="64" cy="64" r="58" fill="url(#tensorflow-gradient)" stroke="#E65100" stroke-width="2"/>
+
+  <!-- TensorFlow Logo Representation -->
+  <g transform="translate(64, 35)">
+    <!-- Hexagon structure representing TensorFlow logo -->
+    <polygon points="0,0 -15,-9 -15,-27 0,-36 15,-27 15,-9" fill="#E65100" stroke="#FFCC80" stroke-width="1"/>
+    <polygon points="0,0 -15,9 -15,27 0,36 15,27 15,9" fill="#E65100" stroke="#FFCC80" stroke-width="1"/>
+    
+    <!-- Inner lines for logo styling -->
+    <line x1="-15" y1="-27" x2="15" y2="-27" stroke="#FFCC80" stroke-width="0.5"/>
+    <line x1="-15" y1="-9" x2="15" y2="-9" stroke="#FFCC80" stroke-width="0.5"/>
+    <line x1="-15" y1="9" x2="15" y2="9" stroke="#FFCC80" stroke-width="0.5"/>
+    <line x1="-15" y1="27" x2="15" y2="27" stroke="#FFCC80" stroke-width="0.5"/>
+    
+    <!-- Connecting line in the middle -->
+    <line x1="0" y1="-36" x2="0" y2="36" stroke="#FFCC80" stroke-width="0.5"/>
+  </g>
+  
+  <!-- Neural Network Visualization -->
+  <g transform="translate(30, 80)">
+    <rect x="-15" y="-10" width="30" height="20" rx="2" fill="#E65100" stroke="#FFCC80" stroke-width="0.5"/>
+    <text x="0" y="-14" font-family="monospace" font-size="3.5" fill="#FFCC80" text-anchor="middle">NEURAL NETWORK</text>
+    
+    <!-- Node connections visualization -->
+    <g>
+      <!-- Input layer -->
+      <circle cx="-10" cy="-6" r="1.5" fill="#FFCC80"/>
+      <circle cx="-10" cy="0" r="1.5" fill="#FFCC80"/>
+      <circle cx="-10" cy="6" r="1.5" fill="#FFCC80"/>
+      
+      <!-- Hidden layer -->
+      <circle cx="0" cy="-7" r="1.5" fill="#FFCC80"/>
+      <circle cx="0" cy="-2" r="1.5" fill="#FFCC80"/>
+      <circle cx="0" cy="3" r="1.5" fill="#FFCC80"/>
+      <circle cx="0" cy="8" r="1.5" fill="#FFCC80"/>
+      
+      <!-- Output layer -->
+      <circle cx="10" cy="-6" r="1.5" fill="#FFCC80"/>
+      <circle cx="10" cy="0" r="1.5" fill="#FFCC80"/>
+      <circle cx="10" cy="6" r="1.5" fill="#FFCC80"/>
+      
+      <!-- Connections -->
+      <g stroke="#FFCC80" stroke-width="0.2">
+        <!-- Input to hidden connections -->
+        <line x1="-10" y1="-6" x2="0" y2="-7"/>
+        <line x1="-10" y1="-6" x2="0" y2="-2"/>
+        <line x1="-10" y1="-6" x2="0" y2="3"/>
+        <line x1="-10" y1="-6" x2="0" y2="8"/>
+        
+        <line x1="-10" y1="0" x2="0" y2="-7"/>
+        <line x1="-10" y1="0" x2="0" y2="-2"/>
+        <line x1="-10" y1="0" x2="0" y2="3"/>
+        <line x1="-10" y1="0" x2="0" y2="8"/>
+        
+        <line x1="-10" y1="6" x2="0" y2="-7"/>
+        <line x1="-10" y1="6" x2="0" y2="-2"/>
+        <line x1="-10" y1="6" x2="0" y2="3"/>
+        <line x1="-10" y1="6" x2="0" y2="8"/>
+        
+        <!-- Hidden to output connections -->
+        <line x1="0" y1="-7" x2="10" y2="-6"/>
+        <line x1="0" y1="-7" x2="10" y2="0"/>
+        <line x1="0" y1="-7" x2="10" y2="6"/>
+        
+        <line x1="0" y1="-2" x2="10" y2="-6"/>
+        <line x1="0" y1="-2" x2="10" y2="0"/>
+        <line x1="0" y1="-2" x2="10" y2="6"/>
+        
+        <line x1="0" y1="3" x2="10" y2="-6"/>
+        <line x1="0" y1="3" x2="10" y2="0"/>
+        <line x1="0" y1="3" x2="10" y2="6"/>
+        
+        <line x1="0" y1="8" x2="10" y2="-6"/>
+        <line x1="0" y1="8" x2="10" y2="0"/>
+        <line x1="0" y1="8" x2="10" y2="6"/>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Tensor Visualization -->
+  <g transform="translate(95, 80)">
+    <rect x="-15" y="-10" width="30" height="20" rx="2" fill="#E65100" stroke="#FFCC80" stroke-width="0.5"/>
+    <text x="0" y="-14" font-family="monospace" font-size="3.5" fill="#FFCC80" text-anchor="middle">TENSORS</text>
+    
+    <!-- Tensor representation -->
+    <g transform="translate(0, 0)">
+      <!-- 3D Tensor representation -->
+      <g stroke="#FFCC80" stroke-width="0.3" fill="#FF9800" fill-opacity="0.3">
+        <rect x="-10" y="-6" width="8" height="12" />
+        <rect x="-8" y="-8" width="8" height="12" />
+        <rect x="-6" y="-10" width="8" height="12" />
+        <rect x="-4" y="-12" width="8" height="12" />
+        <rect x="-2" y="-14" width="8" height="12" />
+        <rect x="0" y="-16" width="8" height="12" />
+        <rect x="2" y="-18" width="8" height="12" />
+        
+        <!-- Add some depth lines to create 3D effect -->
+        <line x1="-10" y1="-6" x2="2" y2="-18" />
+        <line x1="-10" y1="6" x2="2" y2="-6" />
+        <line x1="-2" y1="6" x2="10" y2="-6" />
+        <line x1="-2" y1="-6" x2="10" y2="-18" />
+      </g>
+    </g>
+  </g>
+  
+  <!-- Core TensorFlow Features -->
+  <g transform="translate(64, 45)">
+    <text x="0" y="50" font-family="monospace" font-size="3.5" fill="#FFCC80" text-anchor="middle">CORE FEATURES</text>
+    
+    <g font-family="monospace" font-size="2.5" fill="#FFCC80" text-anchor="middle">
+      <text x="20" y="55">GPU ACCELERATION</text>
+      <text x="-20" y="55">AUTOMATIC DIFFERENTIATION</text>
+      <text x="20" y="60">DISTRIBUTED TRAINING</text>
+      <text x="-20" y="60">MODEL OPTIMIZATION</text>
+    </g>
+  </g>
+  
+  <!-- TensorFlow Code Snippet -->
+  <g transform="translate(64, 95)">
+    <rect x="-30" y="-8" width="60" height="16" rx="2" fill="#E65100" stroke="#FFCC80" stroke-width="0.5"/>
+    <text x="0" y="-12" font-family="monospace" font-size="3" fill="#FFCC80" text-anchor="middle">CODE EXAMPLE</text>
+    
+    <g font-family="monospace" font-size="2" fill="#FFCC80" text-anchor="left">
+      <text x="-28" y="-5">import tensorflow as tf</text>
+      <text x="-28" y="-2">model = tf.keras.Sequential([</text>
+      <text x="-28" y="1">  tf.keras.layers.Dense(128),</text>
+      <text x="-28" y="4">  tf.keras.layers.Dense(10)</text>
+      <text x="-28" y="7">])</text>
+    </g>
+  </g>
+
+  <!-- Label -->
+  <g transform="translate(64, 120)">
+    <rect x="-30" y="-9" width="60" height="18" rx="5" fill="#E65100" stroke="#FFCC80" stroke-width="1"/>
+    <text x="0" y="0" font-family="Arial" font-size="10" fill="#FFFFFF" text-anchor="middle" font-weight="bold">TENSORFLOW</text>
+    <text x="0" y="9" font-family="monospace" font-size="6" fill="#FFCC80" text-anchor="middle">90%</text>
+  </g>
+</svg> 

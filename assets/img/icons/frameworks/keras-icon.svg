@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="keras-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D00000"/>
+      <stop offset="100%" stop-color="#9D0208"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="64" cy="64" r="58" fill="url(#keras-gradient)" stroke="#9D0208" stroke-width="2"/>
+
+  <!-- Keras Logo Representation -->
+  <g transform="translate(64, 35)">
+    <!-- K shape for Keras -->
+    <path d="M -15,-30 L -15,30 L -8,30 L -8,0 L 8,30 L 18,30 L -2,-5 L 18,-30 L 8,-30 L -8,0 L -8,-30 Z" 
+          fill="#9D0208" stroke="#FFCCCB" stroke-width="1"/>
+    
+    <!-- Circle for the 'e' in Keras -->
+    <circle cx="25" cy="0" r="12" fill="#9D0208" stroke="#FFCCCB" stroke-width="1"/>
+    <circle cx="25" cy="0" r="6" fill="#D00000" stroke="#FFCCCB" stroke-width="0.5"/>
+  </g>
+  
+  <!-- Sequential Model Visualization -->
+  <g transform="translate(30, 80)">
+    <rect x="-15" y="-10" width="30" height="20" rx="2" fill="#9D0208" stroke="#FFCCCB" stroke-width="0.5"/>
+    <text x="0" y="-14" font-family="monospace" font-size="3.5" fill="#FFCCCB" text-anchor="middle">SEQUENTIAL MODEL</text>
+    
+    <!-- Layer stack visualization -->
+    <g>
+      <rect x="-10" y="-8" width="20" height="4" rx="1" fill="#FFCCCB" fill-opacity="0.8" stroke="#9D0208" stroke-width="0.5"/>
+      <rect x="-10" y="-3" width="20" height="4" rx="1" fill="#FFCCCB" fill-opacity="0.6" stroke="#9D0208" stroke-width="0.5"/>
+      <rect x="-10" y="2" width="20" height="4" rx="1" fill="#FFCCCB" fill-opacity="0.4" stroke="#9D0208" stroke-width="0.5"/>
+      <rect x="-10" y="7" width="20" height="4" rx="1" fill="#FFCCCB" fill-opacity="0.2" stroke="#9D0208" stroke-width="0.5"/>
+      
+      <g font-family="monospace" font-size="1.8" fill="#9D0208" text-anchor="middle">
+        <text x="0" y="-5.5">Input</text>
+        <text x="0" y="-0.5">Dense(128)</text>
+        <text x="0" y="4.5">Dense(64)</text>
+        <text x="0" y="9.5">Output</text>
+      </g>
+      
+      <!-- Arrows connecting layers -->
+      <g stroke="#FFCCCB" stroke-width="0.3">
+        <path d="M 0,-4 L 0,-3" marker-end="url(#arrow)"/>
+        <path d="M 0,1 L 0,2" marker-end="url(#arrow)"/>
+        <path d="M 0,6 L 0,7" marker-end="url(#arrow)"/>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Model Types Visualization -->
+  <g transform="translate(95, 80)">
+    <rect x="-15" y="-10" width="30" height="20" rx="2" fill="#9D0208" stroke="#FFCCCB" stroke-width="0.5"/>
+    <text x="0" y="-14" font-family="monospace" font-size="3.5" fill="#FFCCCB" text-anchor="middle">MODEL TYPES</text>
+    
+    <!-- Model types lists -->
+    <g font-family="monospace" font-size="2.2" fill="#FFCCCB" text-anchor="left">
+      <text x="-13" y="-6">Sequential</text>
+      <text x="-13" y="-2">Functional</text>
+      <text x="-13" y="2">Subclassing</text>
+      <text x="-13" y="6">Custom</text>
+    </g>
+    
+    <!-- Icons for each model type -->
+    <g>
+      <rect x="8" y="-8" width="4" height="4" rx="0.5" fill="#FFCCCB" fill-opacity="0.7"/>
+      <path d="M 8,-2 L 12,-2 L 10,2 Z" fill="#FFCCCB" fill-opacity="0.7"/>
+      <circle cx="10" cy="4" r="2" fill="#FFCCCB" fill-opacity="0.7"/>
+      <rect x="8" y="6" width="4" height="1" fill="#FFCCCB" fill-opacity="0.7"/>
+      <rect x="8" y="8" width="4" height="1" fill="#FFCCCB" fill-opacity="0.7"/>
+    </g>
+  </g>
+  
+  <!-- Core Keras Features -->
+  <g transform="translate(64, 45)">
+    <text x="0" y="50" font-family="monospace" font-size="3.5" fill="#FFCCCB" text-anchor="middle">CORE FEATURES</text>
+    
+    <g font-family="monospace" font-size="2.5" fill="#FFCCCB" text-anchor="middle">
+      <text x="20" y="55">EASY TO USE</text>
+      <text x="-20" y="55">MODULAR</text>
+      <text x="20" y="60">MULTI-BACKEND</text>
+      <text x="-20" y="60">RESEARCH READY</text>
+    </g>
+  </g>
+  
+  <!-- Keras Code Snippet -->
+  <g transform="translate(64, 95)">
+    <rect x="-30" y="-8" width="60" height="16" rx="2" fill="#9D0208" stroke="#FFCCCB" stroke-width="0.5"/>
+    <text x="0" y="-12" font-family="monospace" font-size="3" fill="#FFCCCB" text-anchor="middle">CODE EXAMPLE</text>
+    
+    <g font-family="monospace" font-size="2" fill="#FFCCCB" text-anchor="left">
+      <text x="-28" y="-5">from keras.models import Sequential</text>
+      <text x="-28" y="-2">model = Sequential([</text>
+      <text x="-28" y="1">  Dense(128, activation='relu'),</text>
+      <text x="-28" y="4">  Dropout(0.2),</text>
+      <text x="-28" y="7">  Dense(10, activation='softmax')</text>
+      <text x="-28" y="10">])</text>
+    </g>
+  </g>
+
+  <!-- Label -->
+  <g transform="translate(64, 120)">
+    <rect x="-30" y="-9" width="60" height="18" rx="5" fill="#9D0208" stroke="#FFCCCB" stroke-width="1"/>
+    <text x="0" y="0" font-family="Arial" font-size="10" fill="#FFFFFF" text-anchor="middle" font-weight="bold">KERAS</text>
+    <text x="0" y="9" font-family="monospace" font-size="6" fill="#FFCCCB" text-anchor="middle">85%</text>
+  </g>
+  
+  <!-- Arrow marker for flowcharts -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#FFCCCB"/>
+    </marker>
+  </defs>
+</svg> 

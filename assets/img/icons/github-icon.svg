@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="github-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#424242"/>
+      <stop offset="100%" stop-color="#212121"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="64" cy="64" r="58" fill="url(#github-gradient)" stroke="#212121" stroke-width="2"/>
+
+  <!-- GitHub cat silhouette -->
+  <g transform="translate(64, 50) scale(1.5)">
+    <path d="M 0,-12.5 C -7,-12.5 -12.5,-7 -12.5,0 C -12.5,5.6 -8.5,10.2 -3.3,11.9 C -2.5,12.1 -2.3,11.6 -2.3,11.2 C -2.3,10.8 -2.3,9.8 -2.3,9 C -7.1,9.7 -8.1,6.2 -8.1,6.2 C -8.8,4.7 -9.8,4.2 -9.8,4.2 C -11.1,3.3 -9.7,3.3 -9.7,3.3 C -8.3,3.4 -7.4,4.8 -7.4,4.8 C -6.1,7 -4,6.2 -2.3,5.9 C -2.1,5.1 -1.7,4.6 -1.3,4.3 C -5.1,4 -9.1,2.4 -9.1,-2.5 C -9.1,-4.1 -8.5,-5.5 -7.4,-6.6 C -7.7,-7 -8.2,-8.3 -7.2,-10.4 C -7.2,-10.4 -6,-11 -2.3,-9 C -1.6,-9.2 -0.8,-9.3 0,-9.3 C 0.8,-9.3 1.6,-9.2 2.3,-9 C 6,-11 7.2,-10.4 7.2,-10.4 C 8.2,-8.3 7.7,-7 7.4,-6.6 C 8.5,-5.5 9.1,-4.1 9.1,-2.5 C 9.1,2.4 5.1,4 1.3,4.3 C 1.8,4.7 2.3,5.5 2.3,6.6 C 2.3,8.3 2.3,10.7 2.3,11.2 C 2.3,11.6 2.5,12.1 3.3,11.9 C 8.5,10.2 12.5,5.6 12.5,0 C 12.5,-7 7,-12.5 0,-12.5 Z" 
+          fill="#FFFFFF" stroke="#212121" stroke-width="0.5"/>
+  </g>
+  
+  <!-- Git branch representation -->
+  <g transform="translate(64, 85)">
+    <rect x="-25" y="-15" width="50" height="30" rx="2" fill="#424242" stroke="#9E9E9E" stroke-width="1"/>
+    <text x="0" y="-20" font-family="monospace" font-size="3.5" fill="#FAFAFA" text-anchor="middle">VERSION CONTROL</text>
+    
+    <!-- Git graph -->
+    <g transform="translate(0, 0)">
+      <!-- Main branch -->
+      <path d="M -20,0 L 20,0" stroke="#FAFAFA" stroke-width="1.5"/>
+      
+      <!-- Commit nodes -->
+      <circle cx="-15" cy="0" r="2" fill="#81C784" stroke="#424242" stroke-width="0.5"/>
+      <circle cx="-5" cy="0" r="2" fill="#81C784" stroke="#424242" stroke-width="0.5"/>
+      <circle cx="5" cy="0" r="2" fill="#81C784" stroke="#424242" stroke-width="0.5"/>
+      <circle cx="15" cy="0" r="2" fill="#81C784" stroke="#424242" stroke-width="0.5"/>
+      
+      <!-- Feature branch -->
+      <path d="M -5,0 C -5,-5 -3,-8 0,-8 L 10,-8" stroke="#FAFAFA" stroke-width="1"/>
+      <circle cx="0" cy="-8" r="2" fill="#64B5F6" stroke="#424242" stroke-width="0.5"/>
+      <circle cx="10" cy="-8" r="2" fill="#64B5F6" stroke="#424242" stroke-width="0.5"/>
+      
+      <!-- Merge branch -->
+      <path d="M 10,-8 C 10,-4 7.5,0 5,0" stroke="#FAFAFA" stroke-width="1" stroke-dasharray="2,1"/>
+      
+      <!-- Bugfix branch -->
+      <path d="M -15,0 C -15,5 -12,8 -9,8 L 0,8" stroke="#FAFAFA" stroke-width="1"/>
+      <circle cx="-9" cy="8" r="2" fill="#FFB74D" stroke="#424242" stroke-width="0.5"/>
+      <circle cx="0" cy="8" r="2" fill="#FFB74D" stroke="#424242" stroke-width="0.5"/>
+      
+      <!-- Merge branch -->
+      <path d="M 0,8 C 0,4 2.5,0 5,0" stroke="#FAFAFA" stroke-width="1" stroke-dasharray="2,1"/>
+    </g>
+  </g>
+  
+  <!-- GitHub features -->
+  <g transform="translate(35, 28)">
+    <rect x="-15" y="-10" width="30" height="20" rx="2" fill="#424242" stroke="#9E9E9E" stroke-width="0.75"/>
+    <text x="0" y="-15" font-family="monospace" font-size="3.5" fill="#FAFAFA" text-anchor="middle">FEATURES</text>
+    
+    <g font-family="monospace" font-size="2.5" fill="#FAFAFA" text-anchor="middle">
+      <text x="0" y="-6">REPOSITORIES</text>
+      <text x="0" y="-2">PULL REQUESTS</text>
+      <text x="0" y="2">ISSUES</text>
+      <text x="0" y="6">ACTIONS</text>
+    </g>
+  </g>
+  
+  <!-- GitHub workflow -->
+  <g transform="translate(95, 28)">
+    <rect x="-15" y="-10" width="30" height="20" rx="2" fill="#424242" stroke="#9E9E9E" stroke-width="0.75"/>
+    <text x="0" y="-15" font-family="monospace" font-size="3.5" fill="#FAFAFA" text-anchor="middle">WORKFLOW</text>
+    
+    <g font-family="monospace" font-size="2.5" fill="#FAFAFA" text-anchor="middle">
+      <text x="0" y="-6">CLONE</text>
+      <text x="0" y="-2">COMMIT</text>
+      <text x="0" y="2">PUSH</text>
+      <text x="0" y="6">MERGE</text>
+    </g>
+  </g>
+  
+  <!-- Commands -->
+  <g transform="translate(35, 55)">
+    <rect x="-15" y="-5" width="30" height="10" rx="2" fill="#424242" stroke="#9E9E9E" stroke-width="0.5"/>
+    
+    <g font-family="monospace" font-size="2" fill="#FAFAFA" text-anchor="left">
+      <text x="-13" y="-2">git add .</text>
+      <text x="-13" y="2">git commit -m "message"</text>
+    </g>
+  </g>
+  
+  <!-- More commands -->
+  <g transform="translate(95, 55)">
+    <rect x="-15" y="-5" width="30" height="10" rx="2" fill="#424242" stroke="#9E9E9E" stroke-width="0.5"/>
+    
+    <g font-family="monospace" font-size="2" fill="#FAFAFA" text-anchor="left">
+      <text x="-13" y="-2">git push origin main</text>
+      <text x="-13" y="2">git pull origin main</text>
+    </g>
+  </g>
+  
+  <!-- Stats -->
+  <g transform="translate(30, 105)">
+    <rect x="-10" y="-5" width="20" height="10" rx="2" fill="#424242" stroke="#9E9E9E" stroke-width="0.5"/>
+    
+    <g transform="translate(-5, 0)">
+      <rect x="-3" y="-3" width="2" height="6" fill="#4CAF50"/>
+      <rect x="-1" y="-2" width="2" height="4" fill="#4CAF50"/>
+      <rect x="1" y="-1" width="2" height="2" fill="#4CAF50"/>
+      <rect x="3" y="-4" width="2" height="8" fill="#4CAF50"/>
+    </g>
+    
+    <text x="0" y="-7" font-family="monospace" font-size="2" fill="#FAFAFA" text-anchor="middle">ACTIVITY</text>
+  </g>
+  
+  <!-- Issues -->
+  <g transform="translate(64, 105)">
+    <rect x="-10" y="-5" width="20" height="10" rx="2" fill="#424242" stroke="#9E9E9E" stroke-width="0.5"/>
+    
+    <g fill="#FAFAFA" transform="scale(0.8)">
+      <circle cx="-5" cy="0" r="3" fill="none" stroke="#FAFAFA" stroke-width="1"/>
+      <text x="-5" y="1" font-family="monospace" font-size="4" text-anchor="middle">!</text>
+    </g>
+    
+    <g fill="#FAFAFA" transform="translate(5, 0) scale(0.8)">
+      <path d="M -3,-3 L 3,3 M -3,3 L 3,-3" stroke="#FAFAFA" stroke-width="1"/>
+    </g>
+    
+    <text x="0" y="-7" font-family="monospace" font-size="2" fill="#FAFAFA" text-anchor="middle">ISSUES</text>
+  </g>
+  
+  <!-- PR -->
+  <g transform="translate(98, 105)">
+    <rect x="-10" y="-5" width="20" height="10" rx="2" fill="#424242" stroke="#9E9E9E" stroke-width="0.5"/>
+    
+    <g fill="none" stroke="#FAFAFA" stroke-width="0.75" transform="scale(0.7)">
+      <circle cx="-5" cy="-3" r="2"/>
+      <circle cx="5" cy="3" r="2"/>
+      <path d="M -5,-1 L -5,1 C -5,5 0,5 0,1 L 0,-1 C 0,-5 5,-5 5,-1 L 5,1"/>
+    </g>
+    
+    <text x="0" y="-7" font-family="monospace" font-size="2" fill="#FAFAFA" text-anchor="middle">PULL REQUESTS</text>
+  </g>
+
+  <!-- Label -->
+  <g transform="translate(64, 120)">
+    <rect x="-30" y="-8" width="60" height="16" rx="5" fill="#212121" stroke="#9E9E9E" stroke-width="1"/>
+    <text x="0" y="0" font-family="Arial" font-size="10" fill="#FFFFFF" text-anchor="middle" font-weight="bold">GITHUB</text>
+    <text x="0" y="8" font-family="monospace" font-size="5" fill="#9E9E9E" text-anchor="middle">95%</text>
+  </g>
+</svg> 

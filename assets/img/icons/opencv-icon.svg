@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="opencv-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9C27B0"/>
+      <stop offset="100%" stop-color="#4A148C"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="64" cy="64" r="58" fill="url(#opencv-gradient)" stroke="#4A148C" stroke-width="2"/>
+
+  <!-- OpenCV logo representation -->
+  <g transform="translate(64, 64) scale(1.3)">
+    <!-- Green segment (left) -->
+    <circle cx="-16" cy="0" r="12" fill="#10FF00" stroke="#E1BEE7" stroke-width="0.5"/>
+    <circle cx="-16" cy="0" r="8" fill="#9C27B0" stroke="#10FF00" stroke-width="2"/>
+    
+    <!-- Red segment (top right) -->
+    <circle cx="8" cy="-14" r="12" fill="#FF0000" stroke="#E1BEE7" stroke-width="0.5"/>
+    <circle cx="8" cy="-14" r="8" fill="#9C27B0" stroke="#FF0000" stroke-width="2"/>
+    
+    <!-- Blue segment (bottom right) -->
+    <circle cx="8" cy="14" r="12" fill="#0000FF" stroke="#E1BEE7" stroke-width="0.5"/>
+    <circle cx="8" cy="14" r="8" fill="#9C27B0" stroke="#0000FF" stroke-width="2"/>
+  </g>
+  
+  <!-- Image processing elements -->
+  <g transform="translate(40, 30)">
+    <rect x="-15" y="-15" width="30" height="30" rx="2" fill="#4A148C" stroke="#E1BEE7" stroke-width="0.75"/>
+    
+    <!-- Image grid -->
+    <g stroke="#E1BEE7" stroke-width="0.5" fill="none">
+      <line x1="-10" y1="-15" x2="-10" y2="15"/>
+      <line x1="-5" y1="-15" x2="-5" y2="15"/>
+      <line x1="0" y1="-15" x2="0" y2="15"/>
+      <line x1="5" y1="-15" x2="5" y2="15"/>
+      <line x1="10" y1="-15" x2="10" y2="15"/>
+      
+      <line x1="-15" y1="-10" x2="15" y2="-10"/>
+      <line x1="-15" y1="-5" x2="15" y2="-5"/>
+      <line x1="-15" y1="0" x2="15" y2="0"/>
+      <line x1="-15" y1="5" x2="15" y2="5"/>
+      <line x1="-15" y1="10" x2="15" y2="10"/>
+    </g>
+    
+    <!-- Image content representation -->
+    <g stroke="#E1BEE7" fill="#BA68C8" opacity="0.6">
+      <circle cx="0" cy="0" r="7"/>
+      <path d="M -7,-7 L -12,-12 M 7,-7 L 12,-12 M -7,7 L -12,12 M 7,7 L 12,12" stroke-width="1"/>
+    </g>
+    
+    <text x="0" y="-20" font-family="monospace" font-size="3.5" fill="#E1BEE7" text-anchor="middle">IMAGING</text>
+  </g>
+  
+  <!-- Computer vision elements -->
+  <g transform="translate(88, 30)">
+    <rect x="-15" y="-15" width="30" height="30" rx="2" fill="#4A148C" stroke="#E1BEE7" stroke-width="0.75"/>
+    
+    <!-- Feature points / object detection -->
+    <rect x="-7" y="-7" width="14" height="14" fill="none" stroke="#E1BEE7" stroke-width="0.75" stroke-dasharray="2,1"/>
+    
+    <g fill="#E1BEE7">
+      <circle cx="-5" cy="-5" r="1.5"/>
+      <circle cx="5" cy="-5" r="1.5"/>
+      <circle cx="-5" cy="5" r="1.5"/>
+      <circle cx="5" cy="5" r="1.5"/>
+      <circle cx="0" cy="0" r="1.5"/>
+      <circle cx="-10" cy="0" r="1.5"/>
+      <circle cx="10" cy="0" r="1.5"/>
+      <circle cx="0" cy="-10" r="1.5"/>
+      <circle cx="0" cy="10" r="1.5"/>
+    </g>
+    
+    <!-- Distance lines -->
+    <g stroke="#BA68C8" stroke-width="0.5" stroke-dasharray="1,0.5">
+      <line x1="-5" y1="-5" x2="5" y2="-5"/>
+      <line x1="5" y1="-5" x2="5" y2="5"/>
+      <line x1="5" y1="5" x2="-5" y2="5"/>
+      <line x1="-5" y1="5" x2="-5" y2="-5"/>
+      <line x1="-5" y1="-5" x2="5" y2="5"/>
+      <line x1="5" y1="-5" x2="-5" y2="5"/>
+    </g>
+    
+    <text x="0" y="-20" font-family="monospace" font-size="3.5" fill="#E1BEE7" text-anchor="middle">VISION</text>
+  </g>
+  
+  <!-- Core functions -->
+  <g transform="translate(64, 95)">
+    <rect x="-45" y="-15" width="90" height="30" rx="3" fill="#4A148C" stroke="#E1BEE7" stroke-width="1"/>
+    <g font-family="monospace" font-size="3.5" fill="#E1BEE7" text-anchor="middle">
+      <text x="-30" y="-8">cvtColor()</text>
+      <text x="-30" y="0">Canny()</text>
+      <text x="-30" y="8">resize()</text>
+      
+      <text x="0" y="-8">GaussianBlur()</text>
+      <text x="0" y="0">findContours()</text>
+      <text x="0" y="8">threshold()</text>
+      
+      <text x="30" y="-8">SIFT/SURF</text>
+      <text x="30" y="0">CascadeClassifier</text>
+      <text x="30" y="8">BackgroundSubtractor</text>
+    </g>
+  </g>
+  
+  <!-- Code snippet -->
+  <g transform="translate(64, 60)">
+    <rect x="-40" y="-10" width="80" height="20" rx="2" fill="#4A148C" stroke="#E1BEE7" stroke-width="0.75"/>
+    <g font-family="monospace" font-size="3.5" fill="#E1BEE7">
+      <text x="-38" y="-5">import cv2</text>
+      <text x="-38" y="0">img = cv2.imread('image.jpg')</text>
+      <text x="-38" y="5">gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)</text>
+    </g>
+  </g>
+
+  <!-- Label -->
+  <g transform="translate(64, 120)">
+    <rect x="-30" y="-9" width="60" height="18" rx="5" fill="#4A148C" stroke="#E1BEE7" stroke-width="1"/>
+    <text x="0" y="0" font-family="Arial" font-size="10" fill="#FFFFFF" text-anchor="middle" font-weight="bold">OPENCV</text>
+    <text x="0" y="9" font-family="monospace" font-size="6" fill="#E1BEE7" text-anchor="middle">92%</text>
+  </g>
+</svg> 

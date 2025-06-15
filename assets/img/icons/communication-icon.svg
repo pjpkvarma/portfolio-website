@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="communication-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00BCD4"/>
+      <stop offset="100%" stop-color="#006064"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="64" cy="64" r="58" fill="url(#communication-gradient)" stroke="#006064" stroke-width="2"/>
+  
+  <!-- Speech bubbles central design -->
+  <g transform="translate(64, 50)">
+    <!-- Central connecting hub -->
+    <circle cx="0" cy="0" r="8" fill="#006064" stroke="#E0F7FA" stroke-width="1"/>
+    
+    <!-- Speech bubble 1 (left) -->
+    <g transform="translate(-25, -10)">
+      <path d="M0,-10 L20,-10 C25,-10 25,10 20,10 L5,10 L0,15 L0,10 L-5,10 C-10,10 -10,-10 -5,-10 Z" 
+            fill="#E0F7FA" stroke="#006064" stroke-width="1"/>
+      <g font-family="monospace" font-size="4" fill="#006064" text-anchor="middle">
+        <text x="5" y="-4">CLEAR</text>
+        <text x="5" y="2">CONCISE</text>
+      </g>
+    </g>
+    
+    <!-- Speech bubble 2 (top) -->
+    <g transform="translate(0, -25)">
+      <path d="M-15,-10 L15,-10 C20,-10 20,5 15,5 L5,5 L0,15 L-5,5 L-15,5 C-20,5 -20,-10 -15,-10 Z" 
+            fill="#E0F7FA" stroke="#006064" stroke-width="1"/>
+      <g font-family="monospace" font-size="4" fill="#006064" text-anchor="middle">
+        <text x="0" y="-4">ACTIVE</text>
+        <text x="0" y="2">LISTENING</text>
+      </g>
+    </g>
+    
+    <!-- Speech bubble 3 (right) -->
+    <g transform="translate(25, -10)">
+      <path d="M-20,-10 L0,-10 L0,-5 L5,-5 L0,0 L0,5 L5,10 L-15,10 C-20,10 -20,-10 -15,-10 Z" 
+            fill="#E0F7FA" stroke="#006064" stroke-width="1"/>
+      <g font-family="monospace" font-size="4" fill="#006064" text-anchor="middle">
+        <text x="-8" y="-4">FEEDBACK</text>
+        <text x="-8" y="2">QUESTIONS</text>
+      </g>
+    </g>
+    
+    <!-- Speech bubble 4 (bottom) -->
+    <g transform="translate(0, 20)">
+      <path d="M-15,-5 L15,-5 C20,-5 20,10 15,10 L5,10 L0,20 L-5,10 L-15,10 C-20,10 -20,-5 -15,-5 Z" 
+            fill="#E0F7FA" stroke="#006064" stroke-width="1"/>
+      <g font-family="monospace" font-size="4" fill="#006064" text-anchor="middle">
+        <text x="0" y="0">EMPATHY</text>
+        <text x="0" y="6">RESPECT</text>
+      </g>
+    </g>
+    
+    <!-- Connection lines -->
+    <g stroke="#E0F7FA" stroke-width="1" stroke-dasharray="2,1">
+      <line x1="-8" y1="0" x2="-15" y2="-3"/>
+      <line x1="0" y1="-8" x2="0" y2="-15"/>
+      <line x1="8" y1="0" x2="15" y2="-3"/>
+      <line x1="0" y1="8" x2="0" y2="14"/>
+    </g>
+    
+    <!-- Central icon (sound waves) -->
+    <g stroke="#E0F7FA" stroke-width="1.5" fill="none" transform="translate(0, 0)">
+      <path d="M-3,3 L3,-3 M-3,-3 L3,3"/>
+      <path d="M-5,0 C-5,2.5 -2.5,5 0,5 C2.5,5 5,2.5 5,0 C5,-2.5 2.5,-5 0,-5 C-2.5,-5 -5,-2.5 -5,0" stroke-dasharray="1,1"/>
+    </g>
+  </g>
+  
+  <!-- Written communication -->
+  <g transform="translate(35, 90)">
+    <rect x="-20" y="-10" width="40" height="20" rx="5" fill="#006064" stroke="#E0F7FA" stroke-width="1"/>
+    <text x="0" y="-2" font-family="monospace" font-size="4" fill="#E0F7FA" text-anchor="middle">WRITTEN</text>
+    
+    <!-- Document icon -->
+    <g transform="translate(0, 8) scale(0.6)">
+      <rect x="-8" y="-8" width="16" height="16" rx="1" fill="#E0F7FA" stroke="#006064" stroke-width="0.75"/>
+      <line x1="-5" y1="-4" x2="5" y2="-4" stroke="#006064" stroke-width="1"/>
+      <line x1="-5" y1="0" x2="5" y2="0" stroke="#006064" stroke-width="1"/>
+      <line x1="-5" y1="4" x2="2" y2="4" stroke="#006064" stroke-width="1"/>
+    </g>
+  </g>
+  
+  <!-- Verbal communication -->
+  <g transform="translate(93, 90)">
+    <rect x="-20" y="-10" width="40" height="20" rx="5" fill="#006064" stroke="#E0F7FA" stroke-width="1"/>
+    <text x="0" y="-2" font-family="monospace" font-size="4" fill="#E0F7FA" text-anchor="middle">VERBAL</text>
+    
+    <!-- Microphone icon -->
+    <g transform="translate(0, 8) scale(0.6)">
+      <rect x="-3" y="-8" width="6" height="10" rx="3" fill="#E0F7FA" stroke="#006064" stroke-width="0.75"/>
+      <path d="M-3,2 C-3,5 3,5 3,2" fill="none" stroke="#006064" stroke-width="0.75"/>
+      <line x1="0" y1="5" x2="0" y2="8" stroke="#006064" stroke-width="0.75"/>
+      <path d="M-5,8 L5,8" stroke="#006064" stroke-width="0.75"/>
+      
+      <!-- Sound waves -->
+      <g stroke="#006064" stroke-width="0.75" fill="none">
+        <path d="M-5,-3 C-7,-3 -7,3 -5,3" />
+        <path d="M5,-3 C7,-3 7,3 5,3" />
+        <path d="M-7,-5 C-10,-5 -10,5 -7,5" />
+        <path d="M7,-5 C10,-5 10,5 7,5" />
+      </g>
+    </g>
+  </g>
+  
+  <!-- Communication channels -->
+  <g transform="translate(64, 110)">
+    <rect x="-45" y="-8" width="90" height="16" rx="3" fill="#006064" stroke="#E0F7FA" stroke-width="0.75"/>
+    <g font-family="monospace" font-size="3.5" fill="#E0F7FA" text-anchor="middle">
+      <text x="-30" y="0">IN-PERSON</text>
+      <text x="-10" y="0">EMAIL</text>
+      <text x="10" y="0">MEETINGS</text>
+      <text x="30" y="0">PRESENTATIONS</text>
+    </g>
+  </g>
+
+  <!-- Label -->
+  <g transform="translate(64, 125)">
+    <rect x="-40" y="-9" width="80" height="18" rx="5" fill="#006064" stroke="#E0F7FA" stroke-width="1"/>
+    <text x="0" y="0" font-family="Arial" font-size="10" fill="#FFFFFF" text-anchor="middle" font-weight="bold">COMMUNICATION</text>
+    <text x="0" y="9" font-family="monospace" font-size="6" fill="#E0F7FA" text-anchor="middle">95%</text>
+  </g>
+</svg> 

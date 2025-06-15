@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <g fill="none" stroke-width="3">
+    <path stroke="#4CAF50" d="M20 20 L40 50 L65 35 L90 70 L110 60" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="20" cy="20" r="6" fill="#FF5722" stroke="#FF5722"/>
+    <circle cx="40" cy="50" r="4" fill="#2196F3" stroke="#2196F3"/>
+    <circle cx="65" cy="35" r="4" fill="#2196F3" stroke="#2196F3"/>
+    <circle cx="90" cy="70" r="4" fill="#2196F3" stroke="#2196F3"/>
+    <circle cx="110" cy="60" r="6" fill="#9C27B0" stroke="#9C27B0"/>
+    
+    <!-- Obstacles -->
+    <circle cx="50" cy="70" r="8" fill="#546E7A" stroke="#546E7A" opacity="0.7"/>
+    <circle cx="75" cy="60" r="5" fill="#546E7A" stroke="#546E7A" opacity="0.7"/>
+    <rect x="25" y="30" width="15" height="15" fill="#546E7A" stroke="#546E7A" opacity="0.7"/>
+    
+    <!-- Grid -->
+    <path stroke="#E0E0E0" d="M10 10 L10 118 M28 10 L28 118 M46 10 L46 118 M64 10 L64 118 M82 10 L82 118 M100 10 L100 118 M118 10 L118 118" stroke-width="1" opacity="0.5"/>
+    <path stroke="#E0E0E0" d="M10 10 L118 10 M10 28 L118 28 M10 46 L118 46 M10 64 L118 64 M10 82 L118 82 M10 100 L118 100 M10 118 L118 118" stroke-width="1" opacity="0.5"/>
+  </g>
+</svg> 

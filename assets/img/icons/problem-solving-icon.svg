@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="problem-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#673AB7"/>
+      <stop offset="100%" stop-color="#311B92"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="64" cy="64" r="58" fill="url(#problem-gradient)" stroke="#311B92" stroke-width="2"/>
+  
+  <!-- Puzzle pieces -->
+  <g transform="translate(64, 45)">
+    <!-- Center piece -->
+    <g transform="translate(0, 0)">
+      <path d="M-15,-15 L-2,-15 C-2,-18 0,-20 3,-20 C6,-20 8,-18 8,-15 L15,-15 L15,-2 C18,-2 20,0 20,3 C20,6 18,8 15,8 L15,15 L-2,15 C-2,18 -4,20 -7,20 C-10,20 -12,18 -12,15 L-15,15 L-15,-2 C-18,-2 -20,-4 -20,-7 C-20,-10 -18,-12 -15,-12 Z"
+        fill="#D1C4E9" stroke="#311B92" stroke-width="1"/>
+      <circle cx="0" cy="0" r="5" fill="#311B92" stroke="#FFFFFF" stroke-width="0.75"/>
+      <text x="0" y="2" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="middle">?</text>
+    </g>
+  </g>
+  
+  <!-- Light bulb (idea) -->
+  <g transform="translate(35, 30)">
+    <path d="M0,-15 C-8,-15 -15,-8 -15,0 C-15,5 -12,9 -8,11 C-7,12 -6,13 -6,15 L6,15 C6,13 7,12 8,11 C12,9 15,5 15,0 C15,-8 8,-15 0,-15 Z" 
+          fill="#FFECB3" stroke="#311B92" stroke-width="1"/>
+    <path d="M-6,15 L6,15 L6,18 C6,19 5,20 4,20 L-4,20 C-5,20 -6,19 -6,18 Z" 
+          fill="#FFC107" stroke="#311B92" stroke-width="1"/>
+    <path d="M-5,-6 L5,4 M5,-6 L-5,4" stroke="#FFC107" stroke-width="2"/>
+  </g>
+  
+  <!-- Gears -->
+  <g transform="translate(93, 30)">
+    <!-- Larger gear -->
+    <g transform="translate(0, 0)">
+      <circle cx="0" cy="0" r="10" fill="#D1C4E9" stroke="#311B92" stroke-width="1"/>
+      
+      <!-- Gear teeth -->
+      <g stroke="#311B92" stroke-width="2" stroke-linecap="round">
+        <line x1="0" y1="-10" x2="0" y2="-15"/>
+        <line x1="7" y1="-7" x2="10" y2="-10"/>
+        <line x1="10" y1="0" x2="15" y2="0"/>
+        <line x1="7" y1="7" x2="10" y2="10"/>
+        <line x1="0" y1="10" x2="0" y2="15"/>
+        <line x1="-7" y1="7" x2="-10" y2="10"/>
+        <line x1="-10" y1="0" x2="-15" y2="0"/>
+        <line x1="-7" y1="-7" x2="-10" y2="-10"/>
+      </g>
+      
+      <circle cx="0" cy="0" r="4" fill="#311B92" stroke="#FFFFFF" stroke-width="0.75"/>
+    </g>
+  </g>
+  
+  <!-- Algorithm/flowchart -->
+  <g transform="translate(35, 80)">
+    <rect x="-20" y="-15" width="40" height="30" rx="2" fill="#D1C4E9" stroke="#311B92" stroke-width="1"/>
+    
+    <!-- Flowchart shapes -->
+    <g stroke="#311B92" stroke-width="1" fill="#FFFFFF">
+      <!-- Start oval -->
+      <ellipse cx="0" cy="-10" rx="12" ry="4"/>
+      <text x="0" y="-9" font-family="monospace" font-size="3" fill="#311B92" text-anchor="middle">START</text>
+      
+      <!-- Process rectangle -->
+      <rect x="-12" y="-3" width="24" height="6" rx="1"/>
+      <text x="0" y="0" font-family="monospace" font-size="3" fill="#311B92" text-anchor="middle">ANALYZE</text>
+      
+      <!-- Decision diamond -->
+      <path d="M0,5 L8,10 L0,15 L-8,10 Z"/>
+      <text x="0" y="11" font-family="monospace" font-size="3" fill="#311B92" text-anchor="middle">IF</text>
+      
+      <!-- Flow arrows -->
+      <g stroke="#311B92" stroke-width="0.75" fill="none">
+        <path d="M0,-6 L0,-3" marker-end="url(#arrowhead)"/>
+        <path d="M0,3 L0,5" marker-end="url(#arrowhead)"/>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Brain/thinking -->
+  <g transform="translate(90, 80)">
+    <rect x="-20" y="-15" width="40" height="30" rx="2" fill="#D1C4E9" stroke="#311B92" stroke-width="1"/>
+    
+    <!-- Brain outline -->
+    <path d="M-10,-5 C-15,-5 -15,0 -10,0 C-5,0 -5,5 -10,5 C-15,5 -15,10 -10,10 L10,10 C15,10 15,5 10,5 C5,5 5,0 10,0 C15,0 15,-5 10,-5 Z" 
+          fill="#FFFFFF" stroke="#311B92" stroke-width="1"/>
+          
+    <!-- Neural connections -->
+    <g stroke="#673AB7" stroke-width="0.5" stroke-linecap="round">
+      <line x1="-8" y1="-2" x2="-2" y2="2"/>
+      <line x1="-8" y1="2" x2="-2" y2="-2"/>
+      <line x1="-2" y1="-2" x2="2" y2="-2"/>
+      <line x1="-2" y1="2" x2="2" y2="2"/>
+      <line x1="2" y1="-2" x2="8" y2="2"/>
+      <line x1="2" y1="2" x2="8" y2="-2"/>
+      <circle cx="-8" cy="-2" r="1" fill="#673AB7"/>
+      <circle cx="-8" cy="2" r="1" fill="#673AB7"/>
+      <circle cx="-2" cy="-2" r="1" fill="#673AB7"/>
+      <circle cx="-2" cy="2" r="1" fill="#673AB7"/>
+      <circle cx="2" cy="-2" r="1" fill="#673AB7"/>
+      <circle cx="2" cy="2" r="1" fill="#673AB7"/>
+      <circle cx="8" cy="-2" r="1" fill="#673AB7"/>
+      <circle cx="8" cy="2" r="1" fill="#673AB7"/>
+    </g>
+  </g>
+  
+  <!-- Problem-solving stages -->
+  <g transform="translate(64, 110)">
+    <rect x="-50" y="-8" width="100" height="16" rx="3" fill="#311B92" stroke="#D1C4E9" stroke-width="0.75"/>
+    <g font-family="monospace" font-size="4" fill="#FFFFFF" text-anchor="middle">
+      <text x="-40" y="0">DEFINE</text>
+      <text x="-20" y="0">ANALYZE</text>
+      <text x="0" y="0">IDEATE</text>
+      <text x="20" y="0">IMPLEMENT</text>
+      <text x="40" y="0">EVALUATE</text>
+    </g>
+  </g>
+
+  <!-- Label -->
+  <g transform="translate(64, 125)">
+    <rect x="-40" y="-9" width="80" height="18" rx="5" fill="#311B92" stroke="#D1C4E9" stroke-width="1"/>
+    <text x="0" y="0" font-family="Arial" font-size="10" fill="#FFFFFF" text-anchor="middle" font-weight="bold">PROBLEM-SOLVING</text>
+    <text x="0" y="9" font-family="monospace" font-size="6" fill="#FFFFFF" text-anchor="middle">93%</text>
+  </g>
+  
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#311B92"/>
+    </marker>
+  </defs>
+</svg> 

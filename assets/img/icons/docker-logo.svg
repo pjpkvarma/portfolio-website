@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="docker-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2196F3"/>
+      <stop offset="100%" stop-color="#0D47A1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="64" cy="64" r="58" fill="url(#docker-gradient)" stroke="#0D47A1" stroke-width="2"/>
+
+  <!-- Docker container stacks -->
+  <g transform="translate(64, 64)">
+    <!-- Container stacks -->
+    <g>
+      <!-- Bottom row -->
+      <rect x="-25" y="5" width="15" height="10" rx="1" fill="#0D47A1" stroke="#BBDEFB" stroke-width="0.75"/>
+      <rect x="-8" y="5" width="15" height="10" rx="1" fill="#0D47A1" stroke="#BBDEFB" stroke-width="0.75"/>
+      <rect x="9" y="5" width="15" height="10" rx="1" fill="#0D47A1" stroke="#BBDEFB" stroke-width="0.75"/>
+      
+      <!-- Middle row -->
+      <rect x="-25" y="-7" width="15" height="10" rx="1" fill="#1565C0" stroke="#BBDEFB" stroke-width="0.75"/>
+      <rect x="-8" y="-7" width="15" height="10" rx="1" fill="#1565C0" stroke="#BBDEFB" stroke-width="0.75"/>
+      <rect x="9" y="-7" width="15" height="10" rx="1" fill="#1565C0" stroke="#BBDEFB" stroke-width="0.75"/>
+      
+      <!-- Top row -->
+      <rect x="-25" y="-19" width="15" height="10" rx="1" fill="#1976D2" stroke="#BBDEFB" stroke-width="0.75"/>
+      <rect x="-8" y="-19" width="15" height="10" rx="1" fill="#1976D2" stroke="#BBDEFB" stroke-width="0.75"/>
+      
+      <!-- Top container (active) -->
+      <rect x="9" y="-19" width="15" height="10" rx="1" fill="#2196F3" stroke="#FFFFFF" stroke-width="1"/>
+      
+      <!-- Container highlights -->
+      <rect x="-23" y="-17" width="3" height="1" fill="#BBDEFB"/>
+      <rect x="-23" y="-15" width="6" height="1" fill="#BBDEFB"/>
+      <rect x="-23" y="-13" width="4" height="1" fill="#BBDEFB"/>
+      
+      <rect x="-6" y="-17" width="3" height="1" fill="#BBDEFB"/>
+      <rect x="-6" y="-15" width="6" height="1" fill="#BBDEFB"/>
+      <rect x="-6" y="-13" width="4" height="1" fill="#BBDEFB"/>
+      
+      <rect x="11" y="-17" width="3" height="1" fill="#FFFFFF"/>
+      <rect x="11" y="-15" width="6" height="1" fill="#FFFFFF"/>
+      <rect x="11" y="-13" width="4" height="1" fill="#FFFFFF"/>
+      
+      <rect x="-23" y="-5" width="3" height="1" fill="#BBDEFB"/>
+      <rect x="-23" y="-3" width="6" height="1" fill="#BBDEFB"/>
+      <rect x="-23" y="-1" width="4" height="1" fill="#BBDEFB"/>
+      
+      <rect x="-6" y="-5" width="3" height="1" fill="#BBDEFB"/>
+      <rect x="-6" y="-3" width="6" height="1" fill="#BBDEFB"/>
+      <rect x="-6" y="-1" width="4" height="1" fill="#BBDEFB"/>
+      
+      <rect x="11" y="-5" width="3" height="1" fill="#BBDEFB"/>
+      <rect x="11" y="-3" width="6" height="1" fill="#BBDEFB"/>
+      <rect x="11" y="-1" width="4" height="1" fill="#BBDEFB"/>
+      
+      <rect x="-23" y="7" width="3" height="1" fill="#BBDEFB"/>
+      <rect x="-23" y="9" width="6" height="1" fill="#BBDEFB"/>
+      <rect x="-23" y="11" width="4" height="1" fill="#BBDEFB"/>
+      
+      <rect x="-6" y="7" width="3" height="1" fill="#BBDEFB"/>
+      <rect x="-6" y="9" width="6" height="1" fill="#BBDEFB"/>
+      <rect x="-6" y="11" width="4" height="1" fill="#BBDEFB"/>
+      
+      <rect x="11" y="7" width="3" height="1" fill="#BBDEFB"/>
+      <rect x="11" y="9" width="6" height="1" fill="#BBDEFB"/>
+      <rect x="11" y="11" width="4" height="1" fill="#BBDEFB"/>
+    </g>
+    
+    <!-- Docker logo hint (whale) -->
+    <g transform="translate(0, -30)">
+      <path d="M -10,0 L 10,0 C 15,0 20,5 15,10 C 13,12 10,12 5,10 C 0,12 -5,12 -10,10 C -15,5 -10,0 -10,0 Z" fill="#1976D2" stroke="#BBDEFB" stroke-width="1"/>
+      <circle cx="5" cy="-3" r="1.5" fill="#BBDEFB"/>
+      <path d="M 15,5 C 18,5 20,7 20,10 L 20,12" stroke="#BBDEFB" stroke-width="1" fill="none"/>
+    </g>
+  </g>
+  
+  <!-- Docker layers visualization -->
+  <g transform="translate(35, 30)">
+    <rect x="-15" y="-12" width="30" height="24" rx="2" fill="#1565C0" stroke="#BBDEFB" stroke-width="0.75"/>
+    <text x="0" y="-16" font-family="monospace" font-size="3.5" fill="#BBDEFB" text-anchor="middle">LAYERS</text>
+    
+    <!-- Layer stack -->
+    <g>
+      <rect x="-10" y="-8" width="20" height="4" fill="#BBDEFB" stroke="#1565C0" stroke-width="0.5"/>
+      <rect x="-10" y="-4" width="20" height="4" fill="#90CAF9" stroke="#1565C0" stroke-width="0.5"/>
+      <rect x="-10" y="0" width="20" height="4" fill="#64B5F6" stroke="#1565C0" stroke-width="0.5"/>
+      <rect x="-10" y="4" width="20" height="4" fill="#42A5F5" stroke="#1565C0" stroke-width="0.5"/>
+      
+      <g font-family="monospace" font-size="2" fill="#0D47A1" text-anchor="middle">
+        <text x="0" y="-5.5">BASE IMAGE</text>
+        <text x="0" y="-1.5">DEPENDENCIES</text>
+        <text x="0" y="2.5">APPLICATION</text>
+        <text x="0" y="6.5">CONFIG</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Docker commands -->
+  <g transform="translate(95, 30)">
+    <rect x="-15" y="-12" width="30" height="24" rx="2" fill="#1565C0" stroke="#BBDEFB" stroke-width="0.75"/>
+    <text x="0" y="-16" font-family="monospace" font-size="3.5" fill="#BBDEFB" text-anchor="middle">COMMANDS</text>
+    
+    <g font-family="monospace" font-size="2.5" fill="#BBDEFB" text-anchor="left">
+      <text x="-12" y="-8">docker build</text>
+      <text x="-12" y="-4">docker run</text>
+      <text x="-12" y="0">docker pull</text>
+      <text x="-12" y="4">docker push</text>
+      <text x="-12" y="8">docker-compose</text>
+    </g>
+  </g>
+  
+  <!-- Dockerfile snippet -->
+  <g transform="translate(64, 75)">
+    <rect x="-25" y="-15" width="50" height="30" rx="2" fill="#1565C0" stroke="#BBDEFB" stroke-width="1"/>
+    <text x="0" y="-20" font-family="monospace" font-size="3.5" fill="#BBDEFB" text-anchor="middle">DOCKERFILE</text>
+    
+    <g font-family="monospace" font-size="2.5" fill="#BBDEFB" text-anchor="left">
+      <text x="-23" y="-10">FROM python:3.9-slim</text>
+      <text x="-23" y="-6">WORKDIR /app</text>
+      <text x="-23" y="-2">COPY . .</text>
+      <text x="-23" y="2">RUN pip install -r requirements.txt</text>
+      <text x="-23" y="6">EXPOSE 8000</text>
+      <text x="-23" y="10">CMD ["python", "app.py"]</text>
+    </g>
+  </g>
+  
+  <!-- Benefits -->
+  <g transform="translate(30, 105)">
+    <rect x="-15" y="-8" width="30" height="16" rx="2" fill="#1565C0" stroke="#BBDEFB" stroke-width="0.5"/>
+    <text x="0" y="-10" font-family="monospace" font-size="2.5" fill="#BBDEFB" text-anchor="middle">BENEFITS</text>
+    
+    <g font-family="monospace" font-size="2" fill="#BBDEFB" text-anchor="middle">
+      <text x="0" y="-5">PORTABILITY</text>
+      <text x="0" y="-1">SCALABILITY</text>
+      <text x="0" y="3">ISOLATION</text>
+      <text x="0" y="7">CONSISTENCY</text>
+    </g>
+  </g>
+  
+  <!-- Orchestration -->
+  <g transform="translate(95, 105)">
+    <rect x="-15" y="-8" width="30" height="16" rx="2" fill="#1565C0" stroke="#BBDEFB" stroke-width="0.5"/>
+    <text x="0" y="-10" font-family="monospace" font-size="2.5" fill="#BBDEFB" text-anchor="middle">ORCHESTRATION</text>
+    
+    <g font-family="monospace" font-size="2" fill="#BBDEFB" text-anchor="middle">
+      <text x="0" y="-5">KUBERNETES</text>
+      <text x="0" y="-1">SWARM</text>
+      <text x="0" y="3">COMPOSE</text>
+      <text x="0" y="7">ECS</text>
+    </g>
+  </g>
+
+  <!-- Label -->
+  <g transform="translate(64, 120)">
+    <rect x="-30" y="-9" width="60" height="18" rx="5" fill="#0D47A1" stroke="#BBDEFB" stroke-width="1"/>
+    <text x="0" y="0" font-family="Arial" font-size="10" fill="#FFFFFF" text-anchor="middle" font-weight="bold">DOCKER</text>
+    <text x="0" y="9" font-family="monospace" font-size="6" fill="#BBDEFB" text-anchor="middle">85%</text>
+  </g>
+</svg> 

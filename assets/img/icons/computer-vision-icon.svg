@@ -1,0 +1,229 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="cv-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF5722"/>
+      <stop offset="100%" stop-color="#BF360C"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="64" cy="64" r="58" fill="url(#cv-gradient)" stroke="#BF360C" stroke-width="2"/>
+
+  <!-- Camera lens elements -->
+  <g transform="translate(64, 64)">
+    <!-- Outer lens ring -->
+    <circle cx="0" cy="0" r="40" fill="none" stroke="#FFCCBC" stroke-width="3"/>
+    <!-- Inner lens elements -->
+    <circle cx="0" cy="0" r="35" fill="none" stroke="#FFCCBC" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="30" fill="none" stroke="#FFCCBC" stroke-width="1"/>
+    <circle cx="0" cy="0" r="25" fill="none" stroke="#FFCCBC" stroke-width="0.75"/>
+    <circle cx="0" cy="0" r="20" fill="none" stroke="#FFCCBC" stroke-width="0.5"/>
+    <!-- Aperture blades -->
+    <g stroke="#FFCCBC" stroke-width="1.5" fill="none">
+      <path d="M 0,0 L 35,10" />
+      <path d="M 0,0 L 30,20" />
+      <path d="M 0,0 L 20,30" />
+      <path d="M 0,0 L 10,35" />
+      <path d="M 0,0 L -10,35" />
+      <path d="M 0,0 L -20,30" />
+      <path d="M 0,0 L -30,20" />
+      <path d="M 0,0 L -35,10" />
+      <path d="M 0,0 L -35,-10" />
+      <path d="M 0,0 L -30,-20" />
+      <path d="M 0,0 L -20,-30" />
+      <path d="M 0,0 L -10,-35" />
+      <path d="M 0,0 L 10,-35" />
+      <path d="M 0,0 L 20,-30" />
+      <path d="M 0,0 L 30,-20" />
+      <path d="M 0,0 L 35,-10" />
+    </g>
+    <!-- Focus rings -->
+    <ellipse cx="0" cy="0" rx="15" ry="10" fill="none" stroke="#FFCCBC" stroke-width="0.5" transform="rotate(30)"/>
+    <ellipse cx="0" cy="0" rx="15" ry="10" fill="none" stroke="#FFCCBC" stroke-width="0.5" transform="rotate(60)"/>
+    <ellipse cx="0" cy="0" rx="15" ry="10" fill="none" stroke="#FFCCBC" stroke-width="0.5" transform="rotate(90)"/>
+    <ellipse cx="0" cy="0" rx="15" ry="10" fill="none" stroke="#FFCCBC" stroke-width="0.5" transform="rotate(120)"/>
+    <ellipse cx="0" cy="0" rx="15" ry="10" fill="none" stroke="#FFCCBC" stroke-width="0.5" transform="rotate(150)"/>
+    <!-- Lens reflection -->
+    <circle cx="10" cy="-10" r="3" fill="#FFFFFF" opacity="0.7"/>
+    <circle cx="5" cy="-5" r="1.5" fill="#FFFFFF" opacity="0.5"/>
+  </g>
+
+  <!-- Eye with binary/digital elements -->
+  <g transform="translate(64, 64)">
+    <ellipse cx="0" cy="0" rx="18" ry="12" fill="#BF360C" stroke="#FFCCBC" stroke-width="1"/>
+    <circle cx="0" cy="0" r="10" fill="#FF8A65"/>
+    <circle cx="0" cy="0" r="7" fill="#FF3D00"/>
+    <circle cx="0" cy="0" r="4" fill="#000000"/>
+    <circle cx="3" cy="-3" r="1.5" fill="#FFFFFF" opacity="0.8"/>
+    <!-- Digital elements in iris -->
+    <g stroke="#FFCCBC" stroke-width="0.5" fill="none">
+      <path d="M -9,3 L -5,3 L -5,7 L -3,7 L -3,5 L -1,5 L -1,3 L 1,3 L 1,1 L 3,1 L 3,-1 L 5,-1 L 5,-3 L 7,-3 L 7,-5 L 9,-5" />
+      <path d="M -7,-7 L -5,-7 L -5,-5 L -3,-5 L -3,-3 L -1,-3 L -1,-1 L 1,-1 L 1,-3 L 3,-3 L 3,-5 L 5,-5 L 5,-7 L 7,-7" />
+      <path d="M -9,-1 L -7,-1 L -7,1 L -5,1 L -5,3 L -3,3 L -3,5 L -1,5 L -1,7 L 1,7 L 1,9" />
+      <path d="M 5,5 L 3,5 L 3,7 L 1,7 L 1,9 L -1,9 L -1,7 L -3,7 L -3,5 L -5,5 L -5,3 L -7,3 L -7,1 L -9,1" />
+    </g>
+  </g>
+
+  <!-- Image processing grid - representing pixels and filters -->
+  <g transform="translate(27, 27)">
+    <rect x="-12" y="-12" width="24" height="24" fill="none" stroke="#FFCCBC" stroke-width="0.5"/>
+    <g fill="#FFCCBC" opacity="0.8">
+      <rect x="-12" y="-12" width="8" height="8" opacity="0.3"/>
+      <rect x="-4" y="-12" width="8" height="8" opacity="0.7"/>
+      <rect x="4" y="-12" width="8" height="8" opacity="0.5"/>
+      <rect x="-12" y="-4" width="8" height="8" opacity="0.8"/>
+      <rect x="-4" y="-4" width="8" height="8" opacity="0.2"/>
+      <rect x="4" y="-4" width="8" height="8" opacity="0.6"/>
+      <rect x="-12" y="4" width="8" height="8" opacity="0.4"/>
+      <rect x="-4" y="4" width="8" height="8" opacity="0.9"/>
+      <rect x="4" y="4" width="8" height="8" opacity="0.1"/>
+    </g>
+    <!-- Kernel overlay -->
+    <g stroke="#FFFFFF" stroke-width="0.75" fill="none">
+      <rect x="-6" y="-6" width="12" height="12" stroke-dasharray="2,1"/>
+    </g>
+    <g font-family="monospace" font-size="3" fill="#FFFFFF" text-anchor="middle">
+      <text x="-9" y="-8">-1</text>
+      <text x="0" y="-8">0</text>
+      <text x="9" y="-8">1</text>
+      <text x="-9" y="0">-1</text>
+      <text x="0" y="0">4</text>
+      <text x="9" y="0">-1</text>
+      <text x="-9" y="8">0</text>
+      <text x="0" y="8">-1</text>
+      <text x="9" y="8">0</text>
+    </g>
+  </g>
+
+  <!-- Feature detection visualization -->
+  <g transform="translate(100, 27)">
+    <rect x="-12" y="-12" width="24" height="24" fill="none" stroke="#FFCCBC" stroke-width="0.5"/>
+    <g stroke="#FFCCBC" stroke-width="0.5" fill="none">
+      <!-- Edge detection points -->
+      <circle cx="-8" cy="-8" r="1" stroke="#FFFFFF" fill="#FFFFFF"/>
+      <circle cx="-2" cy="-8" r="1" stroke="#FFFFFF" fill="#FFFFFF"/>
+      <circle cx="4" cy="-8" r="1" stroke="#FFFFFF" fill="#FFFFFF"/>
+      <circle cx="10" cy="-8" r="1" stroke="#FFFFFF" fill="#FFFFFF"/>
+      
+      <circle cx="-8" cy="-2" r="1" stroke="#FFFFFF" fill="#FFFFFF"/>
+      <circle cx="10" cy="-2" r="1" stroke="#FFFFFF" fill="#FFFFFF"/>
+      
+      <circle cx="-8" cy="4" r="1" stroke="#FFFFFF" fill="#FFFFFF"/>
+      <circle cx="10" cy="4" r="1" stroke="#FFFFFF" fill="#FFFFFF"/>
+      
+      <circle cx="-8" cy="10" r="1" stroke="#FFFFFF" fill="#FFFFFF"/>
+      <circle cx="-2" cy="10" r="1" stroke="#FFFFFF" fill="#FFFFFF"/>
+      <circle cx="4" cy="10" r="1" stroke="#FFFFFF" fill="#FFFFFF"/>
+      <circle cx="10" cy="10" r="1" stroke="#FFFFFF" fill="#FFFFFF"/>
+      
+      <!-- Corner detection points -->
+      <circle cx="-8" cy="-8" r="2" stroke="#FFFFFF" fill="none"/>
+      <circle cx="10" cy="-8" r="2" stroke="#FFFFFF" fill="none"/>
+      <circle cx="-8" cy="10" r="2" stroke="#FFFFFF" fill="none"/>
+      <circle cx="10" cy="10" r="2" stroke="#FFFFFF" fill="none"/>
+      
+      <!-- Feature lines -->
+      <line x1="-8" y1="-8" x2="10" y2="-8" stroke-dasharray="2,1"/>
+      <line x1="10" y1="-8" x2="10" y2="10" stroke-dasharray="2,1"/>
+      <line x1="10" y1="10" x2="-8" y2="10" stroke-dasharray="2,1"/>
+      <line x1="-8" y1="10" x2="-8" y2="-8" stroke-dasharray="2,1"/>
+    </g>
+  </g>
+
+  <!-- Object detection boxes -->
+  <g transform="translate(27, 100)">
+    <rect x="-12" y="-12" width="24" height="24" fill="none" stroke="#FFCCBC" stroke-width="0.5"/>
+    
+    <!-- Simple scene with detection boxes -->
+    <circle cx="-5" cy="-5" r="3" fill="#FF8A65" opacity="0.6"/>
+    <rect x="-7" y="-7" width="4" height="4" fill="none" stroke="#FFFFFF" stroke-width="0.75" stroke-dasharray="1,0.5"/>
+    <text x="-7" y="-8" font-family="monospace" font-size="2" fill="#FFFFFF">97%</text>
+    
+    <rect x="2" y="-8" width="6" height="10" fill="#FF8A65" opacity="0.6"/>
+    <rect x="1" y="-9" width="8" height="12" fill="none" stroke="#FFFFFF" stroke-width="0.75" stroke-dasharray="1,0.5"/>
+    <text x="1" y="-10" font-family="monospace" font-size="2" fill="#FFFFFF">88%</text>
+    
+    <polygon points="-6,3 -2,3 -4,8" fill="#FF8A65" opacity="0.6"/>
+    <rect x="-7" y="2" width="6" height="7" fill="none" stroke="#FFFFFF" stroke-width="0.75" stroke-dasharray="1,0.5"/>
+    <text x="-7" y="1" font-family="monospace" font-size="2" fill="#FFFFFF">73%</text>
+    
+    <circle cx="5" cy="5" r="4" fill="#FF8A65" opacity="0.6"/>
+    <rect x="0" y="0" width="10" height="10" fill="none" stroke="#FFFFFF" stroke-width="0.75" stroke-dasharray="1,0.5"/>
+    <text x="0" y="-1" font-family="monospace" font-size="2" fill="#FFFFFF">95%</text>
+  </g>
+
+  <!-- Depth map / 3D reconstruction -->
+  <g transform="translate(100, 100)">
+    <rect x="-12" y="-12" width="24" height="24" fill="none" stroke="#FFCCBC" stroke-width="0.5"/>
+    
+    <!-- 3D wireframe visualization -->
+    <g stroke="#FFFFFF" stroke-width="0.5" fill="none">
+      <!-- Base plane -->
+      <line x1="-8" y1="5" x2="8" y2="5"/>
+      <line x1="-8" y1="5" x2="-8" y2="-5"/>
+      
+      <!-- 3D cube -->
+      <line x1="-8" y1="5" x2="-2" y2="8"/>
+      <line x1="8" y1="5" x2="2" y2="8"/>
+      <line x1="-8" y1="-5" x2="-2" y2="-2"/>
+      <line x1="-2" y1="8" x2="-2" y2="-2"/>
+      <line x1="-2" y1="8" x2="2" y2="8"/>
+      <line x1="-2" y1="-2" x2="2" y2="-2"/>
+      <line x1="2" y1="8" x2="2" y2="-2"/>
+      
+      <!-- Depth points -->
+      <g fill="#FFFFFF">
+        <circle cx="-8" cy="5" r="0.75"/>
+        <circle cx="8" cy="5" r="0.75"/>
+        <circle cx="-8" cy="-5" r="0.75"/>
+        <circle cx="-2" cy="8" r="0.75"/>
+        <circle cx="2" cy="8" r="0.75"/>
+        <circle cx="-2" cy="-2" r="0.75"/>
+        <circle cx="2" cy="-2" r="0.75"/>
+      </g>
+      
+      <!-- Depth grid -->
+      <g stroke="#FFFFFF" stroke-width="0.25" stroke-dasharray="0.5,0.5">
+        <line x1="-6" y1="5" x2="-1.5" y2="7.5"/>
+        <line x1="-4" y1="5" x2="-1" y2="7"/>
+        <line x1="-2" y1="5" x2="-0.5" y2="6.5"/>
+        <line x1="0" y1="5" x2="0" y2="6"/>
+        <line x1="2" y1="5" x2="0.5" y2="6.5"/>
+        <line x1="4" y1="5" x2="1" y2="7"/>
+        <line x1="6" y1="5" x2="1.5" y2="7.5"/>
+        
+        <line x1="-8" y1="3" x2="-6.5" y2="3"/>
+        <line x1="-8" y1="1" x2="-5" y2="1"/>
+        <line x1="-8" y1="-1" x2="-3.5" y2="-1"/>
+        <line x1="-8" y1="-3" x2="-2" y2="-3"/>
+      </g>
+    </g>
+    
+    <!-- Depth map gradient -->
+    <g opacity="0.3">
+      <rect x="-6" y="3" width="12" height="2" fill="#FFCCBC" opacity="0.2"/>
+      <rect x="-6" y="1" width="12" height="2" fill="#FFCCBC" opacity="0.3"/>
+      <rect x="-6" y="-1" width="12" height="2" fill="#FFCCBC" opacity="0.4"/>
+      <rect x="-6" y="-3" width="12" height="2" fill="#FFCCBC" opacity="0.5"/>
+      <rect x="-6" y="-5" width="12" height="2" fill="#FFCCBC" opacity="0.6"/>
+    </g>
+  </g>
+
+  <!-- Algorithm names -->
+  <g font-family="monospace" font-size="3.5" fill="#FFCCBC">
+    <text x="20" y="15">CNN</text>
+    <text x="35" y="15">SIFT</text>
+    <text x="50" y="15">YOLO</text>
+    <text x="65" y="15">RCNN</text>
+    <text x="85" y="15">SSD</text>
+    <text x="100" y="15">HOG</text>
+    <text x="15" y="110">MSER</text>
+    <text x="35" y="110">HAAR</text>
+    <text x="55" y="110">ORB</text>
+    <text x="75" y="110">SVM</text>
+    <text x="95" y="110">SLAM</text>
+  </g>
+
+  <!-- Label -->
+  <text x="64" y="123" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="middle" font-weight="bold">Computer Vision</text>
+</svg> 

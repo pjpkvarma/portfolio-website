@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="keras-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D00000"/>
+      <stop offset="100%" stop-color="#800000"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="64" cy="64" r="58" fill="url(#keras-gradient)" stroke="#800000" stroke-width="2"/>
+  
+  <!-- Keras logo representation -->
+  <g transform="translate(64, 45) scale(0.9)">
+    <!-- Keras "K" logo -->
+    <path d="M-15,-20 L-15,20 M-15,0 L15,-20 M-15,0 L15,20" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" fill="none"/>
+  </g>
+  
+  <!-- Neural network representation -->
+  <g transform="translate(64, 85)">
+    <!-- Layers -->
+    <g fill="#FFFFFF" stroke="#D00000">
+      <!-- Input layer -->
+      <g transform="translate(-30, 0)">
+        <circle cx="0" cy="-12" r="3" />
+        <circle cx="0" cy="0" r="3" />
+        <circle cx="0" cy="12" r="3" />
+      </g>
+      
+      <!-- Hidden layer 1 -->
+      <g transform="translate(-10, 0)">
+        <circle cx="0" cy="-16" r="3" />
+        <circle cx="0" cy="-8" r="3" />
+        <circle cx="0" cy="0" r="3" />
+        <circle cx="0" cy="8" r="3" />
+        <circle cx="0" cy="16" r="3" />
+      </g>
+      
+      <!-- Hidden layer 2 -->
+      <g transform="translate(10, 0)">
+        <circle cx="0" cy="-16" r="3" />
+        <circle cx="0" cy="-8" r="3" />
+        <circle cx="0" cy="0" r="3" />
+        <circle cx="0" cy="8" r="3" />
+        <circle cx="0" cy="16" r="3" />
+      </g>
+      
+      <!-- Output layer -->
+      <g transform="translate(30, 0)">
+        <circle cx="0" cy="-12" r="3" />
+        <circle cx="0" cy="0" r="3" />
+        <circle cx="0" cy="12" r="3" />
+      </g>
+    </g>
+    
+    <!-- Connections -->
+    <g stroke="#FFFFFF" stroke-width="0.5" opacity="0.6">
+      <!-- Connect input to hidden1 -->
+      <g>
+        <line x1="-30" y1="-12" x2="-10" y2="-16" />
+        <line x1="-30" y1="-12" x2="-10" y2="-8" />
+        <line x1="-30" y1="-12" x2="-10" y2="0" />
+        <line x1="-30" y1="0" x2="-10" y2="-8" />
+        <line x1="-30" y1="0" x2="-10" y2="0" />
+        <line x1="-30" y1="0" x2="-10" y2="8" />
+        <line x1="-30" y1="12" x2="-10" y2="0" />
+        <line x1="-30" y1="12" x2="-10" y2="8" />
+        <line x1="-30" y1="12" x2="-10" y2="16" />
+      </g>
+      
+      <!-- Connect hidden1 to hidden2 -->
+      <g>
+        <line x1="-10" y1="-16" x2="10" y2="-16" />
+        <line x1="-10" y1="-16" x2="10" y2="-8" />
+        <line x1="-10" y1="-8" x2="10" y2="-16" />
+        <line x1="-10" y1="-8" x2="10" y2="-8" />
+        <line x1="-10" y1="-8" x2="10" y2="0" />
+        <line x1="-10" y1="0" x2="10" y2="-8" />
+        <line x1="-10" y1="0" x2="10" y2="0" />
+        <line x1="-10" y1="0" x2="10" y2="8" />
+        <line x1="-10" y1="8" x2="10" y2="0" />
+        <line x1="-10" y1="8" x2="10" y2="8" />
+        <line x1="-10" y1="8" x2="10" y2="16" />
+        <line x1="-10" y1="16" x2="10" y2="8" />
+        <line x1="-10" y1="16" x2="10" y2="16" />
+      </g>
+      
+      <!-- Connect hidden2 to output -->
+      <g>
+        <line x1="10" y1="-16" x2="30" y2="-12" />
+        <line x1="10" y1="-8" x2="30" y2="-12" />
+        <line x1="10" y1="-8" x2="30" y2="0" />
+        <line x1="10" y1="0" x2="30" y2="-12" />
+        <line x1="10" y1="0" x2="30" y2="0" />
+        <line x1="10" y1="0" x2="30" y2="12" />
+        <line x1="10" y1="8" x2="30" y2="0" />
+        <line x1="10" y1="8" x2="30" y2="12" />
+        <line x1="10" y1="16" x2="30" y2="12" />
+      </g>
+    </g>
+  </g>
+  
+  <!-- Technical features -->
+  <g transform="translate(35, 25)">
+    <rect x="-24" y="-10" width="48" height="20" rx="5" fill="#D00000" stroke="#FFFFFF" stroke-width="1"/>
+    <text x="0" y="0" font-family="monospace" font-size="5" fill="#FFFFFF" text-anchor="middle">HIGH-LEVEL</text>
+  </g>
+  
+  <g transform="translate(93, 25)">
+    <rect x="-24" y="-10" width="48" height="20" rx="5" fill="#D00000" stroke="#FFFFFF" stroke-width="1"/>
+    <text x="0" y="0" font-family="monospace" font-size="5" fill="#FFFFFF" text-anchor="middle">USER-FRIENDLY</text>
+  </g>
+  
+  <!-- Code snippet -->
+  <g transform="translate(64, 120)">
+    <rect x="-45" y="-14" width="90" height="28" rx="3" fill="#D00000" stroke="#FFFFFF" stroke-width="0.75"/>
+    <g font-family="monospace" font-size="3.5" fill="#FFFFFF" text-anchor="left">
+      <text x="-40" y="-8">from keras.models import Sequential</text>
+      <text x="-40" y="-3">model = Sequential([</text>
+      <text x="-40" y="2">  Dense(128, activation='relu'),</text>
+      <text x="-40" y="7">  Dense(10, activation='softmax')</text>
+      <text x="-40" y="12">])</text>
+    </g>
+  </g>
+
+  <!-- Label -->
+  <g transform="translate(64, 140)">
+    <rect x="-40" y="-9" width="80" height="18" rx="5" fill="#D00000" stroke="#FFFFFF" stroke-width="1"/>
+    <text x="0" y="0" font-family="Arial" font-size="10" fill="#FFFFFF" text-anchor="middle" font-weight="bold">KERAS</text>
+    <text x="0" y="9" font-family="monospace" font-size="6" fill="#FFFFFF" text-anchor="middle">90%</text>
+  </g>
+</svg> 

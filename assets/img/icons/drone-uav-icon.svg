@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <!-- Body -->
+  <rect x="54" y="54" width="20" height="20" rx="4" fill="#212121" stroke="#000000" stroke-width="2"/>
+  
+  <!-- Camera/Sensor Mount -->
+  <circle cx="64" cy="64" r="5" fill="#4CAF50" stroke="#388E3C" stroke-width="1"/>
+  
+  <!-- Arms -->
+  <g stroke="#424242" stroke-width="3" stroke-linecap="round">
+    <line x1="54" y1="54" x2="34" y2="34"/>
+    <line x1="74" y1="54" x2="94" y2="34"/>
+    <line x1="54" y1="74" x2="34" y2="94"/>
+    <line x1="74" y1="74" x2="94" y2="94"/>
+  </g>
+  
+  <!-- Propellers -->
+  <g fill="#BDBDBD" stroke="#757575" stroke-width="1.5">
+    <ellipse cx="34" cy="34" rx="12" ry="3" transform="rotate(45, 34, 34)"/>
+    <ellipse cx="94" cy="34" rx="12" ry="3" transform="rotate(-45, 94, 34)"/>
+    <ellipse cx="34" cy="94" rx="12" ry="3" transform="rotate(-45, 34, 94)"/>
+    <ellipse cx="94" cy="94" rx="12" ry="3" transform="rotate(45, 94, 94)"/>
+  </g>
+  
+  <!-- Propeller Centers -->
+  <g fill="#E53935">
+    <circle cx="34" cy="34" r="3" />
+    <circle cx="94" cy="34" r="3" />
+    <circle cx="34" cy="94" r="3" />
+    <circle cx="94" cy="94" r="3" />
+  </g>
+  
+  <!-- Status Lights -->
+  <g>
+    <circle cx="57" cy="57" r="2" fill="#F44336"/> <!-- Red -->
+    <circle cx="71" cy="57" r="2" fill="#4CAF50"/> <!-- Green -->
+    <circle cx="71" cy="71" r="2" fill="#2196F3"/> <!-- Blue -->
+    <circle cx="57" cy="71" r="2" fill="#FFC107"/> <!-- Amber -->
+  </g>
+  
+  <!-- Flight Path Indication -->
+  <path d="M64 20 C64 20, 68 30, 64 40" stroke="#64B5F6" stroke-width="2" fill="none" stroke-dasharray="2,2"/>
+
+  <!-- Altitude Lines -->
+  <g stroke="#90CAF9" stroke-width="1" stroke-dasharray="3,2" opacity="0.7">
+    <line x1="20" y1="108" x2="108" y2="108"/>
+    <line x1="25" y1="103" x2="103" y2="103"/>
+    <line x1="30" y1="98" x2="98" y2="98"/>
+  </g>
+</svg> 

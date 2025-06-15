@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+   <meta charset="utf-8" />
+   <meta http-equiv="x-ua-compatible" content="ie=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="Path Planning Algorithms for Autonomous Navigation - Implementation of A*, Dijkstra, and RRT* algorithms for efficient robot navigation" />
+
+   <!-- Site Title -->
+   <title>Path Planning Algorithms - J P K Varma Pothuri</title>
+
+   <!-- Place favicon.ico in the root directory -->
+   <link rel="apple-touch-icon" href="../assets/img/favicon.png" />
+   <link rel="shortcut icon" type="image/png" href="../assets/img/favicon.png" />
+
+   <!-- CSS here -->
+   <link rel="stylesheet" href="../assets/css/animate.min.css" />
+   <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+   <link rel="stylesheet" href="../assets/css/font-awesome-pro.min.css" />
+   <link rel="stylesheet" href="../assets/css/flaticon_gerold.css" />
+   <link rel="stylesheet" href="../assets/css/nice-select.css" />
+   <link rel="stylesheet" href="../assets/css/backToTop.css" />
+   <link rel="stylesheet" href="../assets/css/owl.carousel.min.css" />
+   <link rel="stylesheet" href="../assets/css/swiper.min.css" />
+   <link rel="stylesheet" href="../assets/css/odometer-theme-default.css" />
+   <link rel="stylesheet" href="../assets/css/magnific-popup.css" />
+   <link rel="stylesheet" href="../assets/css/main.css" />
+   <link rel="stylesheet" href="../assets/css/main-2.css" />
+   <link rel="stylesheet" href="../assets/css/main-3.css" />
+   <link rel="stylesheet" href="../assets/css/light-mode.css" />
+   <link rel="stylesheet" href="../assets/css/meanmenu.css" />
+   <link rel="stylesheet" href="../assets/css/responsive.css" />
+   <link rel="stylesheet" href="../assets/css/responsive-2.css" />
+   <link rel="stylesheet" href="../assets/css/responsive-3.css" />
+</head>
+
+<body class="absolute_header">
+   <!-- Preloader Area Start -->
+   <div class="preloader">
+      <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+         <path id="preloaderSvg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
+      </svg>
+
+      <div class="preloader-heading">
+         <div class="load-text">
+            <span>L</span>
+            <span>o</span>
+            <span>a</span>
+            <span>d</span>
+            <span>i</span>
+            <span>n</span>
+            <span>g</span>
+         </div>
+      </div>
+   </div>
+   <!-- Preloader Area End -->
+
+   <!-- start: Back To Top -->
+   <div class="progress-wrap" id="scrollUp">
+      <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+         <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+      </svg>
+   </div>
+   <!-- end: Back To Top -->
+
+   <!-- HEADER START -->
+   <header class="tj-header-area style-2 header-absolute">
+    <div class="container">
+       <div class="row">
+          <div class="col-12 d-flex flex-wrap align-items-center">
+             <div class="logo-box">
+                <a href="index.html">
+                   <img src="assets/img/logo/logo.png" alt="" />
+                </a>
+             </div>
+             <div class="header-info-list d-none d-md-inline-block">
+                <ul class="ul-reset">
+                   <li><a href="mailto:jpkvarmapothuri@gmail.com">jpkvarmapothuri@gmail.com</a></li>
+                </ul>
+             </div>
+             <div class="header-menu" id="headerMenu">
+                <nav>
+                   <ul>
+                      <li class="has-dropdown current-menu-ancestor">
+                         <a class="current-menu-item" href="index.html">Home</a>
+                      </li>
+                      <li><a href="about.html">About</a></li>
+                      <li><a href="services.html">Services</a></li>
+                      <li><a href="portfolio.html">Portfolios</a></li>
+                      <li><a href="certificates.html">Certificates</a></li>
+                      <!-- <li class="has-dropdown">
+                          <a href="blog.html">Blog</a>
+                          <ul class="sub-menu">
+                              <li>
+                                  <a href="blog.html">Blog</a>
+                              </li>
+                              <li>
+                                  <a href="blog-details.html">Blog Details</a>
+                              </li>
+                          </ul>
+                      </li> -->
+                      <li><a href="contact.html">Contact</a></li>
+                   </ul>
+                </nav>
+             </div>
+             <div class="mobile-menu d-lg-none"></div>
+             <div class="header-button">
+                <a href="./assets/resume/jpkvarma_resume_ai.pdf" class="tj-btn-primary-2">Resume
+                   <span class="icon_box">
+                      <i class="flaticon-download icon_first"></i>
+                      <i class="flaticon-download icon_second"></i>
+                   </span>
+                </a>
+             </div>
+             <div class="menu-bar d-lg-none">
+                <button>
+                   <span></span>
+                   <span></span>
+                   <span></span>
+                   <span></span>
+                </button>
+             </div>
+          </div>
+       </div>
+    </div>
+ </header>
+ <header class="tj-header-area style-2 header-2 header-sticky sticky-out">
+    <div class="container">
+       <div class="row">
+          <div class="col-12 d-flex flex-wrap align-items-center">
+             <div class="logo-box">
+                <a href="index.html">
+                   <img src="assets/img/logo/logo.png" alt="" />
+                </a>
+             </div>
+             <div class="header-info-list d-none d-md-inline-block">
+                <ul class="ul-reset">
+                   <li><a href="mailto:jpkvarmapothuri@gmail.com">jpkvarmapothuri@gmail.com</a></li>
+                </ul>
+             </div>
+             <div class="header-menu">
+                <nav>
+                   <ul>
+                      <li class="current-menu-ancestor">
+                         <a class="current-menu-item" href="index.html">Home</a>
+                         
+                      </li>
+                      <li><a href="about.html">About</a></li>
+                      <li><a href="services.html">Services</a></li>
+                      <li><a href="portfolio.html">Portfolios</a></li>
+                      <li><a href="certificates.html">Certificates</a></li>
+                      <!-- <li class="has-dropdown">
+                          <a href="blog.html">Blog</a>
+                          <ul class="sub-menu">
+                              <li>
+                                  <a href="blog.html">Blog</a>
+                              </li>
+                              <li>
+                                  <a href="blog-details.html">Blog Details</a>
+                              </li>
+                          </ul>
+                      </li> -->
+                      <li><a href="contact.html">Contact</a></li>
+                   </ul>
+                </nav>
+             </div>
+             <div class="mobile-menu d-lg-none"></div>
+             <div class="header-button">
+                <a href="./assets/resume/jpkvarma_resume_ai.pdf" class="tj-btn-primary-2">Resume
+                   <span class="icon_box">
+                      <i class="flaticon-download icon_first"></i>
+                      <i class="flaticon-download icon_second"></i>
+                   </span>
+                </a>
+             </div>
+             <div class="menu-bar d-lg-none">
+                <button>
+                   <span></span>
+                   <span></span>
+                   <span></span>
+                   <span></span>
+                </button>
+             </div>
+          </div>
+       </div>
+    </div>
+ </header>
+ <!-- HEADER END -->
+
+   <main class="site-content" id="content">
+      <!-- START: Breadcrumb Area -->
+      <section class="breadcrumb_area" data-bg-image="../assets/img/breadcrumb/breadcrumb-bg.jpg"
+         data-bg-color="#140C1C">
+         <div class="container">
+            <div class="row">
+               <div class="col">
+                  <div class="breadcrumb_content d-flex flex-column align-items-center">
+                     <h2 class="title wow fadeInUp" data-wow-delay=".3s">Path Planning Algorithms for Autonomous Navigation</h2>
+                     <div class="breadcrumb_navigation wow fadeInUp" data-wow-delay=".5s">
+                        <span><a href="../index.html">Home</a></span>
+                        <i class="far fa-long-arrow-right"></i>
+                        <span><a href="../portfolio.html">Portfolio</a></span>
+                        <i class="far fa-long-arrow-right"></i>
+                        <span class="current-item">Path Planning Algorithms</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- END: Breadcrumb Area -->
+
+      <!-- PROJECT DETAILS SECTION START -->
+      <section class="project-details-section" id="project-details">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-8">
+                  <div class="project-details-content">
+                     <div class="project-overview mb-5">
+                        <h3 class="mb-4">Project Overview</h3>
+                        <p>This project showcases the implementation of three well-known algorithms for navigating an environment: A*, Dijkstra, and RRT*. These algorithms help a robot find its way from a starting point to a goal while avoiding obstacles in the environment.</p>
+                     </div>
+                     
+                     <div class="key-features mb-5">
+                        <h3 class="mb-4">Implemented Algorithms</h3>
+                        
+                        <div class="algorithm-card mb-5">
+                           <h4 class="mb-3"><i class="fas fa-map-marker-alt me-2"></i> A* Algorithm</h4>
+                           <p>A* (A-Star) is a smart algorithm that finds the shortest path between two points. It combines the cost of traveling from the start to a point and an estimate of the cost to reach the goal. This balance helps it quickly find an efficient path while avoiding unnecessary exploration.</p>
+                           
+                           <div class="key-properties mt-3">
+                              <h5 class="mb-2">Key Properties:</h5>
+                              <ul>
+                                 <li>Uses heuristic function to guide search</li>
+                                 <li>Optimal if heuristic is admissible</li>
+                                 <li>Efficient for many pathfinding scenarios</li>
+                                 <li>Balances completeness and performance</li>
+                              </ul>
+                           </div>
+                        </div>
+                        
+                        <div class="algorithm-card mb-5">
+                           <h4 class="mb-3"><i class="fas fa-project-diagram me-2"></i> Dijkstra's Algorithm</h4>
+                           <p>Dijkstra's algorithm finds the shortest path between two points by exploring all possible routes. Unlike A*, it doesn't guess where the goal might be, which makes it thorough but slower in some cases. It ensures the shortest path is always found.</p>
+                           
+                           <div class="key-properties mt-3">
+                              <h5 class="mb-2">Key Properties:</h5>
+                              <ul>
+                                 <li>Guarantees optimal solution</li>
+                                 <li>Explores nodes in order of distance from start</li>
+                                 <li>Works well with uniform cost spaces</li>
+                                 <li>Can be inefficient in large search spaces</li>
+                              </ul>
+                           </div>
+                        </div>
+                        
+                        <div class="algorithm-card mb-5">
+                           <h4 class="mb-3"><i class="fas fa-tree me-2"></i> RRT* Algorithm</h4>
+                           <p>RRT* (Rapidly-exploring Random Tree Star) is a flexible algorithm that works well in complex environments. It builds a tree of possible paths by sampling random points in the space and connecting them. Over time, it refines the tree to find a smoother and more optimal path.</p>
+                           
+                           <div class="key-properties mt-3">
+                              <h5 class="mb-2">Key Properties:</h5>
+                              <ul>
+                                 <li>Sampling-based approach for high-dimensional spaces</li>
+                                 <li>Asymptotically optimal</li>
+                                 <li>Handles complex environments efficiently</li>
+                                 <li>Continuously improves path quality over time</li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="implementation-details mb-5">
+                        <h3 class="mb-4">Implementation Details</h3>
+                        <p>The project implemented these algorithms with the following considerations:</p>
+                        
+                        <div class="row mt-4">
+                           <div class="col-md-6 mb-4">
+                              <div class="implementation-card p-3 border rounded h-100">
+                                 <h5><i class="fas fa-wrench me-2"></i> Technical Implementation</h5>
+                                 <ul>
+                                    <li>Python implementation with NumPy and Matplotlib</li>
+                                    <li>Configurable obstacle generation</li>
+                                    <li>Visualization of search process</li>
+                                    <li>Performance metrics collection</li>
+                                 </ul>
+                              </div>
+                           </div>
+                           
+                           <div class="col-md-6 mb-4">
+                              <div class="implementation-card p-3 border rounded h-100">
+                                 <h5><i class="fas fa-chart-line me-2"></i> Performance Comparison</h5>
+                                 <ul>
+                                    <li>Execution time measurement</li>
+                                    <li>Path length optimality</li>
+                                    <li>Memory usage analysis</li>
+                                    <li>Scalability with map complexity</li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="comparative-analysis mb-5">
+                        <h3 class="mb-4">Comparative Analysis</h3>
+                        <p>Algorithms were compared across different metrics to understand their strengths and weaknesses:</p>
+                        
+                        <div class="table-responsive mt-4">
+                           <table class="table table-bordered">
+                              <thead>
+                                 <tr>
+                                    <th>Algorithm</th>
+                                    <th>Path Optimality</th>
+                                    <th>Computation Speed</th>
+                                    <th>Memory Usage</th>
+                                    <th>Complexity Handling</th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 <tr>
+                                    <td>A*</td>
+                                    <td>High</td>
+                                    <td>Medium</td>
+                                    <td>Medium</td>
+                                    <td>Good</td>
+                                 </tr>
+                                 <tr>
+                                    <td>Dijkstra</td>
+                                    <td>Highest</td>
+                                    <td>Slow</td>
+                                    <td>High</td>
+                                    <td>Fair</td>
+                                 </tr>
+                                 <tr>
+                                    <td>RRT*</td>
+                                    <td>Medium to High</td>
+                                    <td>Fast</td>
+                                    <td>Low</td>
+                                    <td>Excellent</td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                     
+                     <div class="applications mb-5">
+                        <h3 class="mb-4">Applications</h3>
+                        <p>These path planning algorithms have numerous practical applications:</p>
+                        
+                        <div class="row mt-4">
+                           <div class="col-md-6 mb-4">
+                              <div class="application-card p-3 border rounded">
+                                 <h5><i class="fas fa-robot me-2"></i> Mobile Robotics</h5>
+                                 <p>Navigation systems for autonomous robots in warehouses, hospitals, and other indoor environments.</p>
+                              </div>
+                           </div>
+                           
+                           <div class="col-md-6 mb-4">
+                              <div class="application-card p-3 border rounded">
+                                 <h5><i class="fas fa-car me-2"></i> Autonomous Vehicles</h5>
+                                 <p>Route planning and obstacle avoidance for self-driving cars in urban environments.</p>
+                              </div>
+                           </div>
+                           
+                           <div class="col-md-6 mb-4">
+                              <div class="application-card p-3 border rounded">
+                                 <h5><i class="fas fa-drone me-2"></i> UAV Navigation</h5>
+                                 <p>Path planning for drones in delivery, photography, and surveillance applications.</p>
+                              </div>
+                           </div>
+                           
+                           <div class="col-md-6 mb-4">
+                              <div class="application-card p-3 border rounded">
+                                 <h5><i class="fas fa-gamepad me-2"></i> Video Games</h5>
+                                 <p>Non-player character movement and navigation in video games and virtual environments.</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="technologies mb-5">
+                        <h3 class="mb-4">Technologies Used</h3>
+                        <div class="row">
+                           <div class="col-md-4 mb-3">
+                              <div class="tech-item text-center p-3">
+                                 <i class="fab fa-python fa-2x mb-2"></i>
+                                 <h5>Python</h5>
+                              </div>
+                           </div>
+                           <div class="col-md-4 mb-3">
+                              <div class="tech-item text-center p-3">
+                                 <i class="fas fa-chart-bar fa-2x mb-2"></i>
+                                 <h5>Matplotlib</h5>
+                              </div>
+                           </div>
+                           <div class="col-md-4 mb-3">
+                              <div class="tech-item text-center p-3">
+                                 <i class="fas fa-table fa-2x mb-2"></i>
+                                 <h5>NumPy</h5>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="project-conclusion">
+                        <h3 class="mb-4">Conclusion</h3>
+                        <p>This project provides a comprehensive implementation and analysis of three fundamental path planning algorithms. Each algorithm has its strengths and ideal use cases: A* offers a good balance between efficiency and optimality, Dijkstra guarantees the shortest path but at higher computational cost, and RRT* excels in complex, high-dimensional spaces where other methods struggle.</p>
+                        
+                        <p>For detailed implementation and documentation, please check the GitHub repository.</p>
+                        
+                        <div class="github-link mt-4">
+                           <a href="#" class="btn btn-primary">
+                              <i class="fab fa-github me-2"></i> View GitHub Repository
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               
+               <div class="col-lg-4">
+                  <div class="project-sidebar">
+                     <div class="project-info-card mb-4">
+                        <h4 class="card-title border-bottom pb-3 mb-3">Project Information</h4>
+                        <ul class="list-unstyled">
+                           <li class="d-flex justify-content-between mb-3">
+                              <span class="fw-bold">Category:</span>
+                              <span>Robotics, Algorithms</span>
+                           </li>
+                           <li class="d-flex justify-content-between mb-3">
+                              <span class="fw-bold">Duration:</span>
+                              <span>3 months</span>
+                           </li>
+                           <li class="d-flex justify-content-between mb-3">
+                              <span class="fw-bold">Completed:</span>
+                              <span>2023</span>
+                           </li>
+                           <li class="d-flex justify-content-between mb-3">
+                              <span class="fw-bold">Institution:</span>
+                              <span>University at Buffalo</span>
+                           </li>
+                        </ul>
+                     </div>
+                     
+                     <div class="related-projects-card mb-4">
+                        <h4 class="card-title border-bottom pb-3 mb-3">Related Projects</h4>
+                        <div class="related-project-item d-flex align-items-center mb-3">
+                           <div>
+                              <h6 class="mb-0"><a href="1.html">Autonomous UAV Tracking</a></h6>
+                              <small>Computer Vision</small>
+                           </div>
+                        </div>
+                        <div class="related-project-item d-flex align-items-center mb-3">
+                           <div>
+                              <h6 class="mb-0"><a href="2.html">Coverage Path Planning</a></h6>
+                              <small>Multi-Robot Systems</small>
+                           </div>
+                        </div>
+                        <div class="related-project-item d-flex align-items-center">
+                           <div>
+                              <h6 class="mb-0"><a href="4.html">Object Detection with Depth Estimation</a></h6>
+                              <small>Computer Vision</small>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="project-contact-card">
+                        <h4 class="card-title border-bottom pb-3 mb-3">Interested in this project?</h4>
+                        <p>If you're interested in learning more about path planning algorithms or exploring potential applications in robotics and autonomous systems, please get in touch.</p>
+                        <a href="../contact.html" class="btn tj-btn-primary-2 w-100">
+                           Contact Me
+                           <span class="icon_box">
+                              <i class="fa-regular fa-arrow-right icon_first"></i>
+                              <i class="fa-regular fa-arrow-right icon_second"></i>
+                           </span>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- PROJECT DETAILS SECTION END -->
+   </main>
+
+   <!-- FOOTER AREA START -->
+   <footer class="tj-footer-area style-2">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12 text-center">
+                        <!-- <div class="footer-logo-box">
+                            <a href="#"><img src="../assets/img/logo/logo.png" alt="" /></a>
+                        </div> -->
+               <div class="footer-menu">
+                  <nav>
+                     <ul>
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="../services.html">Services</a></li>
+                        <li><a href="../portfolio.html">Portfolios</a></li>
+                        <li><a href="../certificates.html">Certificates</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                     </ul>
+                  </nav>
+               </div>
+               <div class="copy-text style-2">
+                  <p>&copy; 2024 All rights reserved by <a href="#" target="_blank">J P K Varma Pothuri</a></p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+   <!-- FOOTER AREA END -->
+
+   <!-- JS here -->
+   <script src="../assets/js/jquery.min.js"></script>
+   <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+   <script src="../assets/js/gsap.min.js"></script>
+   <script src="../assets/js/gsap-scroll-to-plugin.min.js"></script>
+   <script src="../assets/js/gsap-scroll-trigger.min.js"></script>
+   <script src="../assets/js/gsap-split-text.min.js"></script>
+   <script src="../assets/js/lenis.min.js"></script>
+
+   <script src="../assets/js/nice-select.min.js"></script>
+   <script src="../assets/js/backToTop.js"></script>
+   <script src="../assets/js/appear.min.js"></script>
+   <script src="../assets/js/wow.min.js"></script>
+   <script src="../assets/js/lightcase.js"></script>
+   <script src="../assets/js/owl.carousel.min.js"></script>
+   <script src="../assets/js/swiper.min.js"></script>
+   <script src="../assets/js/imagesloaded-pkgd.js"></script>
+   <script src="../assets/js/isotope.pkgd.min.js"></script>
+   <script src="../assets/js/odometer.min.js"></script>
+   <script src="../assets/js/magnific-popup.js"></script>
+   <script src="../assets/js/validate.min.js"></script>
+   <script src="../assets/js/meanmenu.js"></script>
+   <script src="../assets/js/main.js"></script>
+</body>
+
+</html> 

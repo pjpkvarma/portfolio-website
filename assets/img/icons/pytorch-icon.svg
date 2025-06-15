@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="pytorch-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9C27B0"/>
+      <stop offset="100%" stop-color="#4A148C"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="64" cy="64" r="58" fill="url(#pytorch-gradient)" stroke="#4A148C" stroke-width="2"/>
+
+  <!-- PyTorch logo -->
+  <g transform="translate(64, 55) scale(1.2)">
+    <!-- Flame shape -->
+    <path d="M -5,-25 C -15,-15 -15,-5 -5,5 C 0,10 0,15 -5,20 C 10,15 15,0 5,-10 C 0,-15 0,-20 5,-25 Z" 
+          fill="#EE4C2C" stroke="#FFFFFF" stroke-width="0.75"/>
+    
+    <!-- Circle element -->
+    <circle cx="10" cy="10" r="5" fill="#EE4C2C" stroke="#FFFFFF" stroke-width="0.75"/>
+  </g>
+  
+  <!-- Neural network representation -->
+  <g transform="translate(64, 64) scale(0.9)">
+    <!-- Input layer (left) -->
+    <g transform="translate(-25, 0)">
+      <circle cx="0" cy="-20" r="5" fill="#BA68C8" stroke="#E1BEE7" stroke-width="1"/>
+      <circle cx="0" cy="-7" r="5" fill="#BA68C8" stroke="#E1BEE7" stroke-width="1"/>
+      <circle cx="0" cy="7" r="5" fill="#BA68C8" stroke="#E1BEE7" stroke-width="1"/>
+      <circle cx="0" cy="20" r="5" fill="#BA68C8" stroke="#E1BEE7" stroke-width="1"/>
+    </g>
+    
+    <!-- Hidden layer (middle) -->
+    <g transform="translate(0, 0)">
+      <circle cx="0" cy="-25" r="5" fill="#BA68C8" stroke="#E1BEE7" stroke-width="1"/>
+      <circle cx="0" cy="-12.5" r="5" fill="#BA68C8" stroke="#E1BEE7" stroke-width="1"/>
+      <circle cx="0" cy="0" r="5" fill="#BA68C8" stroke="#E1BEE7" stroke-width="1"/>
+      <circle cx="0" cy="12.5" r="5" fill="#BA68C8" stroke="#E1BEE7" stroke-width="1"/>
+      <circle cx="0" cy="25" r="5" fill="#BA68C8" stroke="#E1BEE7" stroke-width="1"/>
+    </g>
+    
+    <!-- Output layer (right) -->
+    <g transform="translate(25, 0)">
+      <circle cx="0" cy="-15" r="5" fill="#BA68C8" stroke="#E1BEE7" stroke-width="1"/>
+      <circle cx="0" cy="0" r="5" fill="#BA68C8" stroke="#E1BEE7" stroke-width="1"/>
+      <circle cx="0" cy="15" r="5" fill="#BA68C8" stroke="#E1BEE7" stroke-width="1"/>
+    </g>
+    
+    <!-- Connections from input to hidden layer -->
+    <g stroke="#E1BEE7" stroke-width="0.5" opacity="0.7">
+      <!-- From node 1 -->
+      <line x1="-20" y1="-20" x2="-5" y2="-25"/>
+      <line x1="-20" y1="-20" x2="-5" y2="-12.5"/>
+      <line x1="-20" y1="-20" x2="-5" y2="0"/>
+      <line x1="-20" y1="-20" x2="-5" y2="12.5"/>
+      <line x1="-20" y1="-20" x2="-5" y2="25"/>
+      
+      <!-- From node 2 -->
+      <line x1="-20" y1="-7" x2="-5" y2="-25"/>
+      <line x1="-20" y1="-7" x2="-5" y2="-12.5"/>
+      <line x1="-20" y1="-7" x2="-5" y2="0"/>
+      <line x1="-20" y1="-7" x2="-5" y2="12.5"/>
+      <line x1="-20" y1="-7" x2="-5" y2="25"/>
+      
+      <!-- From node 3 -->
+      <line x1="-20" y1="7" x2="-5" y2="-25"/>
+      <line x1="-20" y1="7" x2="-5" y2="-12.5"/>
+      <line x1="-20" y1="7" x2="-5" y2="0"/>
+      <line x1="-20" y1="7" x2="-5" y2="12.5"/>
+      <line x1="-20" y1="7" x2="-5" y2="25"/>
+      
+      <!-- From node 4 -->
+      <line x1="-20" y1="20" x2="-5" y2="-25"/>
+      <line x1="-20" y1="20" x2="-5" y2="-12.5"/>
+      <line x1="-20" y1="20" x2="-5" y2="0"/>
+      <line x1="-20" y1="20" x2="-5" y2="12.5"/>
+      <line x1="-20" y1="20" x2="-5" y2="25"/>
+    </g>
+    
+    <!-- Connections from hidden to output layer -->
+    <g stroke="#E1BEE7" stroke-width="0.5" opacity="0.7">
+      <!-- To node 1 -->
+      <line x1="5" y1="-25" x2="20" y2="-15"/>
+      <line x1="5" y1="-12.5" x2="20" y2="-15"/>
+      <line x1="5" y1="0" x2="20" y2="-15"/>
+      <line x1="5" y1="12.5" x2="20" y2="-15"/>
+      <line x1="5" y1="25" x2="20" y2="-15"/>
+      
+      <!-- To node 2 -->
+      <line x1="5" y1="-25" x2="20" y2="0"/>
+      <line x1="5" y1="-12.5" x2="20" y2="0"/>
+      <line x1="5" y1="0" x2="20" y2="0"/>
+      <line x1="5" y1="12.5" x2="20" y2="0"/>
+      <line x1="5" y1="25" x2="20" y2="0"/>
+      
+      <!-- To node 3 -->
+      <line x1="5" y1="-25" x2="20" y2="15"/>
+      <line x1="5" y1="-12.5" x2="20" y2="15"/>
+      <line x1="5" y1="0" x2="20" y2="15"/>
+      <line x1="5" y1="12.5" x2="20" y2="15"/>
+      <line x1="5" y1="25" x2="20" y2="15"/>
+    </g>
+  </g>
+  
+  <!-- Technical features -->
+  <g transform="translate(64, 25)">
+    <rect x="-40" y="-10" width="80" height="20" rx="5" fill="#4A148C" stroke="#E1BEE7" stroke-width="1"/>
+    <g font-family="monospace" font-size="4" fill="#E1BEE7" text-anchor="middle">
+      <text x="-25" y="-2">CUDA</text>
+      <text x="-25" y="6">GPU</text>
+      <text x="0" y="-2">AUTOGRAD</text>
+      <text x="0" y="6">TENSORS</text>
+      <text x="25" y="-2">NEURAL</text>
+      <text x="25" y="6">NETWORKS</text>
+    </g>
+  </g>
+  
+  <!-- Python integration -->
+  <g transform="translate(30, 95)">
+    <rect x="-15" y="-10" width="30" height="20" rx="3" fill="#4A148C" stroke="#E1BEE7" stroke-width="0.75"/>
+    
+    <!-- Python logo hint -->
+    <g transform="translate(0, 0) scale(0.6)">
+      <path d="M -5,-8 C -10,-8 -10,-2 -5,-2 C 0,-2 0,2 -5,2 C -10,2 -10,8 -5,8 L 5,8 C 10,8 10,2 5,2 C 0,2 0,-2 5,-2 C 10,-2 10,-8 5,-8 Z" 
+            fill="#9C27B0" stroke="#E1BEE7" stroke-width="0.75"/>
+      <circle cx="-5" cy="-5" r="1.5" fill="#E1BEE7"/>
+      <circle cx="5" cy="5" r="1.5" fill="#E1BEE7"/>
+    </g>
+    
+    <text x="0" y="-15" font-family="monospace" font-size="3.5" fill="#E1BEE7" text-anchor="middle">PYTHON</text>
+  </g>
+  
+  <!-- Deep learning -->
+  <g transform="translate(98, 95)">
+    <rect x="-15" y="-10" width="30" height="20" rx="3" fill="#4A148C" stroke="#E1BEE7" stroke-width="0.75"/>
+    <text x="0" y="-15" font-family="monospace" font-size="3.5" fill="#E1BEE7" text-anchor="middle">DEEP LEARNING</text>
+    
+    <!-- Brain representation -->
+    <g transform="translate(0, 0) scale(0.5)">
+      <path d="M -10,-10 C -15,-5 -15,0 -10,5 C -5,10 0,10 5,5 C 10,0 10,-5 5,-10 C 0,-15 -5,-15 -10,-10 Z" 
+            fill="#9C27B0" stroke="#E1BEE7" stroke-width="1"/>
+      <path d="M -5,-5 C -3,-2 -3,2 -5,5 C -2,3 2,3 5,5 C 3,2 3,-2 5,-5 C 2,-3 -2,-3 -5,-5 Z" 
+            fill="none" stroke="#E1BEE7" stroke-width="0.75"/>
+      <path d="M -8,0 L 8,0 M 0,-8 L 0,8" stroke="#E1BEE7" stroke-width="0.5" stroke-dasharray="1,1"/>
+    </g>
+  </g>
+
+  <!-- Label -->
+  <g transform="translate(64, 120)">
+    <rect x="-30" y="-9" width="60" height="18" rx="5" fill="#4A148C" stroke="#E1BEE7" stroke-width="1"/>
+    <text x="0" y="0" font-family="Arial" font-size="10" fill="#FFFFFF" text-anchor="middle" font-weight="bold">PYTORCH</text>
+    <text x="0" y="9" font-family="monospace" font-size="6" fill="#E1BEE7" text-anchor="middle">88%</text>
+  </g>
+</svg> 

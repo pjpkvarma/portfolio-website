@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+   <meta charset="utf-8" />
+   <meta http-equiv="x-ua-compatible" content="ie=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="Object Detection with Depth Estimation - A cost-effective framework for object detection and distance estimation using a single camera" />
+
+   <!-- Site Title -->
+   <title>Object Detection with Depth Estimation - J P K Varma Pothuri</title>
+
+   <!-- Place favicon.ico in the root directory -->
+   <link rel="apple-touch-icon" href="../assets/img/favicon.png" />
+   <link rel="shortcut icon" type="image/png" href="../assets/img/favicon.png" />
+
+   <!-- CSS here -->
+   <link rel="stylesheet" href="../assets/css/animate.min.css" />
+   <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+   <link rel="stylesheet" href="../assets/css/font-awesome-pro.min.css" />
+   <link rel="stylesheet" href="../assets/css/flaticon_gerold.css" />
+   <link rel="stylesheet" href="../assets/css/nice-select.css" />
+   <link rel="stylesheet" href="../assets/css/backToTop.css" />
+   <link rel="stylesheet" href="../assets/css/owl.carousel.min.css" />
+   <link rel="stylesheet" href="../assets/css/swiper.min.css" />
+   <link rel="stylesheet" href="../assets/css/odometer-theme-default.css" />
+   <link rel="stylesheet" href="../assets/css/magnific-popup.css" />
+   <link rel="stylesheet" href="../assets/css/main.css" />
+   <link rel="stylesheet" href="../assets/css/main-2.css" />
+   <link rel="stylesheet" href="../assets/css/main-3.css" />
+   <link rel="stylesheet" href="../assets/css/light-mode.css" />
+   <link rel="stylesheet" href="../assets/css/meanmenu.css" />
+   <link rel="stylesheet" href="../assets/css/responsive.css" />
+   <link rel="stylesheet" href="../assets/css/responsive-2.css" />
+   <link rel="stylesheet" href="../assets/css/responsive-3.css" />
+</head>
+
+<body class="absolute_header">
+   <!-- Preloader Area Start -->
+   <div class="preloader">
+      <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+         <path id="preloaderSvg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
+      </svg>
+
+      <div class="preloader-heading">
+         <div class="load-text">
+            <span>L</span>
+            <span>o</span>
+            <span>a</span>
+            <span>d</span>
+            <span>i</span>
+            <span>n</span>
+            <span>g</span>
+         </div>
+      </div>
+   </div>
+   <!-- Preloader Area End -->
+
+   <!-- start: Back To Top -->
+   <div class="progress-wrap" id="scrollUp">
+      <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+         <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+      </svg>
+   </div>
+   <!-- end: Back To Top -->
+
+<!-- HEADER START -->
+<header class="tj-header-area style-2 header-absolute">
+   <div class="container">
+      <div class="row">
+         <div class="col-12 d-flex flex-wrap align-items-center">
+            <div class="logo-box">
+               <a href="../index.html">
+                  <img src="../assets/img/logo/logo.png" alt="" />
+               </a>
+            </div>
+            <div class="header-info-list d-none d-md-inline-block">
+               <ul class="ul-reset">
+                  <li><a href="mailto:jpkvarmapothuri@gmail.com">jpkvarmapothuri@gmail.com</a></li>
+               </ul>
+            </div>
+            <div class="header-menu" id="headerMenu">
+               <nav>
+                  <ul>
+                     <li><a href="../index.html">Home</a></li>
+                     <li><a href="../about.html">About Me</a></li>
+                     <li><a href="../portfolio.html" class="current-menu-item">Projects</a></li>
+                     <li><a href="../publications.html">Publications</a></li>
+                     <li><a href="../contact.html">Contact</a></li>
+                  </ul>
+               </nav>
+            </div>
+            <div class="mobile-menu d-lg-none"></div>
+            <div class="header-button">
+               <a href="../assets/resume/jpkvarma_resume_ai.pdf" class="tj-btn-primary-2">Resume
+                  <span class="icon_box">
+                     <i class="flaticon-download icon_first"></i>
+                     <i class="flaticon-download icon_second"></i>
+                  </span>
+               </a>
+            </div>
+            <div class="menu-bar d-lg-none">
+               <button>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+               </button>
+            </div>
+         </div>
+      </div>
+   </div>
+</header>
+<!-- HEADER END -->
+
+
+   <main class="site-content" id="content">
+      <!-- START: Breadcrumb Area -->
+      <section class="breadcrumb_area" data-bg-image="../assets/img/breadcrumb/breadcrumb-bg.jpg"
+         data-bg-color="#140C1C">
+         <div class="container">
+            <div class="row">
+               <div class="col">
+                  <div class="breadcrumb_content d-flex flex-column align-items-center">
+                     <h2 class="title wow fadeInUp" data-wow-delay=".3s">Object Detection with Depth Estimation</h2>
+                     <div class="breadcrumb_navigation wow fadeInUp" data-wow-delay=".5s">
+                        <span><a href="../index.html">Home</a></span>
+                        <i class="far fa-long-arrow-right"></i>
+                        <span><a href="../portfolio.html">Projects</a></span>
+                        <i class="far fa-long-arrow-right"></i>
+                        <span class="current-item">Object Detection with Depth Estimation</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- END: Breadcrumb Area -->
+
+      <!-- PROJECT DETAILS SECTION START -->
+      <section class="project-details-section" id="project-details">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-8">
+                  <div class="project-details-content">
+                     <div class="project-overview mb-5">
+                        <h3 class="mb-4">Project Overview</h3>
+                        <p>This project develops a cost-effective and lightweight framework for object detection and depth estimation using a single camera. By integrating YOLOv5 for object detection and a neural network for distance estimation, the system achieves robust real-time performance. This approach eliminates the need for expensive multi-sensor setups like LiDAR, making it ideal for low-cost autonomous systems.</p>
+                        
+                        <p>The framework leverages the KITTI dataset, a benchmark in autonomous driving research. YOLOv5 detects and classifies objects in real-time, while a multi-layer perceptron (MLP) predicts object distances using bounding box coordinates. To improve robustness, the system was trained with transformed images simulating adverse weather conditions, such as rain and fog.</p>
+                     </div>
+                     
+                     <div class="key-features mb-5">
+                        <h3 class="mb-4">Key Features and Contributions</h3>
+                        <ul class="list-unstyled">
+                           <li class="mb-3"><i class="fas fa-check-circle me-2"></i> Seamless integration of object detection and depth estimation into a single-camera setup.</li>
+                           <li class="mb-3"><i class="fas fa-check-circle me-2"></i> Enhanced performance in challenging conditions through training with augmented datasets.</li>
+                           <li class="mb-3"><i class="fas fa-check-circle me-2"></i> Adaptation of YOLOv5 to display both object classes and distances on bounding boxes.</li>
+                           <li class="mb-3"><i class="fas fa-check-circle me-2"></i> Real-time processing capabilities suitable for dynamic environments.</li>
+                        </ul>
+                     </div>
+                     
+                     <div class="technical-details mb-5">
+                        <h3 class="mb-4">Technical Approach</h3>
+                        <p>The system combines state-of-the-art object detection with a custom depth estimation network, providing a comprehensive perception solution with minimal hardware requirements.</p>
+                        
+                        <h4 class="mt-4">Object Detection</h4>
+                        <p>The YOLOv5 model identifies objects and provides bounding box coordinates and class predictions. This state-of-the-art algorithm ensures fast and accurate detection even in complex scenes with multiple objects.</p>
+                        
+                        <div class="row mt-4">
+                           <div class="col-md-6 mb-4">
+                              <div class="optimization-card p-3 border rounded h-100">
+                                 <h5><i class="fas fa-search me-2"></i> Detection Pipeline</h5>
+                                 <ul>
+                                    <li>Real-time frame processing from camera feed</li>
+                                    <li>Multi-class object detection capability</li>
+                                    <li>Tracking consistency across video frames</li>
+                                    <li>Confidence filtering to reduce false positives</li>
+                                 </ul>
+                              </div>
+                           </div>
+                           
+                           <div class="col-md-6 mb-4">
+                              <div class="optimization-card p-3 border rounded h-100">
+                                 <h5><i class="fas fa-ruler-combined me-2"></i> Distance Estimation</h5>
+                                 <ul>
+                                    <li>Custom MLP neural network architecture</li>
+                                    <li>Five fully connected layers with batch normalization</li>
+                                    <li>Dropout regularization to prevent overfitting</li>
+                                    <li>Bounding box geometric features as input</li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                        
+                        <h4 class="mt-4">Environmental Robustness</h4>
+                        <p>Training on augmented datasets with added noise and blur enhances the system's ability to handle adverse conditions, such as fog or low-light scenarios. This was achieved through:</p>
+                        <ul>
+                           <li><strong>Data Augmentation:</strong> Random transformations including brightness variation, noise injection, blur, and simulated weather effects</li>
+                           <li><strong>Domain Adaptation:</strong> Training with synthetic and real-world data to improve generalization</li>
+                           <li><strong>Validation in Diverse Conditions:</strong> Testing across various lighting and weather scenarios to ensure consistent performance</li>
+                        </ul>
+                     </div>
+                     
+                     <div class="results mb-5">
+                        <h3 class="mb-4">Performance Evaluation</h3>
+                        <p>The system was evaluated on the KITTI validation dataset, showing promising results:</p>
+                        
+                        <div class="table-responsive mt-4">
+                           <table class="table table-bordered">
+                              <thead>
+                                 <tr>
+                                    <th>Metric</th>
+                                    <th>YOLOv5 + MLP</th>
+                                    <th>Stereo Camera System</th>
+                                    <th>LiDAR Reference</th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 <tr>
+                                    <td>Mean Distance Error</td>
+                                    <td>0.61m</td>
+                                    <td>0.42m</td>
+                                    <td>0.05m</td>
+                                 </tr>
+                                 <tr>
+                                    <td>Processing Speed</td>
+                                    <td>24 FPS</td>
+                                    <td>18 FPS</td>
+                                    <td>10 FPS</td>
+                                 </tr>
+                                 <tr>
+                                    <td>Hardware Cost</td>
+                                    <td>Low</td>
+                                    <td>Medium</td>
+                                    <td>High</td>
+                                 </tr>
+                                 <tr>
+                                    <td>Accuracy in Adverse Weather</td>
+                                    <td>83%</td>
+                                    <td>76%</td>
+                                    <td>72%</td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                        
+                        <p class="mt-3">While the system doesn't match the precision of LiDAR, it offers a compelling balance between accuracy, speed, and cost, making it suitable for many practical applications where extreme precision isn't critical.</p>
+                     </div>
+                     
+                     <div class="applications mb-5">
+                        <h3 class="mb-4">Potential Applications</h3>
+                        <p>The framework's combination of lightweight design and robust performance makes it suitable for various applications:</p>
+                        
+                        <div class="row mt-4">
+                           <div class="col-md-6 mb-4">
+                              <div class="application-card p-3 border rounded">
+                                 <h5><i class="fas fa-car me-2"></i> Autonomous Vehicles</h5>
+                                 <p>Cost-effective perception system for safe navigation and obstacle avoidance in budget-friendly autonomous or semi-autonomous vehicles.</p>
+                              </div>
+                           </div>
+                           
+                           <div class="col-md-6 mb-4">
+                              <div class="application-card p-3 border rounded">
+                                 <h5><i class="fas fa-robot me-2"></i> Robotics</h5>
+                                 <p>Efficient perception system for resource-constrained robots operating in dynamic environments where power and computational resources are limited.</p>
+                              </div>
+                           </div>
+                           
+                           <div class="col-md-6 mb-4">
+                              <div class="application-card p-3 border rounded">
+                                 <h5><i class="fas fa-video me-2"></i> Surveillance Systems</h5>
+                                 <p>Enhanced monitoring capabilities with distance estimation to detect intrusions and track objects across various weather and lighting conditions.</p>
+                              </div>
+                           </div>
+                           
+                           <div class="col-md-6 mb-4">
+                              <div class="application-card p-3 border rounded">
+                                 <h5><i class="fas fa-industry me-2"></i> Industrial Automation</h5>
+                                 <p>Quality control and safety systems requiring spatial awareness without the expense of multiple sensors or complex calibration procedures.</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="technologies mb-5">
+                        <h3 class="mb-4">Technologies Used</h3>
+                        <div class="row">
+                           <div class="col-md-4 mb-3">
+                              <div class="tech-item text-center p-3">
+                                 <i class="fab fa-python fa-2x mb-2"></i>
+                                 <h5>Python</h5>
+                              </div>
+                           </div>
+                           <div class="col-md-4 mb-3">
+                              <div class="tech-item text-center p-3">
+                                 <i class="fas fa-brain fa-2x mb-2"></i>
+                                 <h5>PyTorch</h5>
+                              </div>
+                           </div>
+                           <div class="col-md-4 mb-3">
+                              <div class="tech-item text-center p-3">
+                                 <i class="fas fa-object-group fa-2x mb-2"></i>
+                                 <h5>YOLOv5</h5>
+                              </div>
+                           </div>
+                           <div class="col-md-4 mb-3">
+                              <div class="tech-item text-center p-3">
+                                 <i class="fas fa-eye fa-2x mb-2"></i>
+                                 <h5>OpenCV</h5>
+                              </div>
+                           </div>
+                           <div class="col-md-4 mb-3">
+                              <div class="tech-item text-center p-3">
+                                 <i class="fas fa-database fa-2x mb-2"></i>
+                                 <h5>KITTI Dataset</h5>
+                              </div>
+                           </div>
+                           <div class="col-md-4 mb-3">
+                              <div class="tech-item text-center p-3">
+                                 <i class="fas fa-table fa-2x mb-2"></i>
+                                 <h5>NumPy</h5>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="project-gallery mb-5">
+                        <h3 class="mb-4">Project Gallery</h3>
+                        <div class="row">
+                           <div class="col-md-6 mb-4">
+                              <p class="mt-2 text-center">YOLOv5 detection with integrated distance estimation</p>
+                           </div>
+                           <div class="col-md-6 mb-4">
+                              <p class="mt-2 text-center">System architecture showing integration of detection and depth estimation</p>
+                           </div>
+                           <div class="col-md-6 mb-4">
+                              <p class="mt-2 text-center">Detection and depth estimation performance in adverse weather conditions</p>
+                           </div>
+                           <div class="col-md-6 mb-4">
+                              <p class="mt-2 text-center">Real-world application in a resource-constrained robotics platform</p>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="project-conclusion">
+                        <h3 class="mb-4">Conclusion</h3>
+                        <p>This framework demonstrates how a simple yet effective design can address complex perception challenges, paving the way for scalable and cost-efficient solutions in robotics and autonomous systems. By combining state-of-the-art object detection with custom depth estimation, the system provides a comprehensive environmental understanding using only a single camera, making advanced perception accessible to a wider range of applications where budget or resource constraints previously limited capabilities.</p>
+                     </div>
+                  </div>
+               </div>
+               
+               <div class="col-lg-4">
+                  <div class="project-sidebar">
+                     <div class="project-info-card mb-4">
+                        <h4 class="card-title border-bottom pb-3 mb-3">Project Information</h4>
+                        <ul class="list-unstyled">
+                           <li class="d-flex justify-content-between mb-3">
+                              <span class="fw-bold">Category:</span>
+                              <span>Computer Vision, Deep Learning</span>
+                           </li>
+                           <li class="d-flex justify-content-between mb-3">
+                              <span class="fw-bold">Duration:</span>
+                              <span>8 months</span>
+                           </li>
+                           <li class="d-flex justify-content-between mb-3">
+                              <span class="fw-bold">Completed:</span>
+                              <span>2023</span>
+                           </li>
+                           <li class="d-flex justify-content-between mb-3">
+                              <span class="fw-bold">Institution:</span>
+                              <span>University at Buffalo</span>
+                           </li>
+                           <li class="d-flex justify-content-between">
+                              <span class="fw-bold">Publication:</span>
+                              <span>Under Review - IEEE RAL</span>
+                           </li>
+                        </ul>
+                     </div>
+                     
+                     <div class="related-projects-card mb-4">
+                        <h4 class="card-title border-bottom pb-3 mb-3">Related Projects</h4>
+                        <div class="related-project-item d-flex align-items-center mb-3">
+                           <div>
+                              <h6 class="mb-0"><a href="1.html">Autonomous UAV Tracking</a></h6>
+                              <small>Computer Vision</small>
+                           </div>
+                        </div>
+                        <div class="related-project-item d-flex align-items-center mb-3">
+                           <div>
+                              <h6 class="mb-0"><a href="3.html">Concurrent UAV Design</a></h6>
+                              <small>UAV Systems</small>
+                           </div>
+                        </div>
+                        <div class="related-project-item d-flex align-items-center">
+                           <div>
+                              <h6 class="mb-0"><a href="2.html">Coverage Path Planning</a></h6>
+                              <small>Multi-Robot Systems</small>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="project-contact-card">
+                        <h4 class="card-title border-bottom pb-3 mb-3">Interested in this project?</h4>
+                        <p>If you're interested in learning more about our object detection and depth estimation framework or exploring potential applications in computer vision, please get in touch.</p>
+                        <a href="../contact.html" class="btn tj-btn-primary-2 w-100">
+                           Contact Me
+                           <span class="icon_box">
+                              <i class="fa-regular fa-arrow-right icon_first"></i>
+                              <i class="fa-regular fa-arrow-right icon_second"></i>
+                           </span>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- PROJECT DETAILS SECTION END -->
+   </main>
+
+   <!-- FOOTER AREA START -->
+   <footer class="tj-footer-area style-2">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12 text-center">
+               <!-- <div class="footer-logo-box">
+                  <a href="#"><img src="../assets/img/logo/logo.png" alt="" /></a>
+               </div> -->
+               <div class="footer-menu">
+                  <nav>
+                     <ul>
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="../services.html">Services</a></li>
+                        <li><a href="../portfolio.html">Portfolios</a></li>
+                        <li><a href="../certificates.html">Certificates</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                     </ul>
+                  </nav>
+               </div>
+               <div class="copy-text style-2">
+                  <p>&copy; 2024 All rights reserved by <a href="#" target="_blank">J P K Varma Pothuri</a></p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+   <!-- FOOTER AREA END -->
+
+   <!-- JS here -->
+   <script src="../assets/js/jquery.min.js"></script>
+   <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+   <script src="../assets/js/gsap.min.js"></script>
+   <script src="../assets/js/gsap-scroll-to-plugin.min.js"></script>
+   <script src="../assets/js/gsap-scroll-trigger.min.js"></script>
+   <script src="../assets/js/gsap-split-text.min.js"></script>
+   <script src="../assets/js/lenis.min.js"></script>
+
+   <script src="../assets/js/nice-select.min.js"></script>
+   <script src="../assets/js/backToTop.js"></script>
+   <script src="../assets/js/appear.min.js"></script>
+   <script src="../assets/js/wow.min.js"></script>
+   <script src="../assets/js/lightcase.js"></script>
+   <script src="../assets/js/owl.carousel.min.js"></script>
+   <script src="../assets/js/swiper.min.js"></script>
+   <script src="../assets/js/imagesloaded-pkgd.js"></script>
+   <script src="../assets/js/isotope.pkgd.min.js"></script>
+   <script src="../assets/js/odometer.min.js"></script>
+   <script src="../assets/js/magnific-popup.js"></script>
+   <script src="../assets/js/validate.min.js"></script>
+   <script src="../assets/js/meanmenu.js"></script>
+   <script src="../assets/js/main.js"></script>
+</body>
+
+</html> 

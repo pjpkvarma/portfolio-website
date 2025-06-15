@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="ml-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4DB6AC"/>
+      <stop offset="100%" stop-color="#00796B"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Brain outline -->
+  <path d="M64,30 C42,30 25,47 25,64 C25,81 42,98 64,98 C86,98 103,81 103,64 C103,47 86,30 64,30 Z" 
+        fill="url(#ml-gradient)" stroke="#004D40" stroke-width="2"/>
+  
+  <!-- Neural network connections -->
+  <g fill="none" stroke="#FFFFFF" stroke-width="1.5" opacity="0.7">
+    <!-- Input layer to hidden layer -->
+    <line x1="40" y1="50" x2="55" y2="64"/>
+    <line x1="40" y1="60" x2="55" y2="64"/>
+    <line x1="40" y1="70" x2="55" y2="64"/>
+    <line x1="40" y1="80" x2="55" y2="64"/>
+    
+    <line x1="40" y1="50" x2="55" y2="50"/>
+    <line x1="40" y1="60" x2="55" y2="50"/>
+    <line x1="40" y1="70" x2="55" y2="50"/>
+    <line x1="40" y1="80" x2="55" y2="50"/>
+    
+    <line x1="40" y1="50" x2="55" y2="78"/>
+    <line x1="40" y1="60" x2="55" y2="78"/>
+    <line x1="40" y1="70" x2="55" y2="78"/>
+    <line x1="40" y1="80" x2="55" y2="78"/>
+    
+    <!-- Hidden layer to output layer -->
+    <line x1="55" y1="50" x2="85" y2="58"/>
+    <line x1="55" y1="64" x2="85" y2="58"/>
+    <line x1="55" y1="78" x2="85" y2="58"/>
+    
+    <line x1="55" y1="50" x2="85" y2="72"/>
+    <line x1="55" y1="64" x2="85" y2="72"/>
+    <line x1="55" y1="78" x2="85" y2="72"/>
+  </g>
+  
+  <!-- Neurons -->
+  <g>
+    <!-- Input layer -->
+    <circle cx="40" cy="50" r="3" fill="#FFEB3B"/>
+    <circle cx="40" cy="60" r="3" fill="#FFEB3B"/>
+    <circle cx="40" cy="70" r="3" fill="#FFEB3B"/>
+    <circle cx="40" cy="80" r="3" fill="#FFEB3B"/>
+    
+    <!-- Hidden layer -->
+    <circle cx="55" cy="50" r="3" fill="#FFA726"/>
+    <circle cx="55" cy="64" r="3" fill="#FFA726"/>
+    <circle cx="55" cy="78" r="3" fill="#FFA726"/>
+    
+    <!-- Output layer -->
+    <circle cx="85" cy="58" r="3" fill="#EF5350"/>
+    <circle cx="85" cy="72" r="3" fill="#EF5350"/>
+  </g>
+  
+  <!-- Binary data visualization -->
+  <g fill="#FFFFFF" font-family="monospace" font-size="5" opacity="0.7">
+    <text x="32" y="48">01</text>
+    <text x="32" y="58">10</text>
+    <text x="32" y="68">11</text>
+    <text x="32" y="78">00</text>
+    
+    <text x="82" y="58">1</text>
+    <text x="82" y="72">0</text>
+  </g>
+</svg> 

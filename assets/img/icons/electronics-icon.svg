@@ -1,0 +1,216 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="electronics-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A237E"/>
+      <stop offset="100%" stop-color="#311B92"/>
+    </linearGradient>
+    
+    <pattern id="grid-pattern" width="8" height="8" patternUnits="userSpaceOnUse">
+      <rect width="8" height="8" fill="none"/>
+      <path d="M 0,4 L 8,4 M 4,0 L 4,8" stroke="#3949AB" stroke-width="0.2" opacity="0.2"/>
+    </pattern>
+    
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <circle cx="64" cy="64" r="58" fill="url(#electronics-gradient)" stroke="#303F9F" stroke-width="2"/>
+  <circle cx="64" cy="64" r="52" fill="url(#grid-pattern)" stroke="none"/>
+  
+  <!-- Circuit Board Base -->
+  <rect x="24" y="28" width="80" height="72" rx="3" fill="#2E7D32" stroke="#1B5E20" stroke-width="1"/>
+  
+  <!-- Circuit Traces -->
+  <g id="circuit-traces" stroke="#FDD835" stroke-width="1.2" fill="none">
+    <!-- Horizontal Traces -->
+    <path d="M 28,40 L 100,40"/>
+    <path d="M 28,55 L 100,55"/>
+    <path d="M 28,70 L 100,70"/>
+    <path d="M 28,85 L 100,85"/>
+    
+    <!-- Vertical Traces -->
+    <path d="M 40,32 L 40,96"/>
+    <path d="M 60,32 L 60,96"/>
+    <path d="M 80,32 L 80,96"/>
+    
+    <!-- Connecting Lines -->
+    <path d="M 40,40 L 60,55 L 80,40"/>
+    <path d="M 40,70 L 60,85 L 80,70"/>
+  </g>
+  
+  <!-- Connection Pads -->
+  <g id="connection-pads" fill="#F57F17" stroke="#FF6F00" stroke-width="0.5">
+    <circle cx="40" cy="40" r="2.5"/>
+    <circle cx="60" cy="55" r="2.5"/>
+    <circle cx="80" cy="40" r="2.5"/>
+    <circle cx="40" cy="70" r="2.5"/>
+    <circle cx="60" cy="85" r="2.5"/>
+    <circle cx="80" cy="70" r="2.5"/>
+  </g>
+  
+  <!-- Resistors -->
+  <g id="resistors">
+    <!-- Resistor 1 -->
+    <rect x="35" y="52" width="10" height="6" rx="1" fill="#90A4AE" stroke="#607D8B" stroke-width="0.5"/>
+    <g stroke="#263238" stroke-width="0.8" fill="none">
+      <path d="M 36,55 L 37,55"/>
+      <path d="M 38,55 L 39,55"/>
+      <path d="M 40,55 L 41,55"/>
+      <path d="M 42,55 L 43,55"/>
+    </g>
+    
+    <!-- Resistor 2 -->
+    <rect x="75" y="52" width="10" height="6" rx="1" fill="#90A4AE" stroke="#607D8B" stroke-width="0.5"/>
+    <g stroke="#263238" stroke-width="0.8" fill="none">
+      <path d="M 76,55 L 77,55"/>
+      <path d="M 78,55 L 79,55"/>
+      <path d="M 80,55 L 81,55"/>
+      <path d="M 82,55 L 83,55"/>
+    </g>
+  </g>
+  
+  <!-- Capacitors -->
+  <g id="capacitors">
+    <!-- Capacitor 1 -->
+    <g transform="translate(60, 40)">
+      <path d="M -4,0 L -2,0" stroke="#CFD8DC" stroke-width="2"/>
+      <path d="M 2,0 L 4,0" stroke="#CFD8DC" stroke-width="2"/>
+      <path d="M -2,-4 L -2,4" stroke="#CFD8DC" stroke-width="1"/>
+      <path d="M 2,-4 L 2,4" stroke="#CFD8DC" stroke-width="1"/>
+    </g>
+    
+    <!-- Capacitor 2 (Polarized) -->
+    <g transform="translate(60, 70)">
+      <path d="M -4,0 L -2,0" stroke="#CFD8DC" stroke-width="2"/>
+      <path d="M 2,0 L 4,0" stroke="#CFD8DC" stroke-width="2"/>
+      <path d="M -2,-4 L -2,4" stroke="#CFD8DC" stroke-width="1"/>
+      <path d="M 2,-4 L 2,4" stroke="#CFD8DC" stroke-width="1" fill="none"/>
+      <path d="M 3.5,-2 L 3.5,2" stroke="#CFD8DC" stroke-width="0.8"/>
+      <text x="3.5" y="-3" font-size="4" fill="#CFD8DC">+</text>
+    </g>
+  </g>
+  
+  <!-- IC Chips -->
+  <g id="ic-chips">
+    <!-- Main IC -->
+    <rect x="52" y="93" width="24" height="14" rx="1" fill="#37474F" stroke="#263238" stroke-width="0.7"/>
+    
+    <!-- IC Pins -->
+    <g stroke="#B0BEC5" stroke-width="0.8" fill="none">
+      <path d="M 55,93 L 55,90"/>
+      <path d="M 59,93 L 59,90"/>
+      <path d="M 63,93 L 63,90"/>
+      <path d="M 67,93 L 67,90"/>
+      <path d="M 71,93 L 71,90"/>
+      
+      <path d="M 55,107 L 55,110"/>
+      <path d="M 59,107 L 59,110"/>
+      <path d="M 63,107 L 63,110"/>
+      <path d="M 67,107 L 67,110"/>
+      <path d="M 71,107 L 71,110"/>
+    </g>
+    
+    <!-- IC Notch & Label -->
+    <path d="M 52,97 L 54,97 L 53,95 Z" fill="#B0BEC5"/>
+    <text x="64" y="102" font-family="monospace" font-size="4" fill="#B0BEC5" text-anchor="middle">555</text>
+  </g>
+  
+  <!-- Transistors -->
+  <g id="transistors">
+    <!-- Transistor Symbol 1 -->
+    <g transform="translate(40, 85)">
+      <circle cx="0" cy="0" r="5" fill="#455A64" stroke="#263238" stroke-width="0.5"/>
+      <path d="M 0,-5 L 0,5" stroke="#B0BEC5" stroke-width="0.7"/>
+      <path d="M -3,3 L 3,-3" stroke="#B0BEC5" stroke-width="0.7"/>
+      <path d="M -3,0 L -5,0" stroke="#B0BEC5" stroke-width="0.7"/>
+      <path d="M 1,-3 L 3,-5" stroke="#B0BEC5" stroke-width="0.7"/>
+      <path d="M 1,3 L 3,5" stroke="#B0BEC5" stroke-width="0.7"/>
+    </g>
+    
+    <!-- Transistor Symbol 2 -->
+    <g transform="translate(80, 85)">
+      <circle cx="0" cy="0" r="5" fill="#455A64" stroke="#263238" stroke-width="0.5"/>
+      <path d="M 0,-5 L 0,5" stroke="#B0BEC5" stroke-width="0.7"/>
+      <path d="M -3,3 L 3,-3" stroke="#B0BEC5" stroke-width="0.7"/>
+      <path d="M -3,0 L -5,0" stroke="#B0BEC5" stroke-width="0.7"/>
+      <path d="M 1,-3 L 3,-5" stroke="#B0BEC5" stroke-width="0.7"/>
+      <path d="M 1,3 L 3,5" stroke="#B0BEC5" stroke-width="0.7"/>
+    </g>
+  </g>
+  
+  <!-- LEDs -->
+  <g id="leds">
+    <!-- LED 1 -->
+    <g transform="translate(90, 40)">
+      <circle cx="0" cy="0" r="4" fill="#F44336" stroke="#B71C1C" stroke-width="0.5" filter="url(#glow)">
+        <animate attributeName="fill" values="#F44336;#FF8A80;#F44336" dur="3s" repeatCount="indefinite"/>
+      </circle>
+      <path d="M -2,-2 L 2,2 M -2,2 L 2,-2" stroke="#FFCDD2" stroke-width="0.5" opacity="0.7"/>
+    </g>
+    
+    <!-- LED 2 -->
+    <g transform="translate(90, 70)">
+      <circle cx="0" cy="0" r="4" fill="#4CAF50" stroke="#1B5E20" stroke-width="0.5" filter="url(#glow)">
+        <animate attributeName="fill" values="#4CAF50;#A5D6A7;#4CAF50" dur="4s" repeatCount="indefinite"/>
+      </circle>
+      <path d="M -2,-2 L 2,2 M -2,2 L 2,-2" stroke="#C8E6C9" stroke-width="0.5" opacity="0.7"/>
+    </g>
+  </g>
+  
+  <!-- Switches -->
+  <g id="switches">
+    <!-- Toggle Switch -->
+    <g transform="translate(30, 40)">
+      <rect x="-5" y="-3" width="10" height="6" rx="2" fill="#78909C" stroke="#455A64" stroke-width="0.5"/>
+      <path d="M -3,0 L 3,0" stroke="#CFD8DC" stroke-width="1"/>
+      <circle cx="3" cy="0" r="1.5" fill="#ECEFF1" stroke="#B0BEC5" stroke-width="0.3"/>
+    </g>
+  </g>
+  
+  <!-- Battery -->
+  <g id="battery" transform="translate(30, 70)">
+    <rect x="-6" y="-4" width="12" height="8" rx="1" fill="#616161" stroke="#212121" stroke-width="0.5"/>
+    <path d="M -3,0 L 3,0" stroke="#BDBDBD" stroke-width="1"/>
+    <text x="-2" y="-1" font-size="3" fill="#E0E0E0">+</text>
+    <text x="1" y="-1" font-size="3" fill="#E0E0E0">-</text>
+  </g>
+  
+  <!-- Inductor/Coil -->
+  <g id="inductor" transform="translate(90, 55)">
+    <path d="M -5,0 C -5,3 -3,3 0,3 C 3,3 5,3 5,0 C 5,-3 3,-3 0,-3 C -3,-3 -5,-3 -5,0 Z" fill="none" stroke="#CFD8DC" stroke-width="1"/>
+    <path d="M -6,0 L -5,0" stroke="#CFD8DC" stroke-width="1"/>
+    <path d="M 5,0 L 6,0" stroke="#CFD8DC" stroke-width="1"/>
+  </g>
+  
+  <!-- Oscilloscope Waves -->
+  <g id="oscilloscope" fill="none">
+    <path d="M 28,22 L 100,22" stroke="#E0E0E0" stroke-width="0.3" stroke-dasharray="1,1"/>
+    <path d="M 28,110 L 100,110" stroke="#E0E0E0" stroke-width="0.3" stroke-dasharray="1,1"/>
+    
+    <!-- Sine Wave -->
+    <path d="M 28,16 C 35,4 42,28 50,16 C 58,4 65,28 72,16 C 80,4 87,28 94,16" 
+          stroke="#2196F3" stroke-width="1" opacity="0.7"/>
+    
+    <!-- Square Wave -->
+    <path d="M 28,116 L 38,116 L 38,104 L 50,104 L 50,116 L 61,116 L 61,104 L 73,104 L 73,116 L 84,116 L 84,104 L 96,104" 
+          stroke="#FF9800" stroke-width="1" opacity="0.7"/>
+  </g>
+  
+  <!-- Binary/Digital Elements -->
+  <g id="binary-elements" font-family="monospace" font-size="3" fill="#B2EBF2" opacity="0.7">
+    <text x="94" y="25">10110</text>
+    <text x="94" y="105">01001</text>
+    <text x="22" y="25">01101</text>
+    <text x="22" y="105">10010</text>
+  </g>
+  
+  <!-- Technology Labels -->
+  <g id="tech-labels" font-family="Arial" font-size="4.5" fill="#E0F7FA" text-anchor="middle">
+    <text x="64" y="120">ELECTRONICS</text>
+    <text x="38" y="120" font-size="3">CIRCUITS</text>
+    <text x="90" y="120" font-size="3">COMPONENTS</text>
+  </g>
+</svg> 

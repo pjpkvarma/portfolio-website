@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Path Planning Algorithms</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        .project-article {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 2.5rem;
+            min-height: 100vh;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.8;
+        }
+        .article-title {
+            font-size: 2rem;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        .article-paragraph {
+            margin: 1rem 0;
+        }
+        .article-subtitle {
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            color: #34495e;
+        }
+        .project-btn {
+            display: inline-block;
+            margin: 2rem 0;
+            padding: 0.8rem 1.5rem;
+            background: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 1rem;
+        }
+        .project-btn:hover {
+            background: #2980b9;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 1rem auto;
+        }
+    </style>
+</head>
+<body>
+    <section class="project-article">
+        <h1 class="article-title">Path Planning Algorithms for Autonomous Navigation</h1>
+        <p class="article-paragraph">
+            This project showcases the implementation of three well-known algorithms for navigating an environment: A*, Dijkstra, and RRT*. These algorithms help a robot find its way from a starting point to a goal while avoiding obstacles in the environment.
+        </p>
+
+        <h2 class="article-subtitle">1. A*</h2>
+        <p class="article-paragraph">
+            A* (A-Star) is a smart algorithm that finds the shortest path between two points. It combines the cost of traveling from the start to a point and an estimate of the cost to reach the goal. This balance helps it quickly find an efficient path while avoiding unnecessary exploration.
+        </p>
+        <!-- <img src="assets/A*.png" alt="A* Visualization"> -->
+
+        <h2 class="article-subtitle">2. Dijkstra</h2>
+        <p class="article-paragraph">
+            Dijkstra's algorithm finds the shortest path between two points by exploring all possible routes. Unlike A*, it doesn’t guess where the goal might be, which makes it thorough but slower in some cases. It ensures the shortest path is always found.
+        </p>
+        <!-- <img src="assets/Dijkstra.png" alt="Dijkstra Visualization"> -->
+
+        <h2 class="article-subtitle">3. RRT*</h2>
+        <p class="article-paragraph">
+            RRT* (Rapidly-exploring Random Tree Star) is a flexible algorithm that works well in complex environments. It builds a tree of possible paths by sampling random points in the space and connecting them. Over time, it refines the tree to find a smoother and more optimal path.
+        </p>
+        <!-- <img src="assets/RRT*.png" alt="RRT* Visualization"> -->
+
+        <p>
+            . 
+            . 
+            . 
+            . 
+
+            See the implementation and details in the repository.
+        </p>
+
+        <a href="https://github.com/pjpkvarma/Path-Planning-Algorithms" class="project-btn">GitHub Link</a>
+    </section>
+</body>
+</html>

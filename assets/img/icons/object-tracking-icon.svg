@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="obj-track-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF5722"/>
+      <stop offset="100%" stop-color="#BF360C"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="64" cy="64" r="58" fill="url(#obj-track-gradient)" stroke="#BF360C" stroke-width="2"/>
+
+  <!-- Object tracking visualization -->
+  <g transform="translate(64, 64) scale(2.2)">
+    <!-- Tracking frames -->
+    <g fill="#BF360C" opacity="0.15">
+      <rect x="-25" y="-25" width="50" height="50" rx="2"/>
+      <rect x="-24" y="-24" width="48" height="48" rx="2" stroke="#FFCCBC" stroke-width="0.25" fill="none"/>
+      <rect x="-23" y="-23" width="46" height="46" rx="2" stroke="#FFCCBC" stroke-width="0.25" fill="none"/>
+      <rect x="-22" y="-22" width="44" height="44" rx="2" stroke="#FFCCBC" stroke-width="0.25" fill="none"/>
+    </g>
+
+    <!-- Tracked object path -->
+    <g stroke="#FFFFFF" stroke-width="1.5" fill="none" stroke-dasharray="2,1">
+      <path d="M -15,-15 C -10,-18 -5,-15 0,-10 C 5,-5 8,0 10,5 C 12,10 15,15 18,18" />
+    </g>
+    
+    <!-- Tracked object in different frames -->
+    <g>
+      <!-- Frame 1 -->
+      <g transform="translate(-15, -15)">
+        <rect x="-5" y="-5" width="10" height="10" fill="#FF8A65" opacity="0.6"/>
+        <rect x="-6" y="-6" width="12" height="12" fill="none" stroke="#FFFFFF" stroke-width="0.75" stroke-dasharray="1,0.5"/>
+        <text x="-5" y="-7" font-family="monospace" font-size="3" fill="#FFFFFF">ID:001</text>
+      </g>
+      
+      <!-- Frame 2 -->
+      <g transform="translate(0, -10)">
+        <rect x="-5" y="-5" width="10" height="10" fill="#FF8A65" opacity="0.7"/>
+        <rect x="-6" y="-6" width="12" height="12" fill="none" stroke="#FFFFFF" stroke-width="0.75" stroke-dasharray="1,0.5"/>
+        <text x="-5" y="-7" font-family="monospace" font-size="3" fill="#FFFFFF">ID:001</text>
+      </g>
+      
+      <!-- Frame 3 -->
+      <g transform="translate(10, 5)">
+        <rect x="-5" y="-5" width="10" height="10" fill="#FF8A65" opacity="0.8"/>
+        <rect x="-6" y="-6" width="12" height="12" fill="none" stroke="#FFFFFF" stroke-width="0.75" stroke-dasharray="1,0.5"/>
+        <text x="-5" y="-7" font-family="monospace" font-size="3" fill="#FFFFFF">ID:001</text>
+      </g>
+      
+      <!-- Frame 4 (current) -->
+      <g transform="translate(18, 18)">
+        <rect x="-5" y="-5" width="10" height="10" fill="#FF8A65"/>
+        <rect x="-6" y="-6" width="12" height="12" fill="none" stroke="#FFFFFF" stroke-width="0.75"/>
+        <text x="-5" y="-7" font-family="monospace" font-size="3" fill="#FFFFFF">ID:001</text>
+      </g>
+    </g>
+    
+    <!-- Velocity vectors -->
+    <g stroke="#FFCCBC" stroke-width="0.75" fill="none">
+      <path d="M -15,-15 L -10,-17" marker-end="url(#arrow)"/>
+      <path d="M 0,-10 L 5,-5" marker-end="url(#arrow)"/>
+      <path d="M 10,5 L 15,10" marker-end="url(#arrow)"/>
+    </g>
+    
+    <!-- Tracking confidence -->
+    <g font-family="monospace" font-size="2.5" fill="#FFFFFF">
+      <text x="-10" y="-20">Conf: 95%</text>
+      <text x="5" y="-15">Conf: 90%</text>
+      <text x="15" y="0">Conf: 85%</text>
+    </g>
+  </g>
+  
+  <!-- Markers -->
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5"
+      markerWidth="4" markerHeight="4" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#FFCCBC"/>
+    </marker>
+  </defs>
+
+  <!-- Label -->
+  <g transform="translate(64, 115)">
+    <rect x="-40" y="-10" width="80" height="20" rx="5" fill="#BF360C" stroke="#FFCCBC" stroke-width="1"/>
+    <text x="0" y="0" font-family="Arial" font-size="10" fill="#FFFFFF" text-anchor="middle" font-weight="bold">OBJECT TRACKING</text>
+    <text x="0" y="9" font-family="monospace" font-size="7" fill="#FFCCBC" text-anchor="middle">85%</text>
+  </g>
+</svg> 

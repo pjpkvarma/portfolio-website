@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="tf-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF6F00"/>
+      <stop offset="100%" stop-color="#E65100"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="64" cy="64" r="58" fill="url(#tf-gradient)" stroke="#E65100" stroke-width="2"/>
+  
+  <!-- TensorFlow logo representation -->
+  <g transform="translate(64, 45) scale(0.8)">
+    <!-- TensorFlow Logo -->
+    <path d="M-20,0 L-10,-17.3 L10,-17.3 L20,0 L10,17.3 L-10,17.3 Z" fill="#FFFFFF" stroke="#E65100" stroke-width="1"/>
+    <path d="M-10,-17.3 L0,0 L-10,17.3 Z" fill="#E65100"/>
+    <path d="M10,-17.3 L0,0 L10,17.3 Z" fill="#E65100"/>
+    <path d="M-10,-17.3 L10,-17.3 L0,0 Z" fill="#FFFFFF"/>
+    <path d="M-10,17.3 L10,17.3 L0,0 Z" fill="#FFFFFF"/>
+  </g>
+  
+  <!-- Neural network representation -->
+  <g transform="translate(64, 85)">
+    <!-- Layers -->
+    <g fill="#FFFFFF" stroke="#E65100">
+      <!-- Input layer -->
+      <g transform="translate(-30, 0)">
+        <circle cx="0" cy="-12" r="3" />
+        <circle cx="0" cy="-4" r="3" />
+        <circle cx="0" cy="4" r="3" />
+        <circle cx="0" cy="12" r="3" />
+        <text x="0" y="22" font-family="monospace" font-size="4" fill="#FFFFFF" text-anchor="middle">INPUT</text>
+      </g>
+      
+      <!-- Hidden layer 1 -->
+      <g transform="translate(-10, 0)">
+        <circle cx="0" cy="-14" r="3" />
+        <circle cx="0" cy="-7" r="3" />
+        <circle cx="0" cy="0" r="3" />
+        <circle cx="0" cy="7" r="3" />
+        <circle cx="0" cy="14" r="3" />
+      </g>
+      
+      <!-- Hidden layer 2 -->
+      <g transform="translate(10, 0)">
+        <circle cx="0" cy="-14" r="3" />
+        <circle cx="0" cy="-7" r="3" />
+        <circle cx="0" cy="0" r="3" />
+        <circle cx="0" cy="7" r="3" />
+        <circle cx="0" cy="14" r="3" />
+      </g>
+      
+      <!-- Output layer -->
+      <g transform="translate(30, 0)">
+        <circle cx="0" cy="-8" r="3" />
+        <circle cx="0" cy="0" r="3" />
+        <circle cx="0" cy="8" r="3" />
+        <text x="0" y="22" font-family="monospace" font-size="4" fill="#FFFFFF" text-anchor="middle">OUTPUT</text>
+      </g>
+    </g>
+    
+    <!-- Connections -->
+    <g stroke="#FFFFFF" stroke-width="0.5" opacity="0.6">
+      <!-- Connect input to hidden1 -->
+      <g>
+        <line x1="-30" y1="-12" x2="-10" y2="-14" />
+        <line x1="-30" y1="-12" x2="-10" y2="-7" />
+        <line x1="-30" y1="-12" x2="-10" y2="0" />
+        <line x1="-30" y1="-4" x2="-10" y2="-14" />
+        <line x1="-30" y1="-4" x2="-10" y2="-7" />
+        <line x1="-30" y1="-4" x2="-10" y2="0" />
+        <line x1="-30" y1="-4" x2="-10" y2="7" />
+        <line x1="-30" y1="4" x2="-10" y2="-7" />
+        <line x1="-30" y1="4" x2="-10" y2="0" />
+        <line x1="-30" y1="4" x2="-10" y2="7" />
+        <line x1="-30" y1="4" x2="-10" y2="14" />
+        <line x1="-30" y1="12" x2="-10" y2="0" />
+        <line x1="-30" y1="12" x2="-10" y2="7" />
+        <line x1="-30" y1="12" x2="-10" y2="14" />
+      </g>
+      
+      <!-- Connect hidden1 to hidden2 -->
+      <g>
+        <line x1="-10" y1="-14" x2="10" y2="-14" />
+        <line x1="-10" y1="-14" x2="10" y2="-7" />
+        <line x1="-10" y1="-7" x2="10" y2="-14" />
+        <line x1="-10" y1="-7" x2="10" y2="-7" />
+        <line x1="-10" y1="-7" x2="10" y2="0" />
+        <line x1="-10" y1="0" x2="10" y2="-7" />
+        <line x1="-10" y1="0" x2="10" y2="0" />
+        <line x1="-10" y1="0" x2="10" y2="7" />
+        <line x1="-10" y1="7" x2="10" y2="0" />
+        <line x1="-10" y1="7" x2="10" y2="7" />
+        <line x1="-10" y1="7" x2="10" y2="14" />
+        <line x1="-10" y1="14" x2="10" y2="7" />
+        <line x1="-10" y1="14" x2="10" y2="14" />
+      </g>
+      
+      <!-- Connect hidden2 to output -->
+      <g>
+        <line x1="10" y1="-14" x2="30" y2="-8" />
+        <line x1="10" y1="-7" x2="30" y2="-8" />
+        <line x1="10" y1="-7" x2="30" y2="0" />
+        <line x1="10" y1="0" x2="30" y2="-8" />
+        <line x1="10" y1="0" x2="30" y2="0" />
+        <line x1="10" y1="0" x2="30" y2="8" />
+        <line x1="10" y1="7" x2="30" y2="0" />
+        <line x1="10" y1="7" x2="30" y2="8" />
+        <line x1="10" y1="14" x2="30" y2="8" />
+      </g>
+    </g>
+  </g>
+  
+  <!-- Technical features -->
+  <g transform="translate(35, 25)">
+    <rect x="-24" y="-10" width="48" height="20" rx="5" fill="#E65100" stroke="#FFFFFF" stroke-width="1"/>
+    <text x="0" y="-2" font-family="monospace" font-size="5" fill="#FFFFFF" text-anchor="middle">GPU</text>
+    <text x="0" y="6" font-family="monospace" font-size="5" fill="#FFFFFF" text-anchor="middle">ACCELERATION</text>
+  </g>
+  
+  <g transform="translate(93, 25)">
+    <rect x="-24" y="-10" width="48" height="20" rx="5" fill="#E65100" stroke="#FFFFFF" stroke-width="1"/>
+    <text x="0" y="-2" font-family="monospace" font-size="5" fill="#FFFFFF" text-anchor="middle">DEEP</text>
+    <text x="0" y="6" font-family="monospace" font-size="5" fill="#FFFFFF" text-anchor="middle">LEARNING</text>
+  </g>
+  
+  <!-- Code snippet -->
+  <g transform="translate(64, 120)">
+    <rect x="-45" y="-14" width="90" height="28" rx="3" fill="#E65100" stroke="#FFFFFF" stroke-width="0.75"/>
+    <g font-family="monospace" font-size="3.5" fill="#FFFFFF" text-anchor="left">
+      <text x="-40" y="-8">import tensorflow as tf</text>
+      <text x="-40" y="-3">model = tf.keras.Sequential([</text>
+      <text x="-40" y="2">  tf.keras.layers.Dense(128),</text>
+      <text x="-40" y="7">  tf.keras.layers.Dense(10)</text>
+      <text x="-40" y="12">])</text>
+    </g>
+  </g>
+
+  <!-- Label -->
+  <g transform="translate(64, 140)">
+    <rect x="-40" y="-9" width="80" height="18" rx="5" fill="#E65100" stroke="#FFFFFF" stroke-width="1"/>
+    <text x="0" y="0" font-family="Arial" font-size="10" fill="#FFFFFF" text-anchor="middle" font-weight="bold">TENSORFLOW</text>
+    <text x="0" y="9" font-family="monospace" font-size="6" fill="#FFFFFF" text-anchor="middle">90%</text>
+  </g>
+</svg> 

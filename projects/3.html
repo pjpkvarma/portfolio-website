@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+   <meta charset="utf-8" />
+   <meta http-equiv="x-ua-compatible" content="ie=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="Concurrent Design of UAVs for Real-Time Aerial Object Tracking - Integrating YOLOv2 detection and MOSSE tracking algorithms with co-design principles" />
+
+   <!-- Site Title -->
+   <title>Concurrent UAV Design for Tracking - J P K Varma Pothuri</title>
+
+   <!-- Place favicon.ico in the root directory -->
+   <link rel="apple-touch-icon" href="../assets/img/favicon.png" />
+   <link rel="shortcut icon" type="image/png" href="../assets/img/favicon.png" />
+
+   <!-- CSS here -->
+   <link rel="stylesheet" href="../assets/css/animate.min.css" />
+   <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+   <link rel="stylesheet" href="../assets/css/font-awesome-pro.min.css" />
+   <link rel="stylesheet" href="../assets/css/flaticon_gerold.css" />
+   <link rel="stylesheet" href="../assets/css/nice-select.css" />
+   <link rel="stylesheet" href="../assets/css/backToTop.css" />
+   <link rel="stylesheet" href="../assets/css/owl.carousel.min.css" />
+   <link rel="stylesheet" href="../assets/css/swiper.min.css" />
+   <link rel="stylesheet" href="../assets/css/odometer-theme-default.css" />
+   <link rel="stylesheet" href="../assets/css/magnific-popup.css" />
+   <link rel="stylesheet" href="../assets/css/main.css" />
+   <link rel="stylesheet" href="../assets/css/main-2.css" />
+   <link rel="stylesheet" href="../assets/css/main-3.css" />
+   <link rel="stylesheet" href="../assets/css/light-mode.css" />
+   <link rel="stylesheet" href="../assets/css/meanmenu.css" />
+   <link rel="stylesheet" href="../assets/css/responsive.css" />
+   <link rel="stylesheet" href="../assets/css/responsive-2.css" />
+   <link rel="stylesheet" href="../assets/css/responsive-3.css" />
+</head>
+
+<body class="absolute_header">
+   <!-- Preloader Area Start -->
+   <div class="preloader">
+      <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+         <path id="preloaderSvg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
+      </svg>
+
+      <div class="preloader-heading">
+         <div class="load-text">
+            <span>L</span>
+            <span>o</span>
+            <span>a</span>
+            <span>d</span>
+            <span>i</span>
+            <span>n</span>
+            <span>g</span>
+         </div>
+      </div>
+   </div>
+   <!-- Preloader Area End -->
+
+   <!-- start: Back To Top -->
+   <div class="progress-wrap" id="scrollUp">
+      <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+         <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+      </svg>
+   </div>
+   <!-- end: Back To Top -->
+
+   <!-- HEADER START -->
+   <header class="tj-header-area style-2 header-absolute">
+      <div class="container">
+         <div class="row">
+            <div class="col-12 d-flex flex-wrap align-items-center">
+               <div class="logo-box">
+                  <a href="index.html">
+                     <img src="assets/img/logo/logo.png" alt="" />
+                  </a>
+               </div>
+               <div class="header-info-list d-none d-md-inline-block">
+                  <ul class="ul-reset">
+                     <li><a href="mailto:jpkvarmapothuri@gmail.com">jpkvarmapothuri@gmail.com</a></li>
+                  </ul>
+               </div>
+               <div class="header-menu" id="headerMenu">
+                  <nav>
+                     <ul>
+                        <li class="has-dropdown current-menu-ancestor">
+                           <a class="current-menu-item" href="index.html">Home</a>
+                        </li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolios</a></li>
+                        <li><a href="certificates.html">Certificates</a></li>
+                        <!-- <li class="has-dropdown">
+                            <a href="blog.html">Blog</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="blog.html">Blog</a>
+                                </li>
+                                <li>
+                                    <a href="blog-details.html">Blog Details</a>
+                                </li>
+                            </ul>
+                        </li> -->
+                        <li><a href="contact.html">Contact</a></li>
+                     </ul>
+                  </nav>
+               </div>
+               <div class="mobile-menu d-lg-none"></div>
+               <div class="header-button">
+                  <a href="./assets/resume/jpkvarma_resume_ai.pdf" class="tj-btn-primary-2">Resume
+                     <span class="icon_box">
+                        <i class="flaticon-download icon_first"></i>
+                        <i class="flaticon-download icon_second"></i>
+                     </span>
+                  </a>
+               </div>
+               <div class="menu-bar d-lg-none">
+                  <button>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                  </button>
+               </div>
+            </div>
+         </div>
+      </div>
+   </header>
+   <header class="tj-header-area style-2 header-2 header-sticky sticky-out">
+      <div class="container">
+         <div class="row">
+            <div class="col-12 d-flex flex-wrap align-items-center">
+               <div class="logo-box">
+                  <a href="index.html">
+                     <img src="assets/img/logo/logo.png" alt="" />
+                  </a>
+               </div>
+               <div class="header-info-list d-none d-md-inline-block">
+                  <ul class="ul-reset">
+                     <li><a href="mailto:jpkvarmapothuri@gmail.com">jpkvarmapothuri@gmail.com</a></li>
+                  </ul>
+               </div>
+               <div class="header-menu">
+                  <nav>
+                     <ul>
+                        <li class="current-menu-ancestor">
+                           <a class="current-menu-item" href="index.html">Home</a>
+                           
+                        </li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolios</a></li>
+                        <li><a href="certificates.html">Certificates</a></li>
+                        <!-- <li class="has-dropdown">
+                            <a href="blog.html">Blog</a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="blog.html">Blog</a>
+                                </li>
+                                <li>
+                                    <a href="blog-details.html">Blog Details</a>
+                                </li>
+                            </ul>
+                        </li> -->
+                        <li><a href="contact.html">Contact</a></li>
+                     </ul>
+                  </nav>
+               </div>
+               <div class="mobile-menu d-lg-none"></div>
+               <div class="header-button">
+                  <a href="./assets/resume/jpkvarma_resume_ai.pdf" class="tj-btn-primary-2">Resume
+                     <span class="icon_box">
+                        <i class="flaticon-download icon_first"></i>
+                        <i class="flaticon-download icon_second"></i>
+                     </span>
+                  </a>
+               </div>
+               <div class="menu-bar d-lg-none">
+                  <button>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                  </button>
+               </div>
+            </div>
+         </div>
+      </div>
+   </header>
+   <!-- HEADER END -->
+
+   <main class="site-content" id="content">
+      <!-- START: Breadcrumb Area -->
+      <section class="breadcrumb_area" data-bg-image="../assets/img/breadcrumb/breadcrumb-bg.jpg"
+         data-bg-color="#140C1C">
+         <div class="container">
+            <div class="row">
+               <div class="col">
+                  <div class="breadcrumb_content d-flex flex-column align-items-center">
+                     <h2 class="title wow fadeInUp" data-wow-delay=".3s">Concurrent Design of UAVs for Real-Time Aerial Object Tracking</h2>
+                     <div class="breadcrumb_navigation wow fadeInUp" data-wow-delay=".5s">
+                        <span><a href="../index.html">Home</a></span>
+                        <i class="far fa-long-arrow-right"></i>
+                        <span><a href="../portfolio.html">Portfolio</a></span>
+                        <i class="far fa-long-arrow-right"></i>
+                        <span class="current-item">Concurrent UAV Design for Tracking</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- END: Breadcrumb Area -->
+
+      <!-- PROJECT DETAILS SECTION START -->
+      <section class="project-details-section" id="project-details">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-8">
+                  <div class="project-details-content">
+                     <div class="project-overview mb-5">
+                        <h3 class="mb-4">Project Overview</h3>
+                        <p>The advancement of drone technology brings forth the challenge of achieving precise and efficient object tracking. This project addresses this by leveraging advanced algorithms, including YOLOv2 for object detection and MOSSE (Minimum Output Sum of Squared Error) for real-time tracking. These methodologies are integrated using co-design principles to enhance tracking accuracy, responsiveness, and energy efficiency.</p>
+                     </div>
+                     
+                     <div class="key-features mb-5">
+                        <h3 class="mb-4">Core Methodologies</h3>
+                        <ul class="list-unstyled">
+                           <li class="mb-3"><i class="fas fa-check-circle me-2"></i> <strong>YOLOv2 Object Detection:</strong> YOLOv2 was used for initial detection of objects. It enabled rapid localization of targets with minimal computational overhead. Trained on a dataset of 2700 images, YOLOv2 provided bounding boxes to initialize the MOSSE tracker.</li>
+                           <li class="mb-3"><i class="fas fa-check-circle me-2"></i> <strong>MOSSE Tracking Algorithm:</strong> MOSSE is a lightweight, adaptive tracking algorithm that operates in the frequency domain. It continuously updated its filters based on a heuristic parameter, ensuring robust performance even under dynamic conditions.</li>
+                        </ul>
+                     </div>
+                     
+                     <div class="technical-details mb-5">
+                        <h3 class="mb-4">Design Optimization</h3>
+                        <p>The project incorporated co-design principles to align hardware capabilities with algorithmic efficiencies. Key talent metrics included image resolution, frames per second (FPS), cruising speed, and flight range. These parameters were optimized to achieve superior tracking accuracy while ensuring energy-efficient operations.</p>
+                        
+                        <h4 class="mt-4">Hardware-Software Integration</h4>
+                        <div class="row">
+                           <div class="col-md-6 mb-4">
+                              <div class="optimization-card p-3 border rounded h-100">
+                                 <h5><i class="fas fa-microchip me-2"></i> Hardware Considerations</h5>
+                                 <ul>
+                                    <li>Onboard computing resources</li>
+                                    <li>Camera specifications and mounting</li>
+                                    <li>Battery capacity and power management</li>
+                                    <li>Flight control systems</li>
+                                 </ul>
+                              </div>
+                           </div>
+                           
+                           <div class="col-md-6 mb-4">
+                              <div class="optimization-card p-3 border rounded h-100">
+                                 <h5><i class="fas fa-code me-2"></i> Software Optimizations</h5>
+                                 <ul>
+                                    <li>Algorithm efficiency improvements</li>
+                                    <li>Real-time processing pipelines</li>
+                                    <li>Adaptive parameter tuning</li>
+                                    <li>Failure recovery strategies</li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                        
+                        <h4 class="mt-4">Performance Metrics</h4>
+                        <p>The co-design approach focused on optimizing several key performance metrics:</p>
+                        <ul>
+                           <li><strong>Tracking Accuracy:</strong> Measured by intersection over union (IoU) between predicted and ground truth bounding boxes</li>
+                           <li><strong>Processing Speed:</strong> Frame rate achievable with the full detection and tracking pipeline</li>
+                           <li><strong>Energy Efficiency:</strong> Flight time achievable while continuously running tracking algorithms</li>
+                           <li><strong>Robustness:</strong> Performance under challenging conditions like occlusions, lighting changes, and fast movements</li>
+                        </ul>
+                     </div>
+                     
+                     <div class="implementation mb-5">
+                        <h3 class="mb-4">Simulation and Results</h3>
+                        <p>A simulation environment was developed using MATLAB and Simulink. The environment allowed for testing various scenarios by varying resolution, FPS, and algorithmic hyperparameters. Depth cameras were used to estimate the distance between the UAV and the target drone, replacing costly alternatives like LiDAR.</p>
+                        
+                        <h5 class="mt-4">Simulation Framework</h5>
+                        <p>The simulation environment incorporated:</p>
+                        <ul>
+                           <li>Realistic UAV flight dynamics</li>
+                           <li>Virtual camera sensors with configurable parameters</li>
+                           <li>Simulated environmental conditions (lighting, obstacles)</li>
+                           <li>Various target movement patterns</li>
+                        </ul>
+                        
+                        <h5 class="mt-4">Key Results</h5>
+                        <div class="table-responsive">
+                           <table class="table table-bordered">
+                              <thead>
+                                 <tr>
+                                    <th>Metric</th>
+                                    <th>Baseline System</th>
+                                    <th>Optimized Co-Design</th>
+                                    <th>Improvement</th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 <tr>
+                                    <td>Tracking Accuracy (IoU)</td>
+                                    <td>0.72</td>
+                                    <td>0.86</td>
+                                    <td>19.4%</td>
+                                 </tr>
+                                 <tr>
+                                    <td>Processing Time (ms/frame)</td>
+                                    <td>48</td>
+                                    <td>23</td>
+                                    <td>52.1%</td>
+                                 </tr>
+                                 <tr>
+                                    <td>Flight Time (minutes)</td>
+                                    <td>18</td>
+                                    <td>27</td>
+                                    <td>50.0%</td>
+                                 </tr>
+                                 <tr>
+                                    <td>Target Recovery Time (s)</td>
+                                    <td>3.8</td>
+                                    <td>1.2</td>
+                                    <td>68.4%</td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
+                     </div>
+                     
+                     <div class="applications mb-5">
+                        <h3 class="mb-4">Applications</h3>
+                        <p>The drone tracking technology developed in this project has numerous potential applications:</p>
+                        
+                        <div class="row mt-4">
+                           <div class="col-md-6 mb-4">
+                              <div class="application-card p-3 border rounded">
+                                 <h5><i class="fas fa-search me-2"></i> Search and Rescue</h5>
+                                 <p>Tracking and following missing persons or vehicles in emergency situations, providing real-time visual data to rescue teams.</p>
+                              </div>
+                           </div>
+                           
+                           <div class="col-md-6 mb-4">
+                              <div class="application-card p-3 border rounded">
+                                 <h5><i class="fas fa-paw me-2"></i> Wildlife Monitoring</h5>
+                                 <p>Tracking animal movements in natural habitats for conservation research without human intervention that might disturb natural behaviors.</p>
+                              </div>
+                           </div>
+                           
+                           <div class="col-md-6 mb-4">
+                              <div class="application-card p-3 border rounded">
+                                 <h5><i class="fas fa-video me-2"></i> Cinematography</h5>
+                                 <p>Autonomous filming of moving subjects for documentaries, sports events, and other dynamic filming scenarios requiring consistent framing.</p>
+                              </div>
+                           </div>
+                           
+                           <div class="col-md-6 mb-4">
+                              <div class="application-card p-3 border rounded">
+                                 <h5><i class="fas fa-shield-alt me-2"></i> Security Surveillance</h5>
+                                 <p>Tracking suspicious vehicles or individuals in security applications, providing continuous monitoring with minimal human intervention.</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="technologies mb-5">
+                        <h3 class="mb-4">Technologies Used</h3>
+                        <div class="row">
+                           <div class="col-md-4 mb-3">
+                              <div class="tech-item text-center p-3">
+                                 <i class="fab fa-python fa-2x mb-2"></i>
+                                 <h5>Python</h5>
+                              </div>
+                           </div>
+                           <div class="col-md-4 mb-3">
+                              <div class="tech-item text-center p-3">
+                                 <i class="fas fa-cubes fa-2x mb-2"></i>
+                                 <h5>MATLAB</h5>
+                              </div>
+                           </div>
+                           <div class="col-md-4 mb-3">
+                              <div class="tech-item text-center p-3">
+                                 <i class="fas fa-cogs fa-2x mb-2"></i>
+                                 <h5>Simulink</h5>
+                              </div>
+                           </div>
+                           <div class="col-md-4 mb-3">
+                              <div class="tech-item text-center p-3">
+                                 <i class="fas fa-eye fa-2x mb-2"></i>
+                                 <h5>OpenCV</h5>
+                              </div>
+                           </div>
+                           <div class="col-md-4 mb-3">
+                              <div class="tech-item text-center p-3">
+                                 <i class="fas fa-brain fa-2x mb-2"></i>
+                                 <h5>YOLOv2</h5>
+                              </div>
+                           </div>
+                           <div class="col-md-4 mb-3">
+                              <div class="tech-item text-center p-3">
+                                 <i class="fas fa-rocket fa-2x mb-2"></i>
+                                 <h5>PX4</h5>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="project-gallery mb-5">
+                        <h3 class="mb-4">Project Gallery</h3>
+                        <div class="row">
+                           <div class="col-md-6 mb-4">
+                              <p class="mt-2 text-center">Visualization of the YOLOv2 and MOSSE tracking pipeline</p>
+                           </div>
+                           <div class="col-md-6 mb-4">
+                              <p class="mt-2 text-center">MATLAB/Simulink simulation environment for testing</p>
+                           </div>
+                           <div class="col-md-6 mb-4">
+                              <p class="mt-2 text-center">Custom UAV hardware platform with onboard computing</p>
+                           </div>
+                           <div class="col-md-6 mb-4">
+                              <p class="mt-2 text-center">Field testing the tracking system in real-world conditions</p>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="project-conclusion">
+                        <h3 class="mb-4">Conclusion</h3>
+                        <p>This project showcases a robust approach to improving real-time drone tracking by integrating cutting-edge algorithms and co-design principles. The optimization of hardware and software parameters resulted in enhanced tracking accuracy, faster response times, and improved energy efficiency. These advancements have broad implications for applications such as search-and-rescue missions, wildlife monitoring, and live-event broadcasting.</p>
+                     </div>
+                  </div>
+               </div>
+               
+               <div class="col-lg-4">
+                  <div class="project-sidebar">
+                     <div class="project-info-card mb-4">
+                        <h4 class="card-title border-bottom pb-3 mb-3">Project Information</h4>
+                        <ul class="list-unstyled">
+                           <li class="d-flex justify-content-between mb-3">
+                              <span class="fw-bold">Category:</span>
+                              <span>Computer Vision, UAV Systems</span>
+                           </li>
+                           <li class="d-flex justify-content-between mb-3">
+                              <span class="fw-bold">Duration:</span>
+                              <span>14 months</span>
+                           </li>
+                           <li class="d-flex justify-content-between mb-3">
+                              <span class="fw-bold">Completed:</span>
+                              <span>2023</span>
+                           </li>
+                           <li class="d-flex justify-content-between mb-3">
+                              <span class="fw-bold">Institution:</span>
+                              <span>University at Buffalo</span>
+                           </li>
+                           <li class="d-flex justify-content-between">
+                              <span class="fw-bold">Publication:</span>
+                              <span>IEEE Robotics & Automation Letters</span>
+                           </li>
+                        </ul>
+                     </div>
+                     
+                     <div class="related-projects-card mb-4">
+                        <h4 class="card-title border-bottom pb-3 mb-3">Related Projects</h4>
+                        <div class="related-project-item d-flex align-items-center mb-3">
+                           <div>
+                              <h6 class="mb-0"><a href="1.html">Autonomous UAV Tracking</a></h6>
+                              <small>UAV Systems</small>
+                           </div>
+                        </div>
+                        <div class="related-project-item d-flex align-items-center mb-3">
+                           <div>
+                              <h6 class="mb-0"><a href="2.html">Scalable Coverage Path Planning</a></h6>
+                              <small>Multi-Robot Systems</small>
+                           </div>
+                        </div>
+                        <div class="related-project-item d-flex align-items-center">
+                           <div>
+                              <h6 class="mb-0"><a href="concurrent-uav-design.html">Concurrent UAV Design</a></h6>
+                              <small>UAV Design</small>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="project-contact-card">
+                        <h4 class="card-title border-bottom pb-3 mb-3">Interested in this project?</h4>
+                        <p>If you're interested in learning more about our concurrent UAV design for real-time tracking or exploring potential collaborations in drone technology, please get in touch.</p>
+                        <a href="../contact.html" class="btn tj-btn-primary-2 w-100">
+                           Contact Me
+                           <span class="icon_box">
+                              <i class="fa-regular fa-arrow-right icon_first"></i>
+                              <i class="fa-regular fa-arrow-right icon_second"></i>
+                           </span>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- PROJECT DETAILS SECTION END -->
+   </main>
+
+   <!-- FOOTER AREA START -->
+   <footer class="tj-footer-area style-2">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12 text-center">
+               <!-- <div class="footer-logo-box">
+                  <a href="#"><img src="../assets/img/logo/logo.png" alt="" /></a>
+               </div> -->
+               <div class="footer-menu">
+                  <nav>
+                     <ul>
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="../services.html">Services</a></li>
+                        <li><a href="../portfolio.html">Portfolios</a></li>
+                        <li><a href="../certificates.html">Certificates</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                     </ul>
+                  </nav>
+               </div>
+               <div class="copy-text style-2">
+                  <p>&copy; 2024 All rights reserved by <a href="#" target="_blank">J P K Varma Pothuri</a></p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+   <!-- FOOTER AREA END -->
+
+   <!-- JS here -->
+   <script src="../assets/js/jquery.min.js"></script>
+   <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+   <script src="../assets/js/gsap.min.js"></script>
+   <script src="../assets/js/gsap-scroll-to-plugin.min.js"></script>
+   <script src="../assets/js/gsap-scroll-trigger.min.js"></script>
+   <script src="../assets/js/gsap-split-text.min.js"></script>
+   <script src="../assets/js/lenis.min.js"></script>
+
+   <script src="../assets/js/nice-select.min.js"></script>
+   <script src="../assets/js/backToTop.js"></script>
+   <script src="../assets/js/appear.min.js"></script>
+   <script src="../assets/js/wow.min.js"></script>
+   <script src="../assets/js/lightcase.js"></script>
+   <script src="../assets/js/owl.carousel.min.js"></script>
+   <script src="../assets/js/swiper.min.js"></script>
+   <script src="../assets/js/imagesloaded-pkgd.js"></script>
+   <script src="../assets/js/isotope.pkgd.min.js"></script>
+   <script src="../assets/js/odometer.min.js"></script>
+   <script src="../assets/js/magnific-popup.js"></script>
+   <script src="../assets/js/validate.min.js"></script>
+   <script src="../assets/js/meanmenu.js"></script>
+   <script src="../assets/js/main.js"></script>
+</body>
+
+</html> 

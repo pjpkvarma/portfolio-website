@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Detection with Depth Estimation</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.3;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .project-article {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 2.5rem; min-height: 140vh;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.8;
+        }
+        .article-title {
+            font-size: 2rem;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        .article-paragraph {
+            margin: 1rem 0;
+        }
+        .article-subtitle {
+            font-size: 1.5rem;
+            margin-top: 1rem;
+            color: #34495e;
+        }
+        .article-list {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+        .article-list li {
+            margin: 0.5rem 0;
+        }
+        .project-btn {
+            display: inline-block;
+            margin: 2rem 0;
+            padding: 0.8rem 1.5rem;
+            background: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 1rem;
+        }
+        .project-btn:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <section class="project-article">
+        <h1 class="article-title">Object Detection with Depth Estimation</h1>
+        <p class="article-paragraph">
+            This project develops a cost-effective and lightweight framework for object detection and depth estimation using a single camera. By integrating YOLOv5 for object detection and a neural network for distance estimation, the system achieves robust real-time performance. This approach eliminates the need for expensive multi-sensor setups like LiDAR, making it ideal for low-cost autonomous systems.
+        </p>
+        <p class="article-paragraph">
+            The framework leverages the KITTI dataset, a benchmark in autonomous driving research. YOLOv5 detects and classifies objects in real-time, while a multi-layer perceptron (MLP) predicts object distances using bounding box coordinates. To improve robustness, the system was trained with transformed images simulating adverse weather conditions, such as rain and fog.
+        </p>
+        <h2 class="article-subtitle">Key Features and Contributions</h2>
+        <ul class="article-list">
+            <li>Seamless integration of object detection and depth estimation into a single-camera setup.</li>
+            <li>Enhanced performance in challenging conditions through training with augmented datasets.</li>
+            <li>Adaptation of YOLOv5 to display both object classes and distances on bounding boxes.</li>
+            <li>Real-time processing capabilities suitable for dynamic environments.</li>
+        </ul>
+        <h2 class="article-subtitle">Technical Approach</h2>
+        <p class="article-paragraph">
+            <b>Object Detection:</b> The YOLOv5 model identifies objects and provides bounding box coordinates and class predictions. This state-of-the-art algorithm ensures fast and accurate detection.
+        </p>
+        <p class="article-paragraph">
+            <b>Distance Estimation:</b> A custom MLP neural network processes bounding box coordinates to estimate the distance of objects from the camera. The network features five fully connected layers with batch normalization and dropout to prevent overfitting.
+        </p>
+        <p class="article-paragraph">
+            <b>Environmental Robustness:</b> Training on augmented datasets with added noise and blur enhances the system’s ability to handle adverse conditions, such as fog or low-light scenarios.
+        </p>
+        <h2 class="article-subtitle">Potential Applications</h2>
+        <ul class="article-list">
+            <li>Autonomous vehicles for safe navigation and obstacle avoidance.</li>
+            <li>Robotics in resource-constrained environments requiring efficient perception systems.</li>
+            <li>Surveillance systems capable of operating under diverse weather conditions.</li>
+        </ul>
+        <p class="article-paragraph">
+            This framework demonstrates how a simple yet effective design can address complex perception challenges, paving the way for scalable and cost-efficient solutions in robotics and autonomous systems.
+        </p>
+        <a href="https://github.com/pjpkvarma/Object-detection-with-Depth-Estimation" class="project-btn">GitHub Link</a>
+    </section>
+</body>
+</html>

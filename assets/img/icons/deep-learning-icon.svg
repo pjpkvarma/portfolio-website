@@ -1,0 +1,182 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="dl-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5C6BC0"/>
+      <stop offset="100%" stop-color="#3949AB"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="64" cy="64" r="58" fill="url(#dl-gradient)" stroke="#1A237E" stroke-width="2"/>
+  
+  <!-- Deep neural network visualization -->
+  <g>
+    <!-- Input layer -->
+    <g>
+      <circle cx="24" cy="35" r="4" fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+      <circle cx="24" cy="50" r="4" fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+      <circle cx="24" cy="65" r="4" fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+      <circle cx="24" cy="80" r="4" fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+      <circle cx="24" cy="95" r="4" fill="#FFFFFF" stroke="#000000" stroke-width="1"/>
+    </g>
+    
+    <!-- Hidden layer 1 -->
+    <g>
+      <circle cx="44" cy="30" r="4" fill="#E8EAF6" stroke="#000000" stroke-width="1"/>
+      <circle cx="44" cy="45" r="4" fill="#E8EAF6" stroke="#000000" stroke-width="1"/>
+      <circle cx="44" cy="60" r="4" fill="#E8EAF6" stroke="#000000" stroke-width="1"/>
+      <circle cx="44" cy="75" r="4" fill="#E8EAF6" stroke="#000000" stroke-width="1"/>
+      <circle cx="44" cy="90" r="4" fill="#E8EAF6" stroke="#000000" stroke-width="1"/>
+      <circle cx="44" cy="105" r="4" fill="#E8EAF6" stroke="#000000" stroke-width="1"/>
+    </g>
+    
+    <!-- Hidden layer 2 -->
+    <g>
+      <circle cx="64" cy="25" r="4" fill="#C5CAE9" stroke="#000000" stroke-width="1"/>
+      <circle cx="64" cy="40" r="4" fill="#C5CAE9" stroke="#000000" stroke-width="1"/>
+      <circle cx="64" cy="55" r="4" fill="#C5CAE9" stroke="#000000" stroke-width="1"/>
+      <circle cx="64" cy="70" r="4" fill="#C5CAE9" stroke="#000000" stroke-width="1"/>
+      <circle cx="64" cy="85" r="4" fill="#C5CAE9" stroke="#000000" stroke-width="1"/>
+      <circle cx="64" cy="100" r="4" fill="#C5CAE9" stroke="#000000" stroke-width="1"/>
+      <circle cx="64" cy="115" r="4" fill="#C5CAE9" stroke="#000000" stroke-width="1"/>
+    </g>
+    
+    <!-- Hidden layer 3 -->
+    <g>
+      <circle cx="84" cy="30" r="4" fill="#9FA8DA" stroke="#000000" stroke-width="1"/>
+      <circle cx="84" cy="45" r="4" fill="#9FA8DA" stroke="#000000" stroke-width="1"/>
+      <circle cx="84" cy="60" r="4" fill="#9FA8DA" stroke="#000000" stroke-width="1"/>
+      <circle cx="84" cy="75" r="4" fill="#9FA8DA" stroke="#000000" stroke-width="1"/>
+      <circle cx="84" cy="90" r="4" fill="#9FA8DA" stroke="#000000" stroke-width="1"/>
+      <circle cx="84" cy="105" r="4" fill="#9FA8DA" stroke="#000000" stroke-width="1"/>
+    </g>
+    
+    <!-- Output layer -->
+    <g>
+      <circle cx="104" cy="45" r="4" fill="#7986CB" stroke="#000000" stroke-width="1"/>
+      <circle cx="104" cy="65" r="4" fill="#7986CB" stroke="#000000" stroke-width="1"/>
+      <circle cx="104" cy="85" r="4" fill="#7986CB" stroke="#000000" stroke-width="1"/>
+    </g>
+  </g>
+  
+  <!-- Connections -->
+  <g stroke="#FFFFFF" stroke-width="0.5" opacity="0.6">
+    <!-- Connect input to first hidden layer -->
+    <g>
+      <!-- Each input node connects to all nodes in first hidden layer -->
+      <line x1="28" y1="35" x2="40" y2="30"/>
+      <line x1="28" y1="35" x2="40" y2="45"/>
+      <line x1="28" y1="35" x2="40" y2="60"/>
+      <line x1="28" y1="35" x2="40" y2="75"/>
+      <line x1="28" y1="35" x2="40" y2="90"/>
+      <line x1="28" y1="35" x2="40" y2="105"/>
+      
+      <line x1="28" y1="50" x2="40" y2="30"/>
+      <line x1="28" y1="50" x2="40" y2="45"/>
+      <line x1="28" y1="50" x2="40" y2="60"/>
+      <line x1="28" y1="50" x2="40" y2="75"/>
+      <line x1="28" y1="50" x2="40" y2="90"/>
+      <line x1="28" y1="50" x2="40" y2="105"/>
+      
+      <line x1="28" y1="65" x2="40" y2="30"/>
+      <line x1="28" y1="65" x2="40" y2="45"/>
+      <line x1="28" y1="65" x2="40" y2="60"/>
+      <line x1="28" y1="65" x2="40" y2="75"/>
+      <line x1="28" y1="65" x2="40" y2="90"/>
+      <line x1="28" y1="65" x2="40" y2="105"/>
+      
+      <line x1="28" y1="80" x2="40" y2="30"/>
+      <line x1="28" y1="80" x2="40" y2="45"/>
+      <line x1="28" y1="80" x2="40" y2="60"/>
+      <line x1="28" y1="80" x2="40" y2="75"/>
+      <line x1="28" y1="80" x2="40" y2="90"/>
+      <line x1="28" y1="80" x2="40" y2="105"/>
+      
+      <line x1="28" y1="95" x2="40" y2="30"/>
+      <line x1="28" y1="95" x2="40" y2="45"/>
+      <line x1="28" y1="95" x2="40" y2="60"/>
+      <line x1="28" y1="95" x2="40" y2="75"/>
+      <line x1="28" y1="95" x2="40" y2="90"/>
+      <line x1="28" y1="95" x2="40" y2="105"/>
+    </g>
+    
+    <!-- Connect first hidden to second hidden layer -->
+    <g>
+      <line x1="48" y1="30" x2="60" y2="25"/>
+      <line x1="48" y1="30" x2="60" y2="40"/>
+      <line x1="48" y1="30" x2="60" y2="55"/>
+      
+      <line x1="48" y1="45" x2="60" y2="40"/>
+      <line x1="48" y1="45" x2="60" y2="55"/>
+      <line x1="48" y1="45" x2="60" y2="70"/>
+      
+      <line x1="48" y1="60" x2="60" y2="55"/>
+      <line x1="48" y1="60" x2="60" y2="70"/>
+      <line x1="48" y1="60" x2="60" y2="85"/>
+      
+      <line x1="48" y1="75" x2="60" y2="70"/>
+      <line x1="48" y1="75" x2="60" y2="85"/>
+      <line x1="48" y1="75" x2="60" y2="100"/>
+      
+      <line x1="48" y1="90" x2="60" y2="85"/>
+      <line x1="48" y1="90" x2="60" y2="100"/>
+      <line x1="48" y1="90" x2="60" y2="115"/>
+      
+      <line x1="48" y1="105" x2="60" y2="100"/>
+      <line x1="48" y1="105" x2="60" y2="115"/>
+    </g>
+    
+    <!-- Connect second hidden to third hidden layer -->
+    <g>
+      <line x1="68" y1="25" x2="80" y2="30"/>
+      <line x1="68" y1="25" x2="80" y2="45"/>
+      
+      <line x1="68" y1="40" x2="80" y2="30"/>
+      <line x1="68" y1="40" x2="80" y2="45"/>
+      <line x1="68" y1="40" x2="80" y2="60"/>
+      
+      <line x1="68" y1="55" x2="80" y2="45"/>
+      <line x1="68" y1="55" x2="80" y2="60"/>
+      <line x1="68" y1="55" x2="80" y2="75"/>
+      
+      <line x1="68" y1="70" x2="80" y2="60"/>
+      <line x1="68" y1="70" x2="80" y2="75"/>
+      <line x1="68" y1="70" x2="80" y2="90"/>
+      
+      <line x1="68" y1="85" x2="80" y2="75"/>
+      <line x1="68" y1="85" x2="80" y2="90"/>
+      <line x1="68" y1="85" x2="80" y2="105"/>
+      
+      <line x1="68" y1="100" x2="80" y2="90"/>
+      <line x1="68" y1="100" x2="80" y2="105"/>
+      
+      <line x1="68" y1="115" x2="80" y2="105"/>
+    </g>
+    
+    <!-- Connect third hidden to output layer -->
+    <g>
+      <line x1="88" y1="30" x2="100" y2="45"/>
+      <line x1="88" y1="45" x2="100" y2="45"/>
+      <line x1="88" y1="45" x2="100" y2="65"/>
+      
+      <line x1="88" y1="60" x2="100" y2="45"/>
+      <line x1="88" y1="60" x2="100" y2="65"/>
+      <line x1="88" y1="60" x2="100" y2="85"/>
+      
+      <line x1="88" y1="75" x2="100" y2="65"/>
+      <line x1="88" y1="75" x2="100" y2="85"/>
+      
+      <line x1="88" y1="90" x2="100" y2="65"/>
+      <line x1="88" y1="90" x2="100" y2="85"/>
+      
+      <line x1="88" y1="105" x2="100" y2="85"/>
+    </g>
+  </g>
+  
+  <!-- Layer labels -->
+  <g font-family="Arial" font-size="6" fill="#FFFFFF" text-anchor="middle">
+    <text x="24" cy="115">Input</text>
+    <text x="64" cy="10">Deep Neural Network</text>
+    <text x="104" cy="105">Output</text>
+  </g>
+</svg> 

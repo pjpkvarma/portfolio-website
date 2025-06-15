@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="arduino-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00979D"/>
+      <stop offset="100%" stop-color="#007076"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="64" cy="64" r="58" fill="url(#arduino-gradient)" stroke="#007076" stroke-width="2"/>
+  
+  <!-- Arduino logo representation -->
+  <g transform="translate(64, 45)">
+    <!-- Arduino board outline -->
+    <rect x="-30" y="-15" width="60" height="30" rx="3" fill="#FFFFFF" stroke="#007076" stroke-width="1.5"/>
+    
+    <!-- "ARDUINO" text on board -->
+    <text x="0" y="0" font-family="Arial" font-size="8" fill="#00979D" text-anchor="middle" font-weight="bold">ARDUINO</text>
+    <text x="0" y="6" font-family="Arial" font-size="4" fill="#007076" text-anchor="middle">UNO</text>
+    
+    <!-- USB port -->
+    <rect x="-25" y="-10" width="8" height="12" rx="1" fill="#B4B4B4" stroke="#007076" stroke-width="0.5"/>
+    
+    <!-- Power jack -->
+    <rect x="-25" y="5" width="6" height="6" rx="3" fill="#373737" stroke="#007076" stroke-width="0.5"/>
+    
+    <!-- Headers/pins -->
+    <g>
+      <!-- Digital pins -->
+      <rect x="12" y="-12" width="15" height="24" rx="1" fill="#B4B4B4" stroke="#007076" stroke-width="0.5"/>
+      <text x="19" y="7" font-family="monospace" font-size="3" fill="#007076" text-anchor="middle" transform="rotate(-90, 19, 7)">DIGITAL</text>
+      
+      <!-- Analog pins -->
+      <rect x="-12" y="-12" width="8" height="24" rx="1" fill="#B4B4B4" stroke="#007076" stroke-width="0.5"/>
+      <text x="-8" y="7" font-family="monospace" font-size="3" fill="#007076" text-anchor="middle" transform="rotate(-90, -8, 7)">ANALOG</text>
+    </g>
+    
+    <!-- Microcontroller -->
+    <rect x="-5" y="-8" width="15" height="15" rx="1" fill="#373737" stroke="#007076" stroke-width="0.5"/>
+    <text x="2.5" y="-2" font-family="monospace" font-size="3" fill="#FFFFFF" text-anchor="middle">ATmega</text>
+    <text x="2.5" y="2" font-family="monospace" font-size="3" fill="#FFFFFF" text-anchor="middle">328P</text>
+  </g>
+  
+  <!-- Circuit/project visualization -->
+  <g transform="translate(64, 20)">
+    <!-- LED circuit example -->
+    <g>
+      <!-- LED -->
+      <circle cx="0" cy="0" r="3" fill="#FFFFFF" stroke="#007076" stroke-width="0.5"/>
+      <circle cx="0" cy="0" r="1.5" fill="#FF5555"/>
+      
+      <!-- Resistor -->
+      <rect x="-15" y="-1" width="10" height="2" rx="0.5" fill="#D2CB7A" stroke="#007076" stroke-width="0.5"/>
+      
+      <!-- Wires -->
+      <g stroke="#FFFFFF" stroke-width="0.75">
+        <line x1="-25" y1="0" x2="-15" y2="0"/>
+        <line x1="-5" y1="0" x2="-3" y2="0"/>
+        <line x1="3" y1="0" x2="15" y2="0"/>
+        <line x1="15" y1="0" x2="15" y2="8"/>
+        <line x1="-25" y1="0" x2="-25" y2="8"/>
+      </g>
+      
+      <!-- Arduino connections -->
+      <rect x="-30" y="8" width="60" height="5" rx="1" fill="#00979D" stroke="#007076" stroke-width="0.5"/>
+      <circle cx="-25" cy="10.5" r="1" fill="#FF5555" stroke="#007076" stroke-width="0.3"/>
+      <text x="-21" y="11.5" font-family="monospace" font-size="2.5" fill="#FFFFFF" text-anchor="left">GND</text>
+      <circle cx="15" cy="10.5" r="1" fill="#FF5555" stroke="#007076" stroke-width="0.3"/>
+      <text x="19" y="11.5" font-family="monospace" font-size="2.5" fill="#FFFFFF" text-anchor="left">D13</text>
+    </g>
+  </g>
+  
+  <!-- Features and applications -->
+  <g transform="translate(35, 90)">
+    <rect x="-20" y="-10" width="40" height="20" rx="5" fill="#007076" stroke="#FFFFFF" stroke-width="1"/>
+    
+    <g font-family="monospace" font-size="3" fill="#FFFFFF" text-anchor="middle">
+      <text x="0" y="-5">OPEN SOURCE</text>
+      <text x="0" y="0">PROTOTYPING</text>
+      <text x="0" y="5">IOT PROJECTS</text>
+    </g>
+  </g>
+  
+  <!-- Programming languages -->
+  <g transform="translate(93, 90)">
+    <rect x="-20" y="-10" width="40" height="20" rx="5" fill="#007076" stroke="#FFFFFF" stroke-width="1"/>
+    
+    <g font-family="monospace" font-size="3" fill="#FFFFFF" text-anchor="middle">
+      <text x="0" y="-5">C/C++</text>
+      <text x="0" y="0">ARDUINO IDE</text>
+      <text x="0" y="5">LIBRARIES</text>
+    </g>
+  </g>
+  
+  <!-- Hardware components visualization -->
+  <g transform="translate(64, 70)">
+    <!-- Components -->
+    <g>
+      <!-- Servo motor -->
+      <g transform="translate(-25, 0)">
+        <rect x="-7" y="-7" width="14" height="14" rx="2" fill="#FFFFFF" stroke="#007076" stroke-width="0.75"/>
+        <path d="M-4,-2 L4,-2 L4,4 L-4,4 Z" fill="#00979D"/>
+        <circle cx="0" cy="-2" r="3" fill="#B4B4B4" stroke="#007076" stroke-width="0.3"/>
+        <line x1="0" y1="-2" x2="0" y2="-4" stroke="#007076" stroke-width="0.5"/>
+        <text x="0" y="8" font-family="monospace" font-size="2" fill="#007076" text-anchor="middle">SERVO</text>
+      </g>
+      
+      <!-- Sensor -->
+      <g transform="translate(0, 0)">
+        <rect x="-7" y="-7" width="14" height="14" rx="2" fill="#FFFFFF" stroke="#007076" stroke-width="0.75"/>
+        <circle cx="0" cy="0" r="4" fill="#00979D" stroke="#007076" stroke-width="0.3"/>
+        <circle cx="0" cy="0" r="2" fill="#007076"/>
+        <text x="0" y="8" font-family="monospace" font-size="2" fill="#007076" text-anchor="middle">SENSOR</text>
+      </g>
+      
+      <!-- Motor driver -->
+      <g transform="translate(25, 0)">
+        <rect x="-7" y="-7" width="14" height="14" rx="2" fill="#FFFFFF" stroke="#007076" stroke-width="0.75"/>
+        <rect x="-5" y="-5" width="10" height="10" rx="1" fill="#00979D"/>
+        <rect x="-3" y="-3" width="6" height="6" rx="1" fill="#007076"/>
+        <text x="0" y="8" font-family="monospace" font-size="2" fill="#007076" text-anchor="middle">DRIVER</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Arduino code snippet -->
+  <g transform="translate(64, 110)">
+    <rect x="-45" y="-8" width="90" height="16" rx="3" fill="#007076" stroke="#FFFFFF" stroke-width="0.75"/>
+    <g font-family="monospace" font-size="3" fill="#FFFFFF">
+      <text x="-43" y="-4">void setup() {</text>
+      <text x="-43" y="0">  pinMode(13, OUTPUT);</text>
+      <text x="-43" y="4">}</text>
+      <text x="5" y="-4">void loop() {</text>
+      <text x="5" y="0">  digitalWrite(13, HIGH);</text>
+      <text x="5" y="4">  delay(1000);</text>
+    </g>
+  </g>
+
+  <!-- Label -->
+  <g transform="translate(64, 125)">
+    <rect x="-40" y="-9" width="80" height="18" rx="5" fill="#007076" stroke="#FFFFFF" stroke-width="1"/>
+    <text x="0" y="0" font-family="Arial" font-size="10" fill="#FFFFFF" text-anchor="middle" font-weight="bold">ARDUINO</text>
+    <text x="0" y="9" font-family="monospace" font-size="6" fill="#FFFFFF" text-anchor="middle">90%</text>
+  </g>
+</svg> 

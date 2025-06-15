@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="git-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F05033"/>
+      <stop offset="100%" stop-color="#BD2C00"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="64" cy="64" r="58" fill="url(#git-gradient)" stroke="#BD2C00" stroke-width="2"/>
+  
+  <!-- Git logo representation -->
+  <g transform="translate(48, 45)">
+    <!-- Git logo -->
+    <path d="M0,-15 L15,0 L0,15 L-15,0 Z" fill="#FFFFFF" stroke="#BD2C00" stroke-width="1"/>
+    <circle cx="0" cy="0" r="4" fill="#F05033"/>
+    <circle cx="-8" cy="-8" r="3" fill="#F05033"/>
+    <circle cx="8" cy="-8" r="3" fill="#F05033"/>
+    <circle cx="8" cy="8" r="3" fill="#F05033"/>
+  </g>
+  
+  <!-- GitHub logo representation -->
+  <g transform="translate(85, 45)">
+    <!-- GitHub Octocat silhouette -->
+    <path d="M0,-12 C-7,-12 -12,-7 -12,0 C-12,5 -9,9 -5,11 C-4.5,11.2 -4.2,10.9 -4.2,10.6 C-4.2,10.3 -4.2,9.4 -4.2,8.8 C-7.4,9.5 -8.2,7.5 -8.2,7.5 C-8.8,6 -9.5,5.7 -9.5,5.7 C-10.5,4.9 -9.4,4.9 -9.4,4.9 C-8.4,5 -7.7,6.1 -7.7,6.1 C-6.8,7.8 -5.2,7.5 -4.2,7.2 C-4,6.6 -3.7,6.1 -3.4,5.8 C-6,5.5 -8.8,4.2 -8.8,-0.5 C-8.8,-2.1 -8.3,-3.4 -7.7,-4.4 C-7.9,-4.7 -8.4,-5.9 -7.5,-7.6 C-7.5,-7.6 -6.7,-8 -4.2,-6.4 C-3.2,-6.7 -2.1,-6.8 -1,-6.8 C0.1,-6.8 1.2,-6.7 2.2,-6.4 C4.7,-8 5.5,-7.6 5.5,-7.6 C6.4,-5.9 5.9,-4.7 5.7,-4.4 C6.3,-3.4 6.8,-2.1 6.8,-0.5 C6.8,4.2 4,5.5 1.4,5.8 C1.8,6.2 2.2,6.9 2.2,8 C2.2,9.5 2.2,10.2 2.2,10.6 C2.2,10.9 2.5,11.2 3,11 C7,9 10,5 10,0 C10,-7 5,-12 -2,-12 Z" 
+         fill="#FFFFFF" stroke="#BD2C00" stroke-width="0.75"/>
+  </g>
+  
+  <!-- Branching and merging visualization -->
+  <g transform="translate(64, 80)">
+    <!-- Commit history visualization -->
+    <g stroke="#FFFFFF" stroke-width="1.5">
+      <line x1="-30" y1="0" x2="30" y2="0"/>
+      <line x1="0" y1="0" x2="0" y2="-15"/>
+      <line x1="0" y1="-15" x2="20" y2="-15"/>
+      <line x1="20" y1="-15" x2="20" y2="-5"/>
+      <line x1="20" y1="-5" x2="0" y2="-5"/>
+    </g>
+    
+    <!-- Commit points -->
+    <g fill="#FFFFFF" stroke="#BD2C00" stroke-width="0.75">
+      <circle cx="-20" cy="0" r="3"/>
+      <circle cx="-10" cy="0" r="3"/>
+      <circle cx="0" cy="0" r="3"/>
+      <circle cx="10" cy="0" r="3"/>
+      <circle cx="20" cy="0" r="3"/>
+      <circle cx="30" cy="0" r="3"/>
+      <circle cx="0" cy="-5" r="3"/>
+      <circle cx="0" cy="-15" r="3"/>
+      <circle cx="20" cy="-15" r="3"/>
+      <circle cx="20" cy="-5" r="3"/>
+    </g>
+  </g>
+  
+  <!-- Git commands -->
+  <g transform="translate(35, 105)">
+    <rect x="-20" y="-8" width="40" height="16" rx="3" fill="#BD2C00" stroke="#FFFFFF" stroke-width="0.75"/>
+    <g font-family="monospace" font-size="3" fill="#FFFFFF" text-anchor="middle">
+      <text x="0" y="-4">git init</text>
+      <text x="0" y="0">git add</text>
+      <text x="0" y="4">git commit</text>
+      <text x="0" y="8">git push</text>
+    </g>
+  </g>
+  
+  <!-- GitHub Actions -->
+  <g transform="translate(93, 105)">
+    <rect x="-20" y="-8" width="40" height="16" rx="3" fill="#BD2C00" stroke="#FFFFFF" stroke-width="0.75"/>
+    <g font-family="monospace" font-size="3" fill="#FFFFFF" text-anchor="middle">
+      <text x="0" y="-4">pull requests</text>
+      <text x="0" y="0">issues</text>
+      <text x="0" y="4">actions</text>
+      <text x="0" y="8">projects</text>
+    </g>
+  </g>
+
+  <!-- Label -->
+  <g transform="translate(64, 125)">
+    <rect x="-40" y="-9" width="80" height="18" rx="5" fill="#BD2C00" stroke="#FFFFFF" stroke-width="1"/>
+    <text x="0" y="0" font-family="Arial" font-size="10" fill="#FFFFFF" text-anchor="middle" font-weight="bold">GIT & GITHUB</text>
+    <text x="0" y="9" font-family="monospace" font-size="6" fill="#FFFFFF" text-anchor="middle">92%</text>
+  </g>
+</svg> 

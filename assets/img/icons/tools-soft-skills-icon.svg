@@ -1,0 +1,254 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="tools-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9C27B0"/>
+      <stop offset="100%" stop-color="#4A148C"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="64" cy="64" r="58" fill="url(#tools-gradient)" stroke="#4A148C" stroke-width="2"/>
+  
+  <!-- Central connecting nodes - representing teamwork/collaboration -->
+  <g transform="translate(64, 64)">
+    <!-- Central node -->
+    <circle cx="0" cy="0" r="12" fill="#7B1FA2" stroke="#E1BEE7" stroke-width="1.5"/>
+    
+    <!-- Connection lines -->
+    <line x1="0" y1="-12" x2="0" y2="-30" stroke="#E1BEE7" stroke-width="1.5" stroke-dasharray="2,1"/>
+    <line x1="10.4" y1="-6" x2="26" y2="-15" stroke="#E1BEE7" stroke-width="1.5" stroke-dasharray="2,1"/>
+    <line x1="10.4" y1="6" x2="26" y2="15" stroke="#E1BEE7" stroke-width="1.5" stroke-dasharray="2,1"/>
+    <line x1="0" y1="12" x2="0" y2="30" stroke="#E1BEE7" stroke-width="1.5" stroke-dasharray="2,1"/>
+    <line x1="-10.4" y1="6" x2="-26" y2="15" stroke="#E1BEE7" stroke-width="1.5" stroke-dasharray="2,1"/>
+    <line x1="-10.4" y1="-6" x2="-26" y2="-15" stroke="#E1BEE7" stroke-width="1.5" stroke-dasharray="2,1"/>
+    
+    <!-- Surrounding nodes -->
+    <circle cx="0" cy="-30" r="8" fill="#7B1FA2" stroke="#E1BEE7" stroke-width="1"/>
+    <circle cx="26" cy="-15" r="8" fill="#7B1FA2" stroke="#E1BEE7" stroke-width="1"/>
+    <circle cx="26" cy="15" r="8" fill="#7B1FA2" stroke="#E1BEE7" stroke-width="1"/>
+    <circle cx="0" cy="30" r="8" fill="#7B1FA2" stroke="#E1BEE7" stroke-width="1"/>
+    <circle cx="-26" cy="15" r="8" fill="#7B1FA2" stroke="#E1BEE7" stroke-width="1"/>
+    <circle cx="-26" cy="-15" r="8" fill="#7B1FA2" stroke="#E1BEE7" stroke-width="1"/>
+  </g>
+  
+  <!-- Soft Skills Elements (Top) -->
+  <g transform="translate(64, 34)">
+    <!-- Speech bubbles for communication -->
+    <path d="M -3,-3 L 3,-3 L 3,3 L 0,5 L -3,3 Z" fill="#E1BEE7" stroke="#4A148C" stroke-width="0.75"/>
+    <path d="M -8,0 L -2,0 L -2,6 L -5,8 L -8,6 Z" fill="#CE93D8" stroke="#4A148C" stroke-width="0.75" transform="rotate(-15)"/>
+    <path d="M 2,0 L 8,0 L 8,6 L 5,8 L 2,6 Z" fill="#CE93D8" stroke="#4A148C" stroke-width="0.75" transform="rotate(15)"/>
+    
+    <!-- People icons for teamwork -->
+    <g transform="translate(0, 0) scale(0.8)">
+      <circle cx="-8" cy="0" r="2" fill="#E1BEE7" stroke="#4A148C" stroke-width="0.5"/>
+      <path d="M -10,3 C -10,6 -6,6 -6,3 L -8,10 L -10,3" fill="#E1BEE7" stroke="#4A148C" stroke-width="0.5"/>
+      <line x1="-9" y1="5" x2="-11" y2="8" stroke="#E1BEE7" stroke-width="0.5"/>
+      <line x1="-7" y1="5" x2="-5" y2="8" stroke="#E1BEE7" stroke-width="0.5"/>
+      
+      <circle cx="0" cy="-2" r="2" fill="#E1BEE7" stroke="#4A148C" stroke-width="0.5"/>
+      <path d="M -2,1 C -2,4 2,4 2,1 L 0,8 L -2,1" fill="#E1BEE7" stroke="#4A148C" stroke-width="0.5"/>
+      <line x1="-1" y1="3" x2="-3" y2="6" stroke="#E1BEE7" stroke-width="0.5"/>
+      <line x1="1" y1="3" x2="3" y2="6" stroke="#E1BEE7" stroke-width="0.5"/>
+      
+      <circle cx="8" cy="0" r="2" fill="#E1BEE7" stroke="#4A148C" stroke-width="0.5"/>
+      <path d="M 6,3 C 6,6 10,6 10,3 L 8,10 L 6,3" fill="#E1BEE7" stroke="#4A148C" stroke-width="0.5"/>
+      <line x1="7" y1="5" x2="5" y2="8" stroke="#E1BEE7" stroke-width="0.5"/>
+      <line x1="9" y1="5" x2="11" y2="8" stroke="#E1BEE7" stroke-width="0.5"/>
+    </g>
+  </g>
+  
+  <!-- Software Tools (Top Right) -->
+  <g transform="translate(90, 49)">
+    <!-- Code window -->
+    <rect x="-10" y="-10" width="20" height="17" rx="1" fill="#7B1FA2" stroke="#E1BEE7" stroke-width="0.75"/>
+    <!-- Title bar -->
+    <rect x="-10" y="-10" width="20" height="3" rx="1" fill="#4A148C" stroke="#E1BEE7" stroke-width="0.75"/>
+    <!-- Window controls -->
+    <circle cx="7" cy="-8.5" r="0.7" fill="#E1BEE7"/>
+    <circle cx="4" cy="-8.5" r="0.7" fill="#E1BEE7"/>
+    <circle cx="1" cy="-8.5" r="0.7" fill="#E1BEE7"/>
+    
+    <!-- Code lines -->
+    <g fill="none" stroke="#E1BEE7" stroke-width="0.5">
+      <line x1="-8" y1="-5" x2="3" y2="-5"/>
+      <line x1="-8" y1="-2" x2="8" y2="-2"/>
+      <line x1="-8" y1="1" x2="5" y2="1"/>
+      <line x1="-8" y1="4" x2="7" y2="4"/>
+    </g>
+    
+    <!-- Brackets and syntax highlighting -->
+    <g font-family="monospace" font-size="3" fill="#E1BEE7" text-anchor="middle">
+      <text x="-7" y="-2">{</text>
+      <text x="7" y="4">}</text>
+      <text x="-3" y="-5" fill="#BA68C8">if</text>
+      <text x="0" y="1" fill="#CE93D8">func</text>
+      <text x="0" y="5" fill="#CE93D8">;</text>
+    </g>
+  </g>
+  
+  <!-- Problem-solving/Logic (Top left) -->
+  <g transform="translate(38, 49)">
+    <!-- Puzzle pieces -->
+    <path d="M -10,-10 L 0,-10 C 0,-12 2,-12 2,-10 L 10,-10 L 10,0 C 12,0 12,2 10,2 L 10,10 L 0,10 C 0,12 -2,12 -2,10 L -10,10 L -10,0 C -12,0 -12,-2 -10,-2 Z" 
+          fill="#7B1FA2" stroke="#E1BEE7" stroke-width="0.75"/>
+    
+    <!-- Logic flow diagram elements -->
+    <g fill="none" stroke="#E1BEE7" stroke-width="0.5">
+      <circle cx="0" cy="-5" r="2"/>
+      <rect x="-2" y="0" width="4" height="4" rx="0.5"/>
+      <polygon points="-5,7 0,10 5,7 0,4"/>
+      <line x1="0" y1="-3" x2="0" y2="0"/>
+      <line x1="0" y1="4" x2="0" y2="4"/>
+      <line x1="0" y1="4" x2="0" y2="7"/>
+    </g>
+  </g>
+  
+  <!-- Digital/Design Tools (Bottom Right) -->
+  <g transform="translate(90, 79)">
+    <!-- Design tool palette -->
+    <path d="M -10,-10 C -10,-10 -12,10 10,10 C 10,10 12,-10 -10,-10 Z" fill="#7B1FA2" stroke="#E1BEE7" stroke-width="0.75"/>
+    
+    <!-- Tool icons -->
+    <g fill="#E1BEE7">
+      <circle cx="-5" cy="-5" r="2"/>
+      <circle cx="5" cy="-5" r="2"/>
+      <circle cx="-5" cy="5" r="2"/>
+      <circle cx="5" cy="5" r="2"/>
+      <circle cx="0" cy="0" r="2.5"/>
+    </g>
+    
+    <!-- Color swatches -->
+    <rect x="-7" y="-7" width="3" height="3" fill="#E1BEE7" stroke="#4A148C" stroke-width="0.25"/>
+    <rect x="4" y="-7" width="3" height="3" fill="#CE93D8" stroke="#4A148C" stroke-width="0.25"/>
+    <rect x="-7" y="4" width="3" height="3" fill="#BA68C8" stroke="#4A148C" stroke-width="0.25"/>
+    <rect x="4" y="4" width="3" height="3" fill="#AB47BC" stroke="#4A148C" stroke-width="0.25"/>
+    
+    <!-- Brush/pen tool -->
+    <path d="M 0,-2 L 3,1 L 1,3 L -2,0 Z" fill="#4A148C" stroke="#E1BEE7" stroke-width="0.25"/>
+    <line x1="1" y1="3" x2="0" y2="5" stroke="#E1BEE7" stroke-width="0.75"/>
+  </g>
+  
+  <!-- Hardware Tools (Bottom Left) -->
+  <g transform="translate(38, 79)">
+    <!-- Toolbox shape -->
+    <path d="M -10,-5 L 10,-5 L 10,10 L -10,10 Z" fill="#7B1FA2" stroke="#E1BEE7" stroke-width="0.75"/>
+    <path d="M -7,-10 L 7,-10 L 10,-5 L -10,-5 Z" fill="#4A148C" stroke="#E1BEE7" stroke-width="0.75"/>
+    
+    <!-- Hardware tools -->
+    <g stroke="#E1BEE7" stroke-width="0.75" fill="none">
+      <!-- Wrench -->
+      <path d="M -7,0 C -7,2 -5,4 -3,4 L -1,6 L 1,4 L -1,2 C -3,2 -5,0 -5,-2" fill="#9C27B0"/>
+      
+      <!-- Screwdriver -->
+      <line x1="3" y1="-3" x2="7" y2="5" stroke-width="1"/>
+      <path d="M 3,-3 L 1,-5 L 3,-7 L 5,-5 Z" fill="#9C27B0"/>
+      <path d="M 7,5 L 7,7 L 6,8 L 5,7 L 5,5 Z" fill="#9C27B0"/>
+      
+      <!-- Hammer -->
+      <line x1="-1" y1="8" x2="-1" y2="0" stroke-width="1.25"/>
+      <rect x="-3" y="-2" width="4" height="2" rx="0.5" fill="#9C27B0"/>
+    </g>
+  </g>
+  
+  <!-- Project Management (Bottom) -->
+  <g transform="translate(64, 94)">
+    <!-- Gantt/kanban board -->
+    <rect x="-12" y="-10" width="24" height="18" rx="1" fill="#7B1FA2" stroke="#E1BEE7" stroke-width="0.75"/>
+    
+    <!-- Board columns -->
+    <g stroke="#E1BEE7" stroke-width="0.5" fill="none">
+      <line x1="-4" y1="-10" x2="-4" y2="8"/>
+      <line x1="4" y1="-10" x2="4" y2="8"/>
+    </g>
+    
+    <!-- Task cards -->
+    <rect x="-11" y="-8" width="6" height="3" rx="0.5" fill="#4A148C" stroke="#E1BEE7" stroke-width="0.25"/>
+    <rect x="-11" y="-3" width="6" height="3" rx="0.5" fill="#4A148C" stroke="#E1BEE7" stroke-width="0.25"/>
+    <rect x="-11" y="2" width="6" height="3" rx="0.5" fill="#4A148C" stroke="#E1BEE7" stroke-width="0.25"/>
+    
+    <rect x="-3" y="-8" width="6" height="3" rx="0.5" fill="#4A148C" stroke="#E1BEE7" stroke-width="0.25"/>
+    <rect x="-3" y="-3" width="6" height="3" rx="0.5" fill="#4A148C" stroke="#E1BEE7" stroke-width="0.25"/>
+    
+    <rect x="5" y="-8" width="6" height="3" rx="0.5" fill="#4A148C" stroke="#E1BEE7" stroke-width="0.25"/>
+    
+    <!-- Chart elements -->
+    <g transform="translate(0, 0) scale(0.8)">
+      <path d="M -10,7 L 10,7" stroke="#E1BEE7" stroke-width="0.5" fill="none"/>
+      <rect x="-8" y="4" width="3" height="3" fill="#BA68C8" stroke="#E1BEE7" stroke-width="0.25"/>
+      <rect x="-3" y="2" width="3" height="5" fill="#BA68C8" stroke="#E1BEE7" stroke-width="0.25"/>
+      <rect x="2" y="5" width="3" height="2" fill="#BA68C8" stroke="#E1BEE7" stroke-width="0.25"/>
+      <rect x="7" y="3" width="3" height="4" fill="#BA68C8" stroke="#E1BEE7" stroke-width="0.25"/>
+    </g>
+  </g>
+  
+  <!-- Skill words around the edge -->
+  <g font-family="monospace" font-size="3.5" fill="#E1BEE7" text-anchor="middle">
+    <text x="64" y="15" font-size="4">COMMUNICATION</text>
+    <text x="25" y="30">TEAMWORK</text>
+    <text x="103" y="30">LEADERSHIP</text>
+    <text x="15" y="64">PROBLEM</text>
+    <text x="15" y="68">SOLVING</text>
+    <text x="113" y="64">TIME</text>
+    <text x="113" y="68">MANAGEMENT</text>
+    <text x="30" y="100">ADAPTABILITY</text>
+    <text x="98" y="100">CREATIVITY</text>
+    <text x="64" y="112" font-size="4">CRITICAL THINKING</text>
+  </g>
+  
+  <!-- Tool labels -->
+  <g font-family="monospace" font-size="3" fill="#E1BEE7">
+    <text x="34" y="35">LOGIC</text>
+    <text x="94" y="35">IDE</text>
+    <text x="30" y="68">HARDWARE</text>
+    <text x="98" y="68">DESIGN</text>
+    <text x="64" y="80">AGILE</text>
+  </g>
+  
+  <!-- Specific tool proficiencies -->
+  <g transform="translate(64, 15)">
+    <g font-family="monospace" font-size="3.5" fill="#E1BEE7" text-anchor="middle">
+      <text x="0" y="-3" font-size="4" font-weight="bold">TOOLS PROFICIENCY</text>
+    </g>
+    
+    <!-- Left column -->
+    <g transform="translate(-30, 5)" font-family="monospace" font-size="3" fill="#E1BEE7" text-anchor="middle">
+      <!-- PyTorch -->
+      <g transform="translate(0, 0)">
+        <text x="0" y="0">PYTORCH</text>
+        <rect x="-10" y="2" width="20" height="2.5" rx="1.25" fill="none" stroke="#E1BEE7" stroke-width="0.25"/>
+        <rect x="-10" y="2" width="17.6" height="2.5" rx="1.25" fill="#9C27B0"/>
+        <text x="0" y="4" font-size="2">88%</text>
+      </g>
+      
+      <!-- GitHub -->
+      <g transform="translate(0, 7)">
+        <text x="0" y="0">GIT/GITHUB</text>
+        <rect x="-10" y="2" width="20" height="2.5" rx="1.25" fill="none" stroke="#E1BEE7" stroke-width="0.25"/>
+        <rect x="-10" y="2" width="18" height="2.5" rx="1.25" fill="#9C27B0"/>
+        <text x="0" y="4" font-size="2">90%</text>
+      </g>
+    </g>
+    
+    <!-- Right column -->
+    <g transform="translate(30, 5)" font-family="monospace" font-size="3" fill="#E1BEE7" text-anchor="middle">
+      <!-- OpenCV -->
+      <g transform="translate(0, 0)">
+        <text x="0" y="0">OPENCV</text>
+        <rect x="-10" y="2" width="20" height="2.5" rx="1.25" fill="none" stroke="#E1BEE7" stroke-width="0.25"/>
+        <rect x="-10" y="2" width="18.4" height="2.5" rx="1.25" fill="#9C27B0"/>
+        <text x="0" y="4" font-size="2">92%</text>
+      </g>
+      
+      <!-- Docker -->
+      <g transform="translate(0, 7)">
+        <text x="0" y="0">DOCKER</text>
+        <rect x="-10" y="2" width="20" height="2.5" rx="1.25" fill="none" stroke="#E1BEE7" stroke-width="0.25"/>
+        <rect x="-10" y="2" width="17" height="2.5" rx="1.25" fill="#9C27B0"/>
+        <text x="0" y="4" font-size="2">85%</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Label -->
+  <text x="64" y="123" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="middle" font-weight="bold">Tools & Soft Skills</text>
+</svg> 

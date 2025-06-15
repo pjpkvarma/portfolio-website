@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autonomous UAV Tracking</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        .project-article {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 2.5rem; min-height: 200vh;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.8;
+        }
+        .article-title {
+            font-size: 2rem;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        .article-paragraph {
+            margin: 1rem 0;
+        }
+        .article-subtitle {
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            color: #34495e;
+        }
+        .article-list {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+        .article-list li {
+            margin: 0.5rem 0;
+        }
+        .project-btn {
+            display: inline-block;
+            margin: 2rem 0;
+            padding: 0.8rem 1.5rem;
+            background: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 1rem;
+        }
+        .project-btn:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <section class="project-article">
+        <h1 class="article-title">Autonomous UAV Tracking with Physics-Constrained Learning</h1>
+        <p class="article-paragraph">
+            This project presents an advanced autonomous UAV tracking framework combining state-of-the-art object detection and reinforcement learning. The system enables a "chaser" UAV to follow a dynamic "target" UAV in complex environments while maintaining safety and precision. This approach addresses challenges such as high-speed trajectories, non-linear movements, and maintaining a consistent field of view (FoV) through a physics-constrained learning approach.
+        </p>
+
+        <h2 class="article-subtitle">Key Features</h2>
+        <ul class="article-list">
+            <li>
+                <b>Perception:</b> 
+                Uses a YOLOv11-based object detection model integrated with Kernelized Correlation Filters (KCF) and a Kalman Filter to estimate and track the target's position in real-time.
+            </li>
+            <li>
+                <b>Control:</b> 
+                Employs a Proximal Policy Optimization (PPO)-based reinforcement learning (RL) algorithm with physics-informed constraints. The controller optimizes the chaser UAV’s velocities and yaw angle while maintaining tracking accuracy and safety.
+            </li>
+            <li>
+                <b>Physics-Constrained Action Space:</b> 
+                Integrates target dynamics to bound the chaser's actions, improving training efficiency and real-world robustness.
+            </li>
+            <li>
+                <b>Simulation Environment:</b> 
+                Developed using AirSim and Unreal Engine, offering high-fidelity simulation of UAV dynamics, realistic environments, and robust testing scenarios.
+            </li>
+        </ul>
+
+        <h2 class="article-subtitle">Methodology</h2>
+        <p class="article-paragraph">
+            The framework follows a two-part approach to solve the coupled problems of target estimation and UAV control:
+        </p>
+        <ul class="article-list">
+            <li>
+                <b>Target Estimation:</b> 
+                The YOLOv11 model identifies the target UAV and provides bounding box coordinates. These are passed through KCF for short-term tracking and Kalman filtering for smoothing and predicting the target's next position.
+            </li>
+            <li>
+                <b>Control Using Physics-Constrained RL:</b> 
+                The control policy, trained using PPO, computes optimal velocities (Vx, Vy, Vz) and yaw angle (θ) for the chaser UAV. Physics-informed constraints bound the action space, ensuring feasible movements and minimizing the risk of losing the target.
+            </li>
+        </ul>
+
+        <h2 class="article-subtitle">Simulation Framework</h2>
+        <p class="article-paragraph">
+            The simulation was built using AirSim on Unreal Engine, enabling high-fidelity physics and realistic environments. Five pre-defined target trajectories were created, with randomized initial positions and environmental settings for each mission scenario. The chaser UAV is initialized to have a direct line of sight with the target, and the mission concludes if the target leaves the chaser’s FoV for more than 5 seconds.
+        </p>
+        <p class="article-paragraph">
+            The framework was implemented with a Gymnasium interface, providing seamless integration with RL libraries and enabling efficient training and evaluation.
+        </p>
+
+        <h2 class="article-subtitle">Applications</h2>
+        <ul class="article-list">
+            <li>Surveillance and monitoring in urban environments.</li>
+            <li>Search-and-rescue missions in dynamic and cluttered settings.</li>
+            <li>Wildlife tracking for conservation studies.</li>
+            <li>Inspection of aerial and terrestrial infrastructure.</li>
+        </ul>
+
+        <h2 class="article-subtitle">Conclusion</h2>
+        <p class="article-paragraph">
+            The proposed physics-constrained learning approach bridges the gap between theoretical models and real-world UAV tracking applications. By combining cutting-edge perception and control methodologies with robust simulations, the framework demonstrates significant improvements in tracking accuracy, training efficiency, and real-world applicability.
+        </p>
+
+        <a href="https://pjpkvarma.github.io/paper-submitted/" class="project-btn">GitHub Link</a>
+    </section>
+</body>
+</html>

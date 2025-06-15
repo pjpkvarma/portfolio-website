@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scalable Coverage Path Planning (SCoPP)</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .project-article {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 2.5rem; min-height: 140vh;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+    <section class="project-article">
+        <h1 class="article-title">Scalable and Load-Balanced Coverage Path Planning (SCoPP)</h1>
+        <p class="article-paragraph">
+            Modern challenges in large-scale area coverage demand innovative solutions, especially when deploying multi-UAV teams for applications like disaster response, environmental surveys, and urban mapping. This project presents the Scalable Coverage Path Planning (SCoPP) framework, a highly efficient and adaptable approach tailored for non-convex, large-scale environments. SCoPP not only ensures comprehensive coverage but also emphasizes equitable load balancing across UAVs, minimizing mission time and maximizing efficiency.
+        </p>
+        <p class="article-paragraph">
+            The SCoPP framework operates through a meticulously designed pipeline comprising five core stages:
+        </p>
+        <ul class="article-list">
+            <li><b>Area Selection:</b> Identifying and segmenting the target zones, including defining priorities and constraints like no-fly zones.</li>
+            <li><b>Discretization:</b> Dividing the area into manageable grid cells, ensuring precise coverage calculations.</li>
+            <li><b>Partitioning:</b> Assigning grid cells to individual UAVs based on workload balance and spatial proximity.</li>
+            <li><b>Conflict Resolution:</b> Addressing overlaps or constraints to ensure smooth navigation and task distribution.</li>
+            <li><b>Path Planning:</b> Generating optimized, collision-free routes for each UAV, tailored to their assigned regions.</li>
+        </ul>
+        <p class="article-paragraph">
+            SCoPP’s scalability and flexibility are its standout features. The framework seamlessly adapts to teams of up to 150 UAVs and computes high-quality plans within minutes, even in terrains with intricate boundaries or constraints. Two specialized variants enhance its functionality:
+        </p>
+        <ul class="article-list">
+            <li><b>SCoP3:</b> Incorporates user-defined priorities, allowing UAVs to focus on high-importance regions first.</li>
+            <li><b>SCoPE:</b> Optimized for time-constrained missions, prioritizing swift execution without compromising coverage.</li>
+        </ul>
+        <p class="article-paragraph">
+            Extensive simulations in both synthetic and real-world inspired scenarios demonstrated SCoPP’s superiority over baseline approaches, achieving up to a 30% improvement in workload balance and a 25% reduction in completion time. Field trials using physical UAVs further validated these findings, showcasing robust performance in environments with real-world uncertainties.
+        </p>
+        <p class="article-paragraph">
+            SCoPP stands out as a cutting-edge solution bridging the gap between simulation and practical deployment. Whether managing disaster-stricken areas, tracking environmental changes, or enabling urban surveys, SCoPP redefines scalability and efficiency in multi-UAV path planning.
+        </p>
+        <a href="https://pjpkvarma.github.io/paper-submitted/" class="project-btn">GitHub Link</a>
+    </section>
+</body>
+</html>
+

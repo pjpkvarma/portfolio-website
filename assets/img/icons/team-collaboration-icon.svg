@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="team-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4CAF50"/>
+      <stop offset="100%" stop-color="#1B5E20"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="64" cy="64" r="58" fill="url(#team-gradient)" stroke="#1B5E20" stroke-width="2"/>
+  
+  <!-- Team members representation -->
+  <g transform="translate(64, 45)">
+    <!-- Central hub -->
+    <circle cx="0" cy="0" r="12" fill="#1B5E20" stroke="#FFFFFF" stroke-width="1"/>
+    
+    <!-- Team members -->
+    <g>
+      <!-- Member 1 (top) -->
+      <g transform="translate(0, -30)">
+        <circle cx="0" cy="0" r="8" fill="#4CAF50" stroke="#FFFFFF" stroke-width="1"/>
+        <circle cx="0" cy="-2" r="3" fill="#FFFFFF"/>
+        <path d="M-3,2 C-3,5 3,5 3,2 L3,1 C3,-2 -3,-2 -3,1 Z" fill="#FFFFFF"/>
+      </g>
+      
+      <!-- Member 2 (right) -->
+      <g transform="translate(26, -15)">
+        <circle cx="0" cy="0" r="8" fill="#4CAF50" stroke="#FFFFFF" stroke-width="1"/>
+        <circle cx="0" cy="-2" r="3" fill="#FFFFFF"/>
+        <path d="M-3,2 C-3,5 3,5 3,2 L3,1 C3,-2 -3,-2 -3,1 Z" fill="#FFFFFF"/>
+      </g>
+      
+      <!-- Member 3 (bottom right) -->
+      <g transform="translate(16, 15)">
+        <circle cx="0" cy="0" r="8" fill="#4CAF50" stroke="#FFFFFF" stroke-width="1"/>
+        <circle cx="0" cy="-2" r="3" fill="#FFFFFF"/>
+        <path d="M-3,2 C-3,5 3,5 3,2 L3,1 C3,-2 -3,-2 -3,1 Z" fill="#FFFFFF"/>
+      </g>
+      
+      <!-- Member 4 (bottom left) -->
+      <g transform="translate(-16, 15)">
+        <circle cx="0" cy="0" r="8" fill="#4CAF50" stroke="#FFFFFF" stroke-width="1"/>
+        <circle cx="0" cy="-2" r="3" fill="#FFFFFF"/>
+        <path d="M-3,2 C-3,5 3,5 3,2 L3,1 C3,-2 -3,-2 -3,1 Z" fill="#FFFFFF"/>
+      </g>
+      
+      <!-- Member 5 (left) -->
+      <g transform="translate(-26, -15)">
+        <circle cx="0" cy="0" r="8" fill="#4CAF50" stroke="#FFFFFF" stroke-width="1"/>
+        <circle cx="0" cy="-2" r="3" fill="#FFFFFF"/>
+        <path d="M-3,2 C-3,5 3,5 3,2 L3,1 C3,-2 -3,-2 -3,1 Z" fill="#FFFFFF"/>
+      </g>
+    </g>
+    
+    <!-- Connection lines -->
+    <g stroke="#FFFFFF" stroke-width="1" stroke-dasharray="2,1">
+      <line x1="0" y1="-12" x2="0" y2="-22"/>
+      <line x1="10" y1="-5" x2="19" y2="-11"/>
+      <line x1="7" y1="8" x2="11" y2="12"/>
+      <line x1="-7" y1="8" x2="-11" y2="12"/>
+      <line x1="-10" y1="-5" x2="-19" y2="-11"/>
+    </g>
+    
+    <!-- Project icon in center -->
+    <g transform="translate(0, 0) scale(0.6)">
+      <rect x="-8" y="-10" width="16" height="20" rx="2" fill="#FFFFFF"/>
+      <line x1="-4" y1="-6" x2="4" y2="-6" stroke="#1B5E20" stroke-width="1.5"/>
+      <line x1="-4" y1="-2" x2="4" y2="-2" stroke="#1B5E20" stroke-width="1.5"/>
+      <line x1="-4" y1="2" x2="4" y2="2" stroke="#1B5E20" stroke-width="1.5"/>
+      <line x1="-4" y1="6" x2="2" y2="6" stroke="#1B5E20" stroke-width="1.5"/>
+    </g>
+  </g>
+  
+  <!-- Collaboration tools -->
+  <g transform="translate(35, 90)">
+    <rect x="-25" y="-10" width="50" height="20" rx="5" fill="#1B5E20" stroke="#FFFFFF" stroke-width="1"/>
+    
+    <!-- Tools icons -->
+    <g fill="#FFFFFF">
+      <!-- Calendar -->
+      <g transform="translate(-15, 0) scale(0.7)">
+        <rect x="-5" y="-6" width="10" height="12" rx="1"/>
+        <line x1="-3" y1="-3" x2="3" y2="-3" stroke="#1B5E20" stroke-width="1"/>
+        <line x1="-3" y1="0" x2="3" y2="0" stroke="#1B5E20" stroke-width="1"/>
+        <line x1="-3" y1="3" x2="3" y2="3" stroke="#1B5E20" stroke-width="1"/>
+        <line x1="-3" y1="-9" x2="-3" y2="-6" stroke="#1B5E20" stroke-width="1"/>
+        <line x1="3" y1="-9" x2="3" y2="-6" stroke="#1B5E20" stroke-width="1"/>
+      </g>
+      
+      <!-- Chat -->
+      <g transform="translate(0, 0) scale(0.7)">
+        <path d="M-5,-6 L-5,2 L-2,2 L-2,6 L2,2 L5,2 L5,-6 Z" fill="#FFFFFF" stroke="#1B5E20" stroke-width="1"/>
+        <circle cx="-2" cy="-2" r="1" fill="#1B5E20"/>
+        <circle cx="0" cy="-2" r="1" fill="#1B5E20"/>
+        <circle cx="2" cy="-2" r="1" fill="#1B5E20"/>
+      </g>
+      
+      <!-- Document -->
+      <g transform="translate(15, 0) scale(0.7)">
+        <path d="M-4,-6 L4,-6 L4,6 L-4,6 Z" stroke="#1B5E20" stroke-width="1" fill="#FFFFFF"/>
+        <line x1="-2" y1="-3" x2="2" y2="-3" stroke="#1B5E20" stroke-width="1"/>
+        <line x1="-2" y1="0" x2="2" y2="0" stroke="#1B5E20" stroke-width="1"/>
+        <line x1="-2" y1="3" x2="2" y2="3" stroke="#1B5E20" stroke-width="1"/>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Communication visualization -->
+  <g transform="translate(92, 90)">
+    <rect x="-25" y="-10" width="50" height="20" rx="5" fill="#1B5E20" stroke="#FFFFFF" stroke-width="1"/>
+    
+    <!-- Speech bubbles -->
+    <g fill="#FFFFFF">
+      <path d="M-15,-5 L-15,5 L-10,5 L-10,8 L-7,5 L-5,5 L-5,-5 Z" stroke="#1B5E20" stroke-width="0.5"/>
+      <path d="M-3,-8 L5,-8 L5,0 L0,0 L-3,3 L-3,0 L-3,-8 Z" stroke="#1B5E20" stroke-width="0.5"/>
+      <path d="M7,-5 L17,-5 L17,5 L12,5 L15,8 L12,5 L7,5 Z" stroke="#1B5E20" stroke-width="0.5"/>
+    </g>
+  </g>
+  
+  <!-- Collaboration values -->
+  <g transform="translate(64, 110)">
+    <rect x="-50" y="-8" width="100" height="16" rx="3" fill="#1B5E20" stroke="#FFFFFF" stroke-width="0.75"/>
+    <g font-family="monospace" font-size="4" fill="#FFFFFF" text-anchor="middle">
+      <text x="-35" y="0">TRUST</text>
+      <text x="-18" y="0">RESPECT</text>
+      <text x="0" y="0">COMMUNICATION</text>
+      <text x="20" y="0">SUPPORT</text>
+      <text x="37" y="0">OWNERSHIP</text>
+    </g>
+  </g>
+
+  <!-- Label -->
+  <g transform="translate(64, 125)">
+    <rect x="-50" y="-9" width="100" height="18" rx="5" fill="#1B5E20" stroke="#FFFFFF" stroke-width="1"/>
+    <text x="0" y="0" font-family="Arial" font-size="10" fill="#FFFFFF" text-anchor="middle" font-weight="bold">TEAM COLLABORATION</text>
+    <text x="0" y="9" font-family="monospace" font-size="6" fill="#FFFFFF" text-anchor="middle">95%</text>
+  </g>
+</svg> 

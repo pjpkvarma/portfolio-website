@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concurrent UAV Design</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .project-article {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 2.5rem; min-height: 140vh;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+<body>
+    <section class="project-article">
+        <h1 class="article-title">Concurrent Design of UAVs for Real-Time Aerial Object Tracking</h1>
+        <p class="article-paragraph">
+            The advancement of drone technology brings forth the challenge of achieving precise and efficient object tracking. This project addresses this by leveraging advanced algorithms, including YOLOv2 for object detection and MOSSE (Minimum Output Sum of Squared Error) for real-time tracking. These methodologies are integrated using co-design principles to enhance tracking accuracy, responsiveness, and energy efficiency.
+        </p>
+
+        <h2>Core Methodologies</h2>
+        <p class="article-paragraph">
+            <b>YOLOv2 Object Detection:</b> YOLOv2 was used for initial detection of objects. It enabled rapid localization of targets with minimal computational overhead. Trained on a dataset of 2700 images, YOLOv2 provided bounding boxes to initialize the MOSSE tracker.
+        </p>
+        <p class="article-paragraph">
+            <b>MOSSE Tracking Algorithm:</b> MOSSE is a lightweight, adaptive tracking algorithm that operates in the frequency domain. It continuously updated its filters based on a heuristic parameter, ensuring robust performance even under dynamic conditions.
+        </p>
+
+        <h2>Design Optimization</h2>
+        <p class="article-paragraph">
+            The project incorporated co-design principles to align hardware capabilities with algorithmic efficiencies. Key talent metrics included image resolution, frames per second (FPS), cruising speed, and flight range. These parameters were optimized to achieve superior tracking accuracy while ensuring energy-efficient operations.
+        </p>
+
+        <h2>Simulation and Results</h2>
+        <p class="article-paragraph">
+            A simulation environment was developed using MATLAB and Simulink. The environment allowed for testing various scenarios by varying resolution, FPS, and algorithmic hyperparameters. Depth cameras were used to estimate the distance between the UAV and the target drone, replacing costly alternatives like LiDAR.
+        </p>
+
+        <h2>Conclusion</h2>
+        <p class="article-paragraph">
+            This project showcases a robust approach to improving real-time drone tracking by integrating cutting-edge algorithms and co-design principles. The optimization of hardware and software parameters resulted in enhanced tracking accuracy, faster response times, and improved energy efficiency. These advancements have broad implications for applications such as search-and-rescue missions, wildlife monitoring, and live-event broadcasting.
+        </p>
+        <button class="project-btn" onclick="window.open('https://github.com/pjpkvarma/Concurrent-Design-of-UAVs-for-Real-Time-Object-Tracking')">GitHub Link</button>
+    </section>
+</body>
+</html>
+
+

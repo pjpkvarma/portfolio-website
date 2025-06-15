@@ -1,0 +1,191 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="jetson-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#76B900"/>
+      <stop offset="100%" stop-color="#1A5200"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="64" cy="64" r="58" fill="url(#jetson-gradient)" stroke="#1A5200" stroke-width="2"/>
+  
+  <!-- Jetson Nano board representation -->
+  <g transform="translate(64, 50)">
+    <!-- Main board outline -->
+    <rect x="-32" y="-20" width="64" height="40" rx="3" fill="#F5F5F5" stroke="#1A5200" stroke-width="1.5"/>
+    
+    <!-- NVIDIA logo -->
+    <g transform="translate(-25, -14)">
+      <rect x="-4" y="-4" width="8" height="8" rx="1" fill="#76B900"/>
+      <text x="0" y="0" font-family="Arial" font-size="6" fill="#FFFFFF" font-weight="bold" text-anchor="middle">NV</text>
+    </g>
+    
+    <!-- Components on board -->
+    <g>
+      <!-- Main processor -->
+      <rect x="-15" y="-10" width="20" height="20" rx="2" fill="#333333" stroke="#76B900" stroke-width="0.75"/>
+      <text x="-5" y="-4" font-family="monospace" font-size="3" fill="#FFFFFF" text-anchor="middle">NVIDIA</text>
+      <text x="-5" y="0" font-family="monospace" font-size="3" fill="#FFFFFF" text-anchor="middle">Tegra</text>
+      <text x="-5" y="4" font-family="monospace" font-size="3" fill="#FFFFFF" text-anchor="middle">X1</text>
+      <text x="-5" y="8" font-family="monospace" font-size="3" fill="#FFFFFF" text-anchor="middle">128 CUDA</text>
+      
+      <!-- RAM -->
+      <g transform="translate(15, 0)">
+        <rect x="-5" y="-10" width="18" height="8" rx="1" fill="#333333" stroke="#76B900" stroke-width="0.5"/>
+        <text x="4" y="-6" font-family="monospace" font-size="3" fill="#FFFFFF" text-anchor="middle">4GB RAM</text>
+      </g>
+      
+      <!-- Power connector -->
+      <g transform="translate(25, -14)">
+        <rect x="-4" y="-4" width="8" height="8" rx="1" fill="#333333" stroke="#76B900" stroke-width="0.5"/>
+        <text x="0" y="0" font-family="monospace" font-size="2.5" fill="#FFFFFF" text-anchor="middle">DC</text>
+      </g>
+    </g>
+    
+    <!-- Ports and connectors -->
+    <g transform="translate(0, 8)">
+      <!-- USB ports -->
+      <g transform="translate(25, 0)">
+        <rect x="-14" y="-4" width="18" height="8" rx="1" fill="#1A5200" stroke="#76B900" stroke-width="0.5"/>
+        <text x="-5" y="0" font-family="monospace" font-size="3" fill="#FFFFFF" text-anchor="middle">USB 3.0</text>
+      </g>
+      
+      <!-- HDMI port -->
+      <g transform="translate(-25, 0)">
+        <rect x="-4" y="-4" width="8" height="8" rx="1" fill="#1A5200" stroke="#76B900" stroke-width="0.5"/>
+        <text x="0" y="0" font-family="monospace" font-size="2.5" fill="#FFFFFF" text-anchor="middle">HDMI</text>
+      </g>
+      
+      <!-- GPIO pins -->
+      <g transform="translate(0, 8)">
+        <rect x="-25" y="-2" width="50" height="4" rx="1" fill="#333333" stroke="#76B900" stroke-width="0.5"/>
+        <text x="0" y="1" font-family="monospace" font-size="2.5" fill="#FFFFFF" text-anchor="middle">GPIO PINS</text>
+      </g>
+      
+      <!-- Ethernet -->
+      <g transform="translate(-15, 0)">
+        <rect x="-7" y="-4" width="14" height="8" rx="1" fill="#1A5200" stroke="#76B900" stroke-width="0.5"/>
+        <text x="0" y="0" font-family="monospace" font-size="2.5" fill="#FFFFFF" text-anchor="middle">ETH</text>
+      </g>
+    </g>
+    
+    <!-- Micro SD slot -->
+    <g transform="translate(15, 16)">
+      <rect x="-8" y="-2" width="16" height="4" rx="1" fill="#1A5200" stroke="#76B900" stroke-width="0.5"/>
+      <text x="0" y="1" font-family="monospace" font-size="2.5" fill="#FFFFFF" text-anchor="middle">MICRO SD</text>
+    </g>
+  </g>
+  
+  <!-- AI/Deep Learning Features -->
+  <g transform="translate(35, 90)">
+    <rect x="-20" y="-10" width="40" height="20" rx="5" fill="#1A5200" stroke="#76B900" stroke-width="1"/>
+    
+    <g font-family="monospace" font-size="3" fill="#FFFFFF" text-anchor="middle">
+      <text x="0" y="-5">CUDA CORES</text>
+      <text x="0" y="0">DEEP LEARNING</text>
+      <text x="0" y="5">COMPUTER VISION</text>
+    </g>
+  </g>
+  
+  <!-- Performance -->
+  <g transform="translate(93, 90)">
+    <rect x="-20" y="-10" width="40" height="20" rx="5" fill="#1A5200" stroke="#76B900" stroke-width="1"/>
+    
+    <g font-family="monospace" font-size="3" fill="#FFFFFF" text-anchor="middle">
+      <text x="0" y="-5">472 GFLOPS</text>
+      <text x="0" y="0">4GB LPDDR4</text>
+      <text x="0" y="5">LOW POWER 10W</text>
+    </g>
+  </g>
+  
+  <!-- Connections Visualization -->
+  <g transform="translate(64, 25)">
+    <!-- Neural network visualization -->
+    <g>
+      <!-- Nodes -->
+      <g fill="#FFFFFF" stroke="#1A5200" stroke-width="0.5">
+        <!-- Input layer -->
+        <circle cx="-15" cy="-5" r="2"/>
+        <circle cx="-15" cy="0" r="2"/>
+        <circle cx="-15" cy="5" r="2"/>
+        
+        <!-- Hidden layer 1 -->
+        <circle cx="-5" cy="-8" r="2"/>
+        <circle cx="-5" cy="-4" r="2"/>
+        <circle cx="-5" cy="0" r="2"/>
+        <circle cx="-5" cy="4" r="2"/>
+        <circle cx="-5" cy="8" r="2"/>
+        
+        <!-- Hidden layer 2 -->
+        <circle cx="5" cy="-8" r="2"/>
+        <circle cx="5" cy="-4" r="2"/>
+        <circle cx="5" cy="0" r="2"/>
+        <circle cx="5" cy="4" r="2"/>
+        <circle cx="5" cy="8" r="2"/>
+        
+        <!-- Output layer -->
+        <circle cx="15" cy="-5" r="2"/>
+        <circle cx="15" cy="0" r="2"/>
+        <circle cx="15" cy="5" r="2"/>
+      </g>
+      
+      <!-- Connections -->
+      <g stroke="#76B900" stroke-width="0.3">
+        <!-- Input to hidden 1 connections -->
+        <line x1="-15" y1="-5" x2="-5" y2="-8"/>
+        <line x1="-15" y1="-5" x2="-5" y2="-4"/>
+        <line x1="-15" y1="-5" x2="-5" y2="0"/>
+        <line x1="-15" y1="0" x2="-5" y2="-4"/>
+        <line x1="-15" y1="0" x2="-5" y2="0"/>
+        <line x1="-15" y1="0" x2="-5" y2="4"/>
+        <line x1="-15" y1="5" x2="-5" y2="0"/>
+        <line x1="-15" y1="5" x2="-5" y2="4"/>
+        <line x1="-15" y1="5" x2="-5" y2="8"/>
+        
+        <!-- Hidden 1 to hidden 2 connections -->
+        <line x1="-5" y1="-8" x2="5" y2="-8"/>
+        <line x1="-5" y1="-8" x2="5" y2="-4"/>
+        <line x1="-5" y1="-4" x2="5" y2="-8"/>
+        <line x1="-5" y1="-4" x2="5" y2="-4"/>
+        <line x1="-5" y1="-4" x2="5" y2="0"/>
+        <line x1="-5" y1="0" x2="5" y2="-4"/>
+        <line x1="-5" y1="0" x2="5" y2="0"/>
+        <line x1="-5" y1="0" x2="5" y2="4"/>
+        <line x1="-5" y1="4" x2="5" y2="0"/>
+        <line x1="-5" y1="4" x2="5" y2="4"/>
+        <line x1="-5" y1="4" x2="5" y2="8"/>
+        <line x1="-5" y1="8" x2="5" y2="4"/>
+        <line x1="-5" y1="8" x2="5" y2="8"/>
+        
+        <!-- Hidden 2 to output connections -->
+        <line x1="5" y1="-8" x2="15" y2="-5"/>
+        <line x1="5" y1="-4" x2="15" y2="-5"/>
+        <line x1="5" y1="-4" x2="15" y2="0"/>
+        <line x1="5" y1="0" x2="15" y2="-5"/>
+        <line x1="5" y1="0" x2="15" y2="0"/>
+        <line x1="5" y1="0" x2="15" y2="5"/>
+        <line x1="5" y1="4" x2="15" y2="0"/>
+        <line x1="5" y1="4" x2="15" y2="5"/>
+        <line x1="5" y1="8" x2="15" y2="5"/>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Technical specs -->
+  <g transform="translate(64, 110)">
+    <rect x="-45" y="-8" width="90" height="16" rx="3" fill="#1A5200" stroke="#76B900" stroke-width="0.75"/>
+    <g font-family="monospace" font-size="3" fill="#FFFFFF" text-anchor="middle">
+      <text x="-30" y="0">QUAD-CORE ARM A57</text>
+      <text x="-5" y="0">128 CUDA</text>
+      <text x="20" y="0">4GB RAM</text>
+      <text x="40" y="0">16GB eMMC</text>
+    </g>
+  </g>
+
+  <!-- Label -->
+  <g transform="translate(64, 125)">
+    <rect x="-40" y="-9" width="80" height="18" rx="5" fill="#1A5200" stroke="#76B900" stroke-width="1"/>
+    <text x="0" y="0" font-family="Arial" font-size="10" fill="#FFFFFF" text-anchor="middle" font-weight="bold">JETSON NANO</text>
+    <text x="0" y="9" font-family="monospace" font-size="6" fill="#FFFFFF" text-anchor="middle">85%</text>
+  </g>
+</svg> 

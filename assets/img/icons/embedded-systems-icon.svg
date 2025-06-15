@@ -1,0 +1,194 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="embedded-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#004D40"/>
+      <stop offset="100%" stop-color="#00695C"/>
+    </linearGradient>
+    
+    <pattern id="grid-pattern" width="8" height="8" patternUnits="userSpaceOnUse">
+      <rect width="8" height="8" fill="none"/>
+      <path d="M 0,4 L 8,4 M 4,0 L 4,8" stroke="#00796B" stroke-width="0.3" opacity="0.2"/>
+    </pattern>
+    
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <circle cx="64" cy="64" r="58" fill="url(#embedded-gradient)" stroke="#00796B" stroke-width="2"/>
+  <circle cx="64" cy="64" r="52" fill="url(#grid-pattern)" stroke="none"/>
+  
+  <!-- Microcontroller Board -->
+  <rect x="28" y="36" width="72" height="56" rx="2" fill="#1B5E20" stroke="#004D40" stroke-width="1"/>
+  
+  <!-- Board Details -->
+  <rect x="32" y="40" width="64" height="48" rx="1" fill="#263238" stroke="#004D40" stroke-width="0.5"/>
+  
+  <!-- USB Connector -->
+  <rect x="34" y="34" width="12" height="6" rx="1" fill="#78909C" stroke="#455A64" stroke-width="0.5"/>
+  <rect x="37" y="36" width="6" height="2" rx="0.5" fill="#455A64"/>
+  
+  <!-- Power Indicator -->
+  <circle cx="32" cy="88" r="2" fill="#F44336" filter="url(#glow)">
+    <animate attributeName="fill" values="#F44336;#FFCDD2;#F44336" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <text x="32" y="93" font-family="monospace" font-size="2.5" fill="#B2DFDB" text-anchor="middle">PWR</text>
+  
+  <!-- Data Indicator -->
+  <circle cx="38" cy="88" r="2" fill="#4CAF50" filter="url(#glow)">
+    <animate attributeName="fill" values="#4CAF50;#C8E6C9;#4CAF50" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <text x="38" y="93" font-family="monospace" font-size="2.5" fill="#B2DFDB" text-anchor="middle">TX</text>
+  
+  <!-- Error Indicator -->
+  <circle cx="44" cy="88" r="2" fill="#FFC107" filter="url(#glow)">
+    <animate attributeName="fill" values="#FFC107;#FFECB3;#FFC107" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <text x="44" y="93" font-family="monospace" font-size="2.5" fill="#B2DFDB" text-anchor="middle">RX</text>
+  
+  <!-- Main Processor -->
+  <rect x="44" y="52" width="40" height="40" rx="2" fill="#37474F" stroke="#607D8B" stroke-width="0.5"/>
+  <text x="64" y="75" font-family="monospace" font-size="4" fill="#B2DFDB" text-anchor="middle">MCU</text>
+  <circle cx="64" cy="65" r="10" fill="#004D40" stroke="#00796B" stroke-width="0.5"/>
+  <path d="M 59,65 L 64,70 L 69,65 L 64,60 Z" fill="#E0F2F1"/>
+  
+  <!-- GPIO Pins -->
+  <g id="pins-left">
+    <rect x="27" y="44" width="5" height="2" fill="#FFC107" stroke="#FF8F00" stroke-width="0.2"/>
+    <rect x="27" y="48" width="5" height="2" fill="#FFC107" stroke="#FF8F00" stroke-width="0.2"/>
+    <rect x="27" y="52" width="5" height="2" fill="#FFC107" stroke="#FF8F00" stroke-width="0.2"/>
+    <rect x="27" y="56" width="5" height="2" fill="#FFC107" stroke="#FF8F00" stroke-width="0.2"/>
+    <rect x="27" y="60" width="5" height="2" fill="#FFC107" stroke="#FF8F00" stroke-width="0.2"/>
+    <rect x="27" y="64" width="5" height="2" fill="#FFC107" stroke="#FF8F00" stroke-width="0.2"/>
+    <rect x="27" y="68" width="5" height="2" fill="#FFC107" stroke="#FF8F00" stroke-width="0.2"/>
+    <rect x="27" y="72" width="5" height="2" fill="#FFC107" stroke="#FF8F00" stroke-width="0.2"/>
+    <rect x="27" y="76" width="5" height="2" fill="#FFC107" stroke="#FF8F00" stroke-width="0.2"/>
+    <rect x="27" y="80" width="5" height="2" fill="#FFC107" stroke="#FF8F00" stroke-width="0.2"/>
+  </g>
+  <g id="pins-right">
+    <rect x="96" y="44" width="5" height="2" fill="#FFC107" stroke="#FF8F00" stroke-width="0.2"/>
+    <rect x="96" y="48" width="5" height="2" fill="#FFC107" stroke="#FF8F00" stroke-width="0.2"/>
+    <rect x="96" y="52" width="5" height="2" fill="#FFC107" stroke="#FF8F00" stroke-width="0.2"/>
+    <rect x="96" y="56" width="5" height="2" fill="#FFC107" stroke="#FF8F00" stroke-width="0.2"/>
+    <rect x="96" y="60" width="5" height="2" fill="#FFC107" stroke="#FF8F00" stroke-width="0.2"/>
+    <rect x="96" y="64" width="5" height="2" fill="#FFC107" stroke="#FF8F00" stroke-width="0.2"/>
+    <rect x="96" y="68" width="5" height="2" fill="#FFC107" stroke="#FF8F00" stroke-width="0.2"/>
+    <rect x="96" y="72" width="5" height="2" fill="#FFC107" stroke="#FF8F00" stroke-width="0.2"/>
+    <rect x="96" y="76" width="5" height="2" fill="#FFC107" stroke="#FF8F00" stroke-width="0.2"/>
+    <rect x="96" y="80" width="5" height="2" fill="#FFC107" stroke="#FF8F00" stroke-width="0.2"/>
+  </g>
+  
+  <!-- Pin Labels -->
+  <g font-family="monospace" font-size="2.5" fill="#B2DFDB" text-anchor="start">
+    <text x="34" y="46">D0</text>
+    <text x="34" y="50">D1</text>
+    <text x="34" y="54">D2</text>
+    <text x="34" y="58">D3</text>
+    <text x="34" y="62">A0</text>
+    <text x="34" y="66">A1</text>
+    <text x="34" y="70">SCL</text>
+    <text x="34" y="74">SDA</text>
+    <text x="34" y="78">TX</text>
+    <text x="34" y="82">RX</text>
+  </g>
+  <g font-family="monospace" font-size="2.5" fill="#B2DFDB" text-anchor="end">
+    <text x="94" y="46">VCC</text>
+    <text x="94" y="50">GND</text>
+    <text x="94" y="54">3V3</text>
+    <text x="94" y="58">5V</text>
+    <text x="94" y="62">RST</text>
+    <text x="94" y="66">D13</text>
+    <text x="94" y="70">D12</text>
+    <text x="94" y="74">D11</text>
+    <text x="94" y="78">D10</text>
+    <text x="94" y="82">D9</text>
+  </g>
+  
+  <!-- Circuit Traces -->
+  <g stroke="#26A69A" stroke-width="0.5" fill="none" opacity="0.8">
+    <path d="M 36,45 C 41,45 43,52 48,52"/>
+    <path d="M 36,49 C 41,49 43,55 48,55"/>
+    <path d="M 36,53 C 41,53 43,58 48,58"/>
+    <path d="M 36,57 C 41,57 43,61 48,61"/>
+    <path d="M 36,61 C 41,61 43,64 48,64"/>
+    <path d="M 36,65 C 41,65 43,67 48,67"/>
+    <path d="M 36,69 C 41,69 43,70 48,70"/>
+    <path d="M 36,73 C 41,73 43,73 48,73"/>
+    <path d="M 36,77 C 41,77 43,76 48,76"/>
+    <path d="M 36,81 C 41,81 43,79 48,79"/>
+    
+    <path d="M 80,52 C 85,52 89,45 92,45"/>
+    <path d="M 80,55 C 85,55 89,49 92,49"/>
+    <path d="M 80,58 C 85,58 89,53 92,53"/>
+    <path d="M 80,61 C 85,61 89,57 92,57"/>
+    <path d="M 80,64 C 85,64 89,61 92,61"/>
+    <path d="M 80,67 C 85,67 89,65 92,65"/>
+    <path d="M 80,70 C 85,70 89,69 92,69"/>
+    <path d="M 80,73 C 85,73 89,73 92,73"/>
+    <path d="M 80,76 C 85,76 89,77 92,77"/>
+    <path d="M 80,79 C 85,79 89,81 92,81"/>
+  </g>
+  
+  <!-- External Components -->
+  
+  <!-- Crystal Oscillator -->
+  <rect x="37" y="45" width="5" height="3" fill="#B0BEC5" stroke="#78909C" stroke-width="0.3"/>
+  <text x="39.5" y="43" font-family="monospace" font-size="2" fill="#B2DFDB" text-anchor="middle">XTAL</text>
+  
+  <!-- Reset Button -->
+  <circle cx="94" cy="60" r="2" fill="#F44336" stroke="#D32F2F" stroke-width="0.3"/>
+  <path d="M 92,60 L 96,60 M 94,58 L 94,62" stroke="#FFCDD2" stroke-width="0.3"/>
+  
+  <!-- Capacitors -->
+  <g transform="translate(88, 49)">
+    <path d="M -2,0 L 2,0" stroke="#CFD8DC" stroke-width="1"/>
+    <path d="M -1,-2 L -1,2" stroke="#CFD8DC" stroke-width="0.5"/>
+    <path d="M 1,-2 L 1,2" stroke="#CFD8DC" stroke-width="0.5"/>
+  </g>
+  
+  <!-- Headers -->
+  <g transform="translate(50, 44)">
+    <rect x="-4" y="-2" width="8" height="4" fill="#424242" stroke="#212121" stroke-width="0.3"/>
+    <circle cx="-2" cy="0" r="0.8" fill="#B2DFDB"/>
+    <circle cx="0" cy="0" r="0.8" fill="#B2DFDB"/>
+    <circle cx="2" cy="0" r="0.8" fill="#B2DFDB"/>
+  </g>
+  
+  <!-- Binary Data / Code -->
+  <g font-family="monospace" font-size="3" fill="#B2DFDB" opacity="0.7">
+    <text x="70" y="30">01001010</text>
+    <text x="68" y="33">10110101</text>
+    <text x="32" y="106">FFD2:0036:CBA1</text>
+    <text x="32" y="110">SETUP();LOOP();</text>
+  </g>
+  
+  <!-- Communication Protocols -->
+  <g font-family="monospace" font-size="3" fill="#80CBC4" text-anchor="middle">
+    <text x="64" y="21">UART</text>
+    <text x="52" y="21">I2C</text>
+    <text x="76" y="21">SPI</text>
+    <text x="40" y="21">GPIO</text>
+    <text x="88" y="21">PWM</text>
+    <text x="27" y="21">ADC</text>
+    <text x="101" y="21">DAC</text>
+  </g>
+  
+  <!-- Connecting Line Between Protocols -->
+  <path d="M 27,22 L 101,22" stroke="#00897B" stroke-width="0.3" stroke-dasharray="1,1"/>
+  
+  <!-- Peripherals -->
+  <g opacity="0.8">
+    <!-- EEPROM -->
+    <rect x="90" y="85" width="10" height="6" rx="1" fill="#455A64" stroke="#263238" stroke-width="0.3"/>
+    <text x="95" y="89" font-family="monospace" font-size="2" fill="#B2DFDB" text-anchor="middle">ROM</text>
+    
+    <!-- RAM -->
+    <rect x="90" y="92" width="10" height="6" rx="1" fill="#455A64" stroke="#263238" stroke-width="0.3"/>
+    <text x="95" y="96" font-family="monospace" font-size="2" fill="#B2DFDB" text-anchor="middle">RAM</text>
+  </g>
+  
+  <!-- Bottom Label -->
+  <text x="64" y="120" font-family="Arial" font-size="5" fill="#E0F2F1" text-anchor="middle">EMBEDDED SYSTEMS</text>
+</svg> 

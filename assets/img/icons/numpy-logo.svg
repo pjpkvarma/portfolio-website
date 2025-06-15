@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="numpy-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4DABCF"/>
+      <stop offset="100%" stop-color="#013243"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="64" cy="64" r="58" fill="url(#numpy-gradient)" stroke="#013243" stroke-width="2"/>
+
+  <!-- NumPy Logo Representation -->
+  <g transform="translate(64, 33)">
+    <!-- Stacked N for NumPy logo -->
+    <path d="M -20,-25 L -12,-25 L -12,5 L 12,-25 L 20,-25 L 20,25 L 12,25 L 12,-5 L -12,25 L -20,25 Z" 
+          fill="#013243" stroke="#C8E7F5" stroke-width="1"/>
+          
+    <!-- py abbreviation -->
+    <text x="25" y="0" font-family="Arial" font-size="16" fill="#C8E7F5" font-weight="bold">py</text>
+    
+    <!-- Array grid overlay -->
+    <g transform="translate(0, 0)" fill="none" stroke="#C8E7F5" stroke-width="0.3">
+      <rect x="-20" y="-25" width="40" height="50" />
+      <!-- Horizontal grid lines -->
+      <line x1="-20" y1="-15" x2="20" y2="-15" />
+      <line x1="-20" y1="-5" x2="20" y2="-5" />
+      <line x1="-20" y1="5" x2="20" y2="5" />
+      <line x1="-20" y1="15" x2="20" y2="15" />
+      
+      <!-- Vertical grid lines -->
+      <line x1="-10" y1="-25" x2="-10" y2="25" />
+      <line x1="0" y1="-25" x2="0" y2="25" />
+      <line x1="10" y1="-25" x2="10" y2="25" />
+    </g>
+  </g>
+  
+  <!-- Array Operations Visualization -->
+  <g transform="translate(30, 80)">
+    <rect x="-15" y="-10" width="30" height="20" rx="2" fill="#013243" stroke="#C8E7F5" stroke-width="0.5"/>
+    <text x="0" y="-14" font-family="monospace" font-size="3.5" fill="#C8E7F5" text-anchor="middle">ARRAY OPERATIONS</text>
+    
+    <!-- Array visualization -->
+    <g>
+      <!-- Input matrices -->
+      <rect x="-12" y="-8" width="8" height="8" fill="#4DABCF" fill-opacity="0.4" stroke="#C8E7F5" stroke-width="0.3"/>
+      <rect x="-12" y="2" width="8" height="8" fill="#4DABCF" fill-opacity="0.4" stroke="#C8E7F5" stroke-width="0.3"/>
+      
+      <!-- Operation symbol -->
+      <text x="0" y="0" font-family="monospace" font-size="5" fill="#C8E7F5" text-anchor="middle">×</text>
+      
+      <!-- Output matrix -->
+      <rect x="4" y="-3" width="8" height="8" fill="#4DABCF" fill-opacity="0.8" stroke="#C8E7F5" stroke-width="0.3"/>
+      
+      <!-- Grid lines for matrices -->
+      <g stroke="#C8E7F5" stroke-width="0.2">
+        <line x1="-12" y1="-4" x2="-4" y2="-4" />
+        <line x1="-8" y1="-8" x2="-8" y2="0" />
+        
+        <line x1="-12" y1="6" x2="-4" y2="6" />
+        <line x1="-8" y1="2" x2="-8" y2="10" />
+        
+        <line x1="4" y1="1" x2="12" y2="1" />
+        <line x1="8" y1="-3" x2="8" y2="5" />
+      </g>
+    </g>
+  </g>
+  
+  <!-- Scientific Computing Visualization -->
+  <g transform="translate(95, 80)">
+    <rect x="-15" y="-10" width="30" height="20" rx="2" fill="#013243" stroke="#C8E7F5" stroke-width="0.5"/>
+    <text x="0" y="-14" font-family="monospace" font-size="3.5" fill="#C8E7F5" text-anchor="middle">SCIENTIFIC COMPUTING</text>
+    
+    <!-- Scientific computing elements -->
+    <g>
+      <!-- Sine wave -->
+      <path d="M -13,-4 C -11,-8 -9,0 -7,-4 C -5,-8 -3,0 -1,-4 C 1,-8 3,0 5,-4" fill="none" stroke="#C8E7F5" stroke-width="0.5"/>
+      
+      <!-- Statistical histogram -->
+      <rect x="-13" y="2" width="2" height="1" fill="#C8E7F5" />
+      <rect x="-10" y="2" width="2" height="3" fill="#C8E7F5" />
+      <rect x="-7" y="2" width="2" height="6" fill="#C8E7F5" />
+      <rect x="-4" y="2" width="2" height="4" fill="#C8E7F5" />
+      <rect x="-1" y="2" width="2" height="2" fill="#C8E7F5" />
+      <rect x="2" y="2" width="2" height="1" fill="#C8E7F5" />
+      <rect x="5" y="2" width="2" height="0.5" fill="#C8E7F5" />
+      
+      <!-- Coordinate system -->
+      <g transform="translate(10, -5)">
+        <line x1="-4" y1="0" x2="4" y2="0" stroke="#C8E7F5" stroke-width="0.3" />
+        <line x1="0" y1="-4" x2="0" y2="4" stroke="#C8E7F5" stroke-width="0.3" />
+        <circle cx="2" cy="2" r="0.5" fill="#C8E7F5" />
+        <circle cx="-2" cy="1" r="0.5" fill="#C8E7F5" />
+        <circle cx="1" cy="-2" r="0.5" fill="#C8E7F5" />
+        <circle cx="-1.5" cy="-1.5" r="0.5" fill="#C8E7F5" />
+      </g>
+    </g>
+  </g>
+  
+  <!-- Core NumPy Features -->
+  <g transform="translate(64, 45)">
+    <text x="0" y="50" font-family="monospace" font-size="3.5" fill="#C8E7F5" text-anchor="middle">CORE FEATURES</text>
+    
+    <g font-family="monospace" font-size="2.5" fill="#C8E7F5" text-anchor="middle">
+      <text x="20" y="55">N-DIMENSIONAL ARRAYS</text>
+      <text x="-20" y="55">BROADCASTING</text>
+      <text x="20" y="60">VECTORIZED OPERATIONS</text>
+      <text x="-20" y="60">INTEGRATION WITH C/C++</text>
+    </g>
+  </g>
+  
+  <!-- NumPy Code Snippet -->
+  <g transform="translate(64, 95)">
+    <rect x="-30" y="-8" width="60" height="16" rx="2" fill="#013243" stroke="#C8E7F5" stroke-width="0.5"/>
+    <text x="0" y="-12" font-family="monospace" font-size="3" fill="#C8E7F5" text-anchor="middle">CODE EXAMPLE</text>
+    
+    <g font-family="monospace" font-size="2" fill="#C8E7F5" text-anchor="left">
+      <text x="-28" y="-5">import numpy as np</text>
+      <text x="-28" y="-2">a = np.array([[1, 2], [3, 4]])</text>
+      <text x="-28" y="1">b = np.array([[5, 6], [7, 8]])</text>
+      <text x="-28" y="4">c = np.dot(a, b)  # Matrix product</text>
+      <text x="-28" y="7"># Result: [[19 22], [43 50]]</text>
+    </g>
+  </g>
+
+  <!-- Label -->
+  <g transform="translate(64, 120)">
+    <rect x="-30" y="-9" width="60" height="18" rx="5" fill="#013243" stroke="#C8E7F5" stroke-width="1"/>
+    <text x="0" y="0" font-family="Arial" font-size="10" fill="#FFFFFF" text-anchor="middle" font-weight="bold">NUMPY</text>
+    <text x="0" y="9" font-family="monospace" font-size="6" fill="#C8E7F5" text-anchor="middle">95%</text>
+  </g>
+</svg> 

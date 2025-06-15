@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="docker-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2496ED"/>
+      <stop offset="100%" stop-color="#0B4D8C"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="64" cy="64" r="58" fill="url(#docker-gradient)" stroke="#0B4D8C" stroke-width="2"/>
+  
+  <!-- Docker logo representation -->
+  <g transform="translate(64, 48)">
+    <!-- Docker whale container -->
+    <path d="M-27,-10 H38 C40,-10 42,-8 42,-6 V10 C42,14 38,18 34,18 H-25 C-32,18 -35,12 -33,6 C-30,0 -29,-8 -27,-10 Z" 
+          fill="#FFFFFF" stroke="#0B4D8C" stroke-width="1"/>
+    
+    <!-- Docker containers (boxes) -->
+    <g>
+      <!-- First row -->
+      <rect x="-25" y="-8" width="10" height="8" rx="1" fill="#2496ED" stroke="#0B4D8C" stroke-width="0.5"/>
+      <rect x="-13" y="-8" width="10" height="8" rx="1" fill="#2496ED" stroke="#0B4D8C" stroke-width="0.5"/>
+      <rect x="-1" y="-8" width="10" height="8" rx="1" fill="#2496ED" stroke="#0B4D8C" stroke-width="0.5"/>
+      <rect x="11" y="-8" width="10" height="8" rx="1" fill="#2496ED" stroke="#0B4D8C" stroke-width="0.5"/>
+      <rect x="23" y="-8" width="10" height="8" rx="1" fill="#2496ED" stroke="#0B4D8C" stroke-width="0.5"/>
+      
+      <!-- Second row -->
+      <rect x="-25" y="2" width="10" height="8" rx="1" fill="#2496ED" stroke="#0B4D8C" stroke-width="0.5"/>
+      <rect x="-13" y="2" width="10" height="8" rx="1" fill="#2496ED" stroke="#0B4D8C" stroke-width="0.5"/>
+      <rect x="-1" y="2" width="10" height="8" rx="1" fill="#2496ED" stroke="#0B4D8C" stroke-width="0.5"/>
+    </g>
+    
+    <!-- Docker whale eye -->
+    <circle cx="31" cy="-3" r="1.5" fill="#0B4D8C"/>
+  </g>
+  
+  <!-- Container orchestration -->
+  <g transform="translate(64, 20)">
+    <!-- Container orchestration icons -->
+    <g>
+      <!-- Kubernetes integration -->
+      <g transform="translate(0, 0)">
+        <circle cx="0" cy="0" r="10" fill="#FFFFFF" stroke="#0B4D8C" stroke-width="0.75"/>
+        <path d="M0,-7 L7,0 L0,7 L-7,0 Z" fill="#2496ED" stroke="#0B4D8C" stroke-width="0.5"/>
+        <circle cx="0" cy="0" r="2" fill="#0B4D8C"/>
+      </g>
+      
+      <!-- Container nodes -->
+      <g stroke="#FFFFFF" stroke-width="0.75">
+        <line x1="-20" y1="0" x2="-5" y2="0"/>
+        <line x1="5" y1="0" x2="20" y2="0"/>
+        <line x1="-25" y1="-5" x2="-25" y2="5"/>
+        <line x1="25" y1="-5" x2="25" y2="5"/>
+      </g>
+      
+      <g>
+        <rect x="-30" y="-5" width="10" height="10" rx="1" fill="#2496ED" stroke="#FFFFFF" stroke-width="0.5"/>
+        <rect x="20" y="-5" width="10" height="10" rx="1" fill="#2496ED" stroke="#FFFFFF" stroke-width="0.5"/>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Container benefits -->
+  <g transform="translate(35, 90)">
+    <rect x="-20" y="-10" width="40" height="20" rx="5" fill="#0B4D8C" stroke="#FFFFFF" stroke-width="1"/>
+    
+    <g font-family="monospace" font-size="3" fill="#FFFFFF" text-anchor="middle">
+      <text x="0" y="-5">ISOLATION</text>
+      <text x="0" y="0">PORTABILITY</text>
+      <text x="0" y="5">SCALABILITY</text>
+    </g>
+  </g>
+  
+  <!-- Docker capabilities -->
+  <g transform="translate(93, 90)">
+    <rect x="-20" y="-10" width="40" height="20" rx="5" fill="#0B4D8C" stroke="#FFFFFF" stroke-width="1"/>
+    
+    <g font-family="monospace" font-size="3" fill="#FFFFFF" text-anchor="middle">
+      <text x="0" y="-5">MICROSERVICES</text>
+      <text x="0" y="0">CI/CD</text>
+      <text x="0" y="5">DEV ENVIRONMENTS</text>
+    </g>
+  </g>
+  
+  <!-- Docker Compose -->
+  <g transform="translate(64, 70)">
+    <!-- Docker Compose visualization -->
+    <g>
+      <!-- Service 1 -->
+      <g transform="translate(-25, 0)">
+        <rect x="-7" y="-7" width="14" height="14" rx="2" fill="#FFFFFF" stroke="#0B4D8C" stroke-width="0.75"/>
+        <text x="0" y="0" font-family="monospace" font-size="2.5" fill="#0B4D8C" text-anchor="middle">SERVICE 1</text>
+      </g>
+      
+      <!-- Service 2 -->
+      <g transform="translate(0, 0)">
+        <rect x="-7" y="-7" width="14" height="14" rx="2" fill="#FFFFFF" stroke="#0B4D8C" stroke-width="0.75"/>
+        <text x="0" y="0" font-family="monospace" font-size="2.5" fill="#0B4D8C" text-anchor="middle">SERVICE 2</text>
+      </g>
+      
+      <!-- Service 3 -->
+      <g transform="translate(25, 0)">
+        <rect x="-7" y="-7" width="14" height="14" rx="2" fill="#FFFFFF" stroke="#0B4D8C" stroke-width="0.75"/>
+        <text x="0" y="0" font-family="monospace" font-size="2.5" fill="#0B4D8C" text-anchor="middle">SERVICE 3</text>
+      </g>
+      
+      <!-- Connection lines -->
+      <g stroke="#FFFFFF" stroke-width="0.75" stroke-dasharray="2,1">
+        <line x1="-25" y1="-7" x2="25" y2="-7"/>
+        <line x1="-25" y1="7" x2="25" y2="7"/>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Docker commands -->
+  <g transform="translate(64, 110)">
+    <rect x="-45" y="-8" width="90" height="16" rx="3" fill="#0B4D8C" stroke="#FFFFFF" stroke-width="0.75"/>
+    <g font-family="monospace" font-size="3" fill="#FFFFFF" text-anchor="middle">
+      <text x="-35" y="0">docker build</text>
+      <text x="-15" y="0">docker run</text>
+      <text x="5" y="0">docker pull</text>
+      <text x="25" y="0">docker-compose</text>
+    </g>
+  </g>
+
+  <!-- Code snippet -->
+  <g transform="translate(64, 95) scale(0.9)">
+    <rect x="-30" y="-8" width="60" height="16" rx="2" fill="#FFFFFF" stroke="#0B4D8C" stroke-width="0.75"/>
+    <text x="-27" y="-4" font-family="monospace" font-size="3" fill="#0B4D8C">FROM node:14</text>
+    <text x="-27" y="0" font-family="monospace" font-size="3" fill="#0B4D8C">WORKDIR /app</text>
+    <text x="-27" y="4" font-family="monospace" font-size="3" fill="#0B4D8C">COPY . .</text>
+    <text x="-27" y="8" font-family="monospace" font-size="3" fill="#0B4D8C">CMD ["npm", "start"]</text>
+  </g>
+
+  <!-- Label -->
+  <g transform="translate(64, 125)">
+    <rect x="-40" y="-9" width="80" height="18" rx="5" fill="#0B4D8C" stroke="#FFFFFF" stroke-width="1"/>
+    <text x="0" y="0" font-family="Arial" font-size="10" fill="#FFFFFF" text-anchor="middle" font-weight="bold">DOCKER</text>
+    <text x="0" y="9" font-family="monospace" font-size="6" fill="#FFFFFF" text-anchor="middle">96%</text>
+  </g>
+</svg> 

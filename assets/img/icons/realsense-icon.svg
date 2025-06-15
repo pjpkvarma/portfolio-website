@@ -1,0 +1,216 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="realsense-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00BCD4"/>
+      <stop offset="100%" stop-color="#006064"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="64" cy="64" r="58" fill="url(#realsense-gradient)" stroke="#006064" stroke-width="2"/>
+
+  <!-- RealSense camera representation -->
+  <g transform="translate(64, 64)">
+    <!-- Main device body -->
+    <rect x="-22" y="-8" width="44" height="16" rx="2" fill="#006064" stroke="#B2EBF2" stroke-width="1"/>
+    
+    <!-- Lenses array -->
+    <g transform="translate(-12, 0)">
+      <!-- RGB lens -->
+      <circle cx="0" cy="0" r="5" fill="#004D40" stroke="#B2EBF2" stroke-width="0.75"/>
+      <circle cx="0" cy="0" r="4" fill="#00838F" stroke="#B2EBF2" stroke-width="0.5"/>
+      <circle cx="0" cy="0" r="2" fill="#00BCD4" stroke="#006064" stroke-width="0.5"/>
+      <path d="M -3.5,-3.5 L 3.5,3.5 M -3.5,3.5 L 3.5,-3.5" stroke="#B2EBF2" stroke-width="0.3" stroke-dasharray="0.5,0.5"/>
+      <text x="0" y="-7" font-family="monospace" font-size="2.5" fill="#B2EBF2" text-anchor="middle">RGB</text>
+    </g>
+    
+    <!-- Depth lens left -->
+    <g transform="translate(0, 0)">
+      <circle cx="0" cy="0" r="5" fill="#004D40" stroke="#B2EBF2" stroke-width="0.75"/>
+      <circle cx="0" cy="0" r="4" fill="#00838F" stroke="#B2EBF2" stroke-width="0.5"/>
+      <circle cx="0" cy="0" r="2" fill="#00BCD4" stroke="#006064" stroke-width="0.5"/>
+      <path d="M -3.5,-3.5 L 3.5,3.5 M -3.5,3.5 L 3.5,-3.5" stroke="#B2EBF2" stroke-width="0.3" stroke-dasharray="0.5,0.5"/>
+      <text x="0" y="-7" font-family="monospace" font-size="2.5" fill="#B2EBF2" text-anchor="middle">IR1</text>
+    </g>
+    
+    <!-- Depth lens right -->
+    <g transform="translate(12, 0)">
+      <circle cx="0" cy="0" r="5" fill="#004D40" stroke="#B2EBF2" stroke-width="0.75"/>
+      <circle cx="0" cy="0" r="4" fill="#00838F" stroke="#B2EBF2" stroke-width="0.5"/>
+      <circle cx="0" cy="0" r="2" fill="#00BCD4" stroke="#006064" stroke-width="0.5"/>
+      <path d="M -3.5,-3.5 L 3.5,3.5 M -3.5,3.5 L 3.5,-3.5" stroke="#B2EBF2" stroke-width="0.3" stroke-dasharray="0.5,0.5"/>
+      <text x="0" y="-7" font-family="monospace" font-size="2.5" fill="#B2EBF2" text-anchor="middle">IR2</text>
+    </g>
+    
+    <!-- IR projector -->
+    <g transform="translate(-12, 0)">
+      <circle cx="-10" cy="0" r="3" fill="#00695C" stroke="#B2EBF2" stroke-width="0.5"/>
+      <text x="-10" y="-5" font-family="monospace" font-size="2" fill="#B2EBF2" text-anchor="middle">IR</text>
+    </g>
+    
+    <!-- Intel logo hint -->
+    <g transform="translate(22, 0)">
+      <rect x="-3" y="-3" width="6" height="6" rx="1" fill="#00BCD4" stroke="#B2EBF2" stroke-width="0.5"/>
+      <text x="0" y="1" font-family="monospace" font-size="3" fill="#B2EBF2" text-anchor="middle">i</text>
+    </g>
+  </g>
+  
+  <!-- Depth sensing visualization -->
+  <g transform="translate(64, 27)">
+    <rect x="-25" y="-20" width="50" height="40" rx="2" fill="#004D40" stroke="#B2EBF2" stroke-width="1"/>
+    <text x="0" y="-25" font-family="monospace" font-size="3.5" fill="#B2EBF2" text-anchor="middle">DEPTH SENSING</text>
+    
+    <!-- Depth map visualization -->
+    <g>
+      <g transform="translate(0, 0) scale(0.85)">
+        <!-- Near objects (brighter) -->
+        <rect x="-20" y="-7" width="8" height="14" fill="#E0F7FA" stroke="#006064" stroke-width="0.3"/>
+        <rect x="-20" y="-15" width="8" height="6" fill="#B2EBF2" stroke="#006064" stroke-width="0.3"/>
+        
+        <!-- Mid-range objects -->
+        <rect x="-10" y="-15" width="20" height="30" fill="#80DEEA" stroke="#006064" stroke-width="0.3"/>
+        
+        <!-- Far objects (darker) -->
+        <rect x="12" y="-10" width="8" height="20" fill="#26C6DA" stroke="#006064" stroke-width="0.3"/>
+        <rect x="12" y="-15" width="8" height="3" fill="#00ACC1" stroke="#006064" stroke-width="0.3"/>
+        
+        <!-- Distance indicators -->
+        <g font-family="monospace" font-size="2" fill="#B2EBF2" text-anchor="middle">
+          <text x="-16" y="0">0.5m</text>
+          <text x="0" y="0">1.5m</text>
+          <text x="16" y="0">3m</text>
+        </g>
+        
+        <!-- Depth grid -->
+        <g stroke="#006064" stroke-width="0.2" stroke-dasharray="0.5,0.5">
+          <line x1="-20" y1="-15" x2="20" y2="-15"/>
+          <line x1="-20" y1="-10" x2="20" y2="-10"/>
+          <line x1="-20" y1="-5" x2="20" y2="-5"/>
+          <line x1="-20" y1="0" x2="20" y2="0"/>
+          <line x1="-20" y1="5" x2="20" y2="5"/>
+          <line x1="-20" y1="10" x2="20" y2="10"/>
+          <line x1="-20" y1="15" x2="20" y2="15"/>
+          
+          <line x1="-20" y1="-15" x2="-20" y2="15"/>
+          <line x1="-15" y1="-15" x2="-15" y2="15"/>
+          <line x1="-10" y1="-15" x2="-10" y2="15"/>
+          <line x1="-5" y1="-15" x2="-5" y2="15"/>
+          <line x1="0" y1="-15" x2="0" y2="15"/>
+          <line x1="5" y1="-15" x2="5" y2="15"/>
+          <line x1="10" y1="-15" x2="10" y2="15"/>
+          <line x1="15" y1="-15" x2="15" y2="15"/>
+          <line x1="20" y1="-15" x2="20" y2="15"/>
+        </g>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Point cloud representation -->
+  <g transform="translate(64, 80)">
+    <rect x="-25" y="-10" width="50" height="20" rx="2" fill="#004D40" stroke="#B2EBF2" stroke-width="1"/>
+    <text x="0" y="-15" font-family="monospace" font-size="3.5" fill="#B2EBF2" text-anchor="middle">POINT CLOUD</text>
+    
+    <!-- Point cloud -->
+    <g transform="translate(0, 0) scale(0.8)">
+      <g fill="#4DD0E1">
+        <circle cx="-20" cy="-8" r="0.5"/>
+        <circle cx="-18" cy="-7" r="0.5"/>
+        <circle cx="-16" cy="-6" r="0.5"/>
+        <circle cx="-14" cy="-6" r="0.5"/>
+        <circle cx="-12" cy="-5" r="0.5"/>
+        <circle cx="-10" cy="-4" r="0.5"/>
+        <circle cx="-8" cy="-3" r="0.5"/>
+        <circle cx="-6" cy="-2" r="0.5"/>
+        <circle cx="-4" cy="-1" r="0.5"/>
+        <circle cx="-2" cy="0" r="0.5"/>
+        <circle cx="0" cy="1" r="0.5"/>
+        <circle cx="2" cy="2" r="0.5"/>
+        <circle cx="4" cy="3" r="0.5"/>
+        <circle cx="6" cy="4" r="0.5"/>
+        <circle cx="8" cy="5" r="0.5"/>
+        <circle cx="10" cy="6" r="0.5"/>
+        <circle cx="12" cy="7" r="0.5"/>
+        <circle cx="14" cy="8" r="0.5"/>
+        <circle cx="16" cy="8" r="0.5"/>
+        <circle cx="18" cy="8" r="0.5"/>
+        <circle cx="20" cy="9" r="0.5"/>
+        
+        <circle cx="-19" cy="-5" r="0.5"/>
+        <circle cx="-17" cy="-4" r="0.5"/>
+        <circle cx="-15" cy="-3" r="0.5"/>
+        <circle cx="-13" cy="-2" r="0.5"/>
+        <circle cx="-11" cy="-1" r="0.5"/>
+        <circle cx="-9" cy="0" r="0.5"/>
+        <circle cx="-7" cy="1" r="0.5"/>
+        <circle cx="-5" cy="2" r="0.5"/>
+        <circle cx="-3" cy="3" r="0.5"/>
+        <circle cx="-1" cy="4" r="0.5"/>
+        <circle cx="1" cy="5" r="0.5"/>
+        <circle cx="3" cy="6" r="0.5"/>
+        <circle cx="5" cy="7" r="0.5"/>
+        <circle cx="7" cy="8" r="0.5"/>
+        <circle cx="9" cy="8" r="0.5"/>
+        <circle cx="11" cy="8" r="0.5"/>
+        <circle cx="13" cy="9" r="0.5"/>
+        <circle cx="15" cy="9" r="0.5"/>
+        <circle cx="17" cy="9" r="0.5"/>
+        <circle cx="19" cy="9" r="0.5"/>
+        
+        <!-- More points with varying opacity for depth effect -->
+        <g opacity="0.7">
+          <circle cx="-18" cy="-3" r="0.5"/>
+          <circle cx="-14" cy="-1" r="0.5"/>
+          <circle cx="-10" cy="1" r="0.5"/>
+          <circle cx="-6" cy="3" r="0.5"/>
+          <circle cx="-2" cy="5" r="0.5"/>
+          <circle cx="2" cy="7" r="0.5"/>
+          <circle cx="6" cy="8" r="0.5"/>
+          <circle cx="10" cy="9" r="0.5"/>
+          <circle cx="14" cy="10" r="0.5"/>
+          <circle cx="18" cy="10" r="0.5"/>
+        </g>
+        
+        <g opacity="0.4">
+          <circle cx="-16" cy="-1" r="0.5"/>
+          <circle cx="-12" cy="1" r="0.5"/>
+          <circle cx="-8" cy="3" r="0.5"/>
+          <circle cx="-4" cy="5" r="0.5"/>
+          <circle cx="0" cy="7" r="0.5"/>
+          <circle cx="4" cy="9" r="0.5"/>
+          <circle cx="8" cy="10" r="0.5"/>
+          <circle cx="12" cy="10" r="0.5"/>
+          <circle cx="16" cy="10" r="0.5"/>
+        </g>
+      </g>
+      
+      <!-- Surface hint -->
+      <path d="M -20,-8 C -10,0 0,5 20,9" fill="none" stroke="#B2EBF2" stroke-width="0.3" stroke-dasharray="1,0.5"/>
+    </g>
+  </g>
+  
+  <!-- Features -->
+  <g transform="translate(30, 100)">
+    <rect x="-10" y="-8" width="20" height="16" rx="2" fill="#00838F" stroke="#B2EBF2" stroke-width="0.5"/>
+    <text x="0" y="-3" font-family="monospace" font-size="2.5" fill="#B2EBF2" text-anchor="middle">D435i</text>
+    <text x="0" y="3" font-family="monospace" font-size="2.5" fill="#B2EBF2" text-anchor="middle">IMU</text>
+  </g>
+  
+  <g transform="translate(60, 100)">
+    <rect x="-10" y="-8" width="20" height="16" rx="2" fill="#00838F" stroke="#B2EBF2" stroke-width="0.5"/>
+    <text x="0" y="-3" font-family="monospace" font-size="2.5" fill="#B2EBF2" text-anchor="middle">USB</text>
+    <text x="0" y="3" font-family="monospace" font-size="2.5" fill="#B2EBF2" text-anchor="middle">TYPE-C</text>
+  </g>
+  
+  <g transform="translate(90, 100)">
+    <rect x="-10" y="-8" width="20" height="16" rx="2" fill="#00838F" stroke="#B2EBF2" stroke-width="0.5"/>
+    <text x="0" y="-3" font-family="monospace" font-size="2.5" fill="#B2EBF2" text-anchor="middle">SDK</text>
+    <text x="0" y="3" font-family="monospace" font-size="2.5" fill="#B2EBF2" text-anchor="middle">LIBREALSENSE</text>
+  </g>
+
+  <!-- Label -->
+  <g transform="translate(64, 115)">
+    <rect x="-35" y="-8" width="70" height="16" rx="5" fill="#006064" stroke="#B2EBF2" stroke-width="1"/>
+    <text x="0" y="0" font-family="Arial" font-size="10" fill="#FFFFFF" text-anchor="middle" font-weight="bold">REALSENSE</text>
+    <text x="0" y="8" font-family="monospace" font-size="5" fill="#B2EBF2" text-anchor="middle">92%</text>
+  </g>
+</svg> 

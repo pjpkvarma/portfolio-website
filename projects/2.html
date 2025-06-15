@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+   <meta charset="utf-8" />
+   <meta http-equiv="x-ua-compatible" content="ie=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="Scalable and Load-Balanced Coverage Path Planning (SCoPP) - Efficient multi-UAV coordination for large-scale area coverage" />
+
+   <!-- Site Title -->
+   <title>Scalable Coverage Path Planning - J P K Varma Pothuri</title>
+
+   <!-- Place favicon.ico in the root directory -->
+   <link rel="apple-touch-icon" href="../assets/img/favicon.png" />
+   <link rel="shortcut icon" type="image/png" href="../assets/img/favicon.png" />
+
+   <!-- CSS here -->
+   <link rel="stylesheet" href="../assets/css/animate.min.css" />
+   <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+   <link rel="stylesheet" href="../assets/css/font-awesome-pro.min.css" />
+   <link rel="stylesheet" href="../assets/css/flaticon_gerold.css" />
+   <link rel="stylesheet" href="../assets/css/nice-select.css" />
+   <link rel="stylesheet" href="../assets/css/backToTop.css" />
+   <link rel="stylesheet" href="../assets/css/owl.carousel.min.css" />
+   <link rel="stylesheet" href="../assets/css/swiper.min.css" />
+   <link rel="stylesheet" href="../assets/css/odometer-theme-default.css" />
+   <link rel="stylesheet" href="../assets/css/magnific-popup.css" />
+   <link rel="stylesheet" href="../assets/css/main.css" />
+   <link rel="stylesheet" href="../assets/css/main-2.css" />
+   <link rel="stylesheet" href="../assets/css/main-3.css" />
+   <link rel="stylesheet" href="../assets/css/light-mode.css" />
+   <link rel="stylesheet" href="../assets/css/meanmenu.css" />
+   <link rel="stylesheet" href="../assets/css/responsive.css" />
+   <link rel="stylesheet" href="../assets/css/responsive-2.css" />
+   <link rel="stylesheet" href="../assets/css/responsive-3.css" />
+</head>
+
+<body class="absolute_header">
+   <!-- Preloader Area Start -->
+   <div class="preloader">
+      <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+         <path id="preloaderSvg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
+      </svg>
+
+      <div class="preloader-heading">
+         <div class="load-text">
+            <span>L</span>
+            <span>o</span>
+            <span>a</span>
+            <span>d</span>
+            <span>i</span>
+            <span>n</span>
+            <span>g</span>
+         </div>
+      </div>
+   </div>
+   <!-- Preloader Area End -->
+
+   <!-- start: Back To Top -->
+   <div class="progress-wrap" id="scrollUp">
+      <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+         <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+      </svg>
+   </div>
+   <!-- end: Back To Top -->
+
+<!-- HEADER START -->
+<header class="tj-header-area style-2 header-absolute">
+   <div class="container">
+      <div class="row">
+         <div class="col-12 d-flex flex-wrap align-items-center">
+            <div class="logo-box">
+               <a href="../index.html">
+                  <img src="../assets/img/logo/logo.png" alt="" />
+               </a>
+            </div>
+            <div class="header-info-list d-none d-md-inline-block">
+               <ul class="ul-reset">
+                  <li><a href="mailto:jpkvarmapothuri@gmail.com">jpkvarmapothuri@gmail.com</a></li>
+               </ul>
+            </div>
+            <div class="header-menu" id="headerMenu">
+               <nav>
+                  <ul>
+                     <li><a href="../index.html">Home</a></li>
+                     <li><a href="../about.html">About Me</a></li>
+                     <li><a href="../portfolio.html" class="current-menu-item">Projects</a></li>
+                     <li><a href="../publications.html">Publications</a></li>
+                     <li><a href="../contact.html">Contact</a></li>
+                  </ul>
+               </nav>
+            </div>
+            <div class="mobile-menu d-lg-none"></div>
+            <div class="header-button">
+               <a href="../assets/resume/jpkvarma_resume_ai.pdf" class="tj-btn-primary-2">Resume
+                  <span class="icon_box">
+                     <i class="flaticon-download icon_first"></i>
+                     <i class="flaticon-download icon_second"></i>
+                  </span>
+               </a>
+            </div>
+            <div class="menu-bar d-lg-none">
+               <button>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+               </button>
+            </div>
+         </div>
+      </div>
+   </div>
+</header>
+<!-- HEADER END -->
+
+
+   <main class="site-content" id="content">
+      <!-- START: Breadcrumb Area -->
+      <section class="breadcrumb_area" data-bg-image="../assets/img/breadcrumb/breadcrumb-bg.jpg"
+         data-bg-color="#140C1C">
+         <div class="container">
+            <div class="row">
+               <div class="col">
+                  <div class="breadcrumb_content d-flex flex-column align-items-center">
+                     <h2 class="title wow fadeInUp" data-wow-delay=".3s">Scalable and Load-Balanced Coverage Path Planning</h2>
+                     <div class="breadcrumb_navigation wow fadeInUp" data-wow-delay=".5s">
+                        <span><a href="../index.html">Home</a></span>
+                        <i class="far fa-long-arrow-right"></i>
+                        <span><a href="../portfolio.html">Projects</a></span>
+                        <i class="far fa-long-arrow-right"></i>
+                        <span class="current-item">Coverage Path Planning</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- END: Breadcrumb Area -->
+
+      <!-- PROJECT DETAILS SECTION START -->
+      <section class="project-details-section" id="project-details">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-8">
+                  <div class="project-details-content">
+                     <div class="project-overview mb-5">
+                        <h3 class="mb-4">Project Overview</h3>
+                        <p>Modern challenges in large-scale area coverage demand innovative solutions, especially when deploying multi-UAV teams for applications like disaster response, environmental surveys, and urban mapping. This project presents the Scalable Coverage Path Planning (SCoPP) framework, a highly efficient and adaptable approach tailored for non-convex, large-scale environments. SCoPP not only ensures comprehensive coverage but also emphasizes equitable load balancing across UAVs, minimizing mission time and maximizing efficiency.</p>
+                     </div>
+                     
+                     <div class="key-features mb-5">
+                        <h3 class="mb-4">Key Features</h3>
+                        <ul class="list-unstyled">
+                           <li class="mb-3"><i class="fas fa-check-circle me-2"></i> Scalable framework supporting up to 150 UAVs for large-scale coverage missions</li>
+                           <li class="mb-3"><i class="fas fa-check-circle me-2"></i> Optimized load balancing with up to 30% improvement over baseline approaches</li>
+                           <li class="mb-3"><i class="fas fa-check-circle me-2"></i> Efficient handling of non-convex environments with complex boundaries and constraints</li>
+                           <li class="mb-3"><i class="fas fa-check-circle me-2"></i> Specialized variants for priority-based (SCoP3) and time-constrained (SCoPE) missions</li>
+                           <li class="mb-3"><i class="fas fa-check-circle me-2"></i> Validated through extensive simulations and real-world field trials</li>
+                        </ul>
+                     </div>
+                     
+                     <div class="technical-details mb-5">
+                        <h3 class="mb-4">Framework Design</h3>
+                        <p>The SCoPP framework operates through a meticulously designed pipeline comprising five core stages:</p>
+                        
+                        <h4 class="mt-4">Core Pipeline</h4>
+                        <ol>
+                           <li><strong>Area Selection:</strong> Identifying and segmenting the target zones, including defining priorities and constraints like no-fly zones.</li>
+                           <li><strong>Discretization:</strong> Dividing the area into manageable grid cells, ensuring precise coverage calculations.</li>
+                           <li><strong>Partitioning:</strong> Assigning grid cells to individual UAVs based on workload balance and spatial proximity.</li>
+                           <li><strong>Conflict Resolution:</strong> Addressing overlaps or constraints to ensure smooth navigation and task distribution.</li>
+                           <li><strong>Path Planning:</strong> Generating optimized, collision-free routes for each UAV, tailored to their assigned regions.</li>
+                        </ol>
+                     </div>
+                     
+                     <div class="implementation mb-5">
+                        <h3 class="mb-4">Specialized Variants</h3>
+                        <h5 class="mt-3">SCoP3: Priority-Based Coverage</h5>
+                        <p>The SCoP3 variant incorporates user-defined priorities, allowing UAVs to focus on high-importance regions first. This is particularly valuable in scenarios such as:</p>
+                        <ul>
+                           <li>Search and rescue operations where certain areas have higher likelihood of finding survivors</li>
+                           <li>Environmental monitoring where specific zones require more frequent or detailed observation</li>
+                           <li>Agriculture applications where certain crop sections need priority attention due to pest risks or ripening status</li>
+                        </ul>
+                        
+                        <h5 class="mt-4">SCoPE: Time-Optimized Coverage</h5>
+                        <p>The SCoPE variant is optimized for time-constrained missions, prioritizing swift execution without compromising coverage. Key features include:</p>
+                        <ul>
+                           <li>Energy-aware path planning that considers UAV battery limitations</li>
+                           <li>Accelerated coverage patterns that minimize unnecessary maneuvers</li>
+                           <li>Dynamic reallocation of resources when certain UAVs complete their assigned regions ahead of schedule</li>
+                        </ul>
+                     </div>
+                     
+                     <div class="optimization-techniques mb-5">
+                        <h3 class="mb-4">Technical Innovations</h3>
+                        <p>Several innovative techniques were developed to enhance the performance of the SCoPP framework:</p>
+                        
+                        <div class="row">
+                           <div class="col-md-6 mb-4">
+                              <div class="optimization-card p-3 border rounded h-100">
+                                 <h5><i class="fas fa-balance-scale me-2"></i> Advanced Load Balancing</h5>
+                                 <p>Our partitioning algorithm uses a novel weighted approach that considers not just area size but also complexity factors like obstacle density and terrain variations, ensuring truly equitable workload distribution across the UAV team.</p>
+                              </div>
+                           </div>
+                           
+                           <div class="col-md-6 mb-4">
+                              <div class="optimization-card p-3 border rounded h-100">
+                                 <h5><i class="fas fa-exchange-alt me-2"></i> Adaptive Tessellation</h5>
+                                 <p>Rather than using fixed grid cells, our discretization process adapts to environmental features, creating finer resolution in complex areas while maintaining efficiency in open spaces.</p>
+                              </div>
+                           </div>
+                           
+                           <div class="col-md-6 mb-4">
+                              <div class="optimization-card p-3 border rounded h-100">
+                                 <h5><i class="fas fa-project-diagram me-2"></i> Hierarchical Planning</h5>
+                                 <p>A multi-level planning approach that allows rapid global planning followed by detailed local refinement, significantly reducing computational time while maintaining plan quality.</p>
+                              </div>
+                           </div>
+                           
+                           <div class="col-md-6 mb-4">
+                              <div class="optimization-card p-3 border rounded h-100">
+                                 <h5><i class="fas fa-sync-alt me-2"></i> Dynamic Replanning</h5>
+                                 <p>Real-time adaptation capabilities that allow the system to respond to unexpected obstacles, UAV failures, or changing mission priorities without requiring a complete recalculation.</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="results mb-5">
+                        <h3 class="mb-4">Results and Performance</h3>
+                        <p>Extensive simulations in both synthetic and real-world inspired scenarios demonstrated SCoPP's superiority over baseline approaches:</p>
+                        
+                        <h5 class="mt-4">Quantitative Performance</h5>
+                        <table class="table table-bordered">
+                           <thead>
+                              <tr>
+                                 <th>Metric</th>
+                                 <th>Baseline Approaches</th>
+                                 <th>SCoPP Framework</th>
+                                 <th>Improvement</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <td>Workload Balance</td>
+                                 <td>±18.7% variation</td>
+                                 <td>±7.2% variation</td>
+                                 <td>30% improvement</td>
+                              </tr>
+                              <tr>
+                                 <td>Mission Completion Time</td>
+                                 <td>38.4 minutes</td>
+                                 <td>28.9 minutes</td>
+                                 <td>25% reduction</td>
+                              </tr>
+                              <tr>
+                                 <td>Planning Computation Time</td>
+                                 <td>8.2 minutes</td>
+                                 <td>2.4 minutes</td>
+                                 <td>71% reduction</td>
+                              </tr>
+                              <tr>
+                                 <td>Coverage Completeness</td>
+                                 <td>94.8%</td>
+                                 <td>99.2%</td>
+                                 <td>4.6% improvement</td>
+                              </tr>
+                              <tr>
+                                 <td>Scalability (max UAVs)</td>
+                                 <td>48 UAVs</td>
+                                 <td>150+ UAVs</td>
+                                 <td>212% improvement</td>
+                              </tr>
+                           </tbody>
+                        </table>
+                        
+                        <h5 class="mt-4">Field Trial Validation</h5>
+                        <p>Field trials using physical UAVs further validated these findings, showcasing robust performance in environments with real-world uncertainties:</p>
+                        <ul class="list-unstyled">
+                           <li class="mb-3"><i class="fas fa-chart-line me-2"></i> <strong>Real-world Implementation:</strong> Successfully deployed on a team of 8 custom quadrotor UAVs equipped with onboard computing and sensing capabilities.</li>
+                           <li class="mb-3"><i class="fas fa-chart-line me-2"></i> <strong>Robustness Testing:</strong> Maintained 96.4% performance efficiency even with introduced disturbances like wind gusts and temporary communication losses.</li>
+                           <li class="mb-3"><i class="fas fa-chart-line me-2"></i> <strong>Adaptability Demonstration:</strong> Successfully adjusted to the sudden "failure" of two UAVs mid-mission, redistributing their workload among the remaining team members.</li>
+                        </ul>
+                     </div>
+                     
+                     <div class="applications mb-5">
+                        <h3 class="mb-4">Applications</h3>
+                        <p>The SCoPP framework has demonstrated its versatility across several critical application domains:</p>
+                        
+                        <div class="row mt-4">
+                           <div class="col-md-6 mb-4">
+                              <div class="application-card p-3 border rounded">
+                                 <h5><i class="fas fa-fire-extinguisher me-2"></i> Disaster Response</h5>
+                                 <p>The SCoPP framework enables rapid assessment of disaster-stricken areas, with SCoP3's priority-based coverage ensuring that high-risk zones receive immediate attention while maintaining comprehensive situational awareness.</p>
+                              </div>
+                           </div>
+                           
+                           <div class="col-md-6 mb-4">
+                              <div class="application-card p-3 border rounded">
+                                 <h5><i class="fas fa-leaf me-2"></i> Environmental Monitoring</h5>
+                                 <p>For tracking environmental changes like deforestation, pollution spread, or wildlife population dynamics, SCoPP provides efficient coverage strategies that can be repeated over time to collect consistent temporal data.</p>
+                              </div>
+                           </div>
+                           
+                           <div class="col-md-6 mb-4">
+                              <div class="application-card p-3 border rounded">
+                                 <h5><i class="fas fa-city me-2"></i> Urban Mapping</h5>
+                                 <p>SCoPP's ability to handle complex, non-convex environments makes it ideal for urban mapping missions, efficiently navigating around tall buildings and restricted airspaces while maintaining thorough coverage.</p>
+                              </div>
+                           </div>
+                           
+                           <div class="col-md-6 mb-4">
+                              <div class="application-card p-3 border rounded">
+                                 <h5><i class="fas fa-seedling me-2"></i> Precision Agriculture</h5>
+                                 <p>The framework's adaptive tessellation allows for detailed monitoring of agricultural fields, with options to focus on specific crop sections that may require more attention based on growth patterns or pest outbreaks.</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="technologies mb-5">
+                        <h3 class="mb-4">Technologies Used</h3>
+                        <div class="row">
+                           <div class="col-md-4 mb-3">
+                              <div class="tech-item text-center p-3">
+                                 <i class="fab fa-python fa-2x mb-2"></i>
+                                 <h5>Python</h5>
+                              </div>
+                           </div>
+                           <div class="col-md-4 mb-3">
+                              <div class="tech-item text-center p-3">
+                                 <i class="fab fa-cuttlefish fa-2x mb-2"></i>
+                                 <h5>C++</h5>
+                              </div>
+                           </div>
+                           <div class="col-md-4 mb-3">
+                              <div class="tech-item text-center p-3">
+                                 <i class="fas fa-robot fa-2x mb-2"></i>
+                                 <h5>ROS 2</h5>
+                              </div>
+                           </div>
+                           <div class="col-md-4 mb-3">
+                              <div class="tech-item text-center p-3">
+                                 <i class="fas fa-cube fa-2x mb-2"></i>
+                                 <h5>Gazebo</h5>
+                              </div>
+                           </div>
+                           <div class="col-md-4 mb-3">
+                              <div class="tech-item text-center p-3">
+                                 <i class="fas fa-network-wired fa-2x mb-2"></i>
+                                 <h5>CGAL</h5>
+                              </div>
+                           </div>
+                           <div class="col-md-4 mb-3">
+                              <div class="tech-item text-center p-3">
+                                 <i class="fas fa-table fa-2x mb-2"></i>
+                                 <h5>NumPy</h5>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="project-gallery mb-5">
+                        <h3 class="mb-4">Project Gallery</h3>
+                        <div class="row">
+                           <div class="col-md-6 mb-4">
+                              <p class="mt-2 text-center">SCoPP area partitioning for 12 UAVs in a complex environment</p>
+                           </div>
+                           <div class="col-md-6 mb-4">
+                              <p class="mt-2 text-center">Field testing with a team of autonomous UAVs</p>
+                           </div>
+                           <div class="col-md-6 mb-4">
+                              <p class="mt-2 text-center">Optimized coverage paths with load balancing visualization</p>
+                           </div>
+                           <div class="col-md-6 mb-4">
+                              <p class="mt-2 text-center">SCoPP application in simulated disaster response scenario</p>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="project-conclusion">
+                        <h3 class="mb-4">Conclusion</h3>
+                        <p>SCoPP stands out as a cutting-edge solution bridging the gap between simulation and practical deployment. Whether managing disaster-stricken areas, tracking environmental changes, or enabling urban surveys, SCoPP redefines scalability and efficiency in multi-UAV path planning.</p>
+                        
+                        <p>Future work focuses on extending the framework to heterogeneous teams of robots with varying capabilities, incorporating real-time environmental data feeds, and developing learning-based components that can adapt coverage strategies based on historical mission data.</p>
+                     </div>
+                  </div>
+               </div>
+               
+               <div class="col-lg-4">
+                  <div class="project-sidebar">
+                     <div class="project-info-card mb-4">
+                        <h4 class="card-title border-bottom pb-3 mb-3">Project Information</h4>
+                        <ul class="list-unstyled">
+                           <li class="d-flex justify-content-between mb-3">
+                              <span class="fw-bold">Category:</span>
+                              <span>Multi-Robot Systems</span>
+                           </li>
+                           <li class="d-flex justify-content-between mb-3">
+                              <span class="fw-bold">Duration:</span>
+                              <span>6 months</span>
+                           </li>
+                           <li class="d-flex justify-content-between mb-3">
+                              <span class="fw-bold">Completed:</span>
+                              <span>2024</span>
+                           </li>
+                           <li class="d-flex justify-content-between mb-3">
+                              <span class="fw-bold">Institution:</span>
+                              <span>University at Buffalo</span>
+                           </li>
+                           <li class="d-flex justify-content-between">
+                              <span class="fw-bold">Publication:</span>
+                              <span>Yet to be</span>
+                           </li>
+                        </ul>
+                     </div>
+                     
+                     <div class="related-projects-card mb-4">
+                        <h4 class="card-title border-bottom pb-3 mb-3">Related Projects</h4>
+                        <div class="related-project-item d-flex align-items-center mb-3">
+                           <div>
+                              <h6 class="mb-0"><a href="1.html">Autonomous UAV Tracking</a></h6>
+                              <small>UAV Systems</small>
+                           </div>
+                        </div>
+                        <div class="related-project-item d-flex align-items-center mb-3">
+                           <div>
+                              <h6 class="mb-0"><a href="concurrent-uav-design.html">Concurrent UAV Design</a></h6>
+                              <small>UAV Design</small>
+                           </div>
+                        </div>
+                        <div class="related-project-item d-flex align-items-center">
+                           <div>
+                              <h6 class="mb-0"><a href="monocular-depth.html">Monocular Depth Estimation</a></h6>
+                              <small>Computer Vision</small>
+                           </div>
+                        </div>
+                     </div>
+                     
+                     <div class="project-contact-card">
+                        <h4 class="card-title border-bottom pb-3 mb-3">Interested in this project?</h4>
+                        <p>If you're interested in learning more about our SCoPP framework or exploring potential applications in multi-UAV systems, please get in touch.</p>
+                        <a href="../contact.html" class="btn tj-btn-primary-2 w-100">
+                           Contact Me
+                           <span class="icon_box">
+                              <i class="fa-regular fa-arrow-right icon_first"></i>
+                              <i class="fa-regular fa-arrow-right icon_second"></i>
+                           </span>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- PROJECT DETAILS SECTION END -->
+   </main>
+
+   <!-- FOOTER AREA START -->
+   <footer class="tj-footer-area style-2">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12 text-center">
+               <!-- <div class="footer-logo-box">
+                  <a href="#"><img src="../assets/img/logo/logo.png" alt="" /></a>
+               </div> -->
+               <div class="footer-menu">
+                  <nav>
+                     <ul>
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="../services.html">Services</a></li>
+                        <li><a href="../portfolio.html">Portfolios</a></li>
+                        <li><a href="../certificates.html">Certificates</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                     </ul>
+                  </nav>
+               </div>
+               <div class="copy-text style-2">
+                  <p>&copy; 2024 All rights reserved by <a href="#" target="_blank">J P K Varma Pothuri</a></p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+   <!-- FOOTER AREA END -->
+
+   <!-- JS here -->
+   <script src="../assets/js/jquery.min.js"></script>
+   <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+   <script src="../assets/js/gsap.min.js"></script>
+   <script src="../assets/js/gsap-scroll-to-plugin.min.js"></script>
+   <script src="../assets/js/gsap-scroll-trigger.min.js"></script>
+   <script src="../assets/js/gsap-split-text.min.js"></script>
+   <script src="../assets/js/lenis.min.js"></script>
+
+   <script src="../assets/js/nice-select.min.js"></script>
+   <script src="../assets/js/backToTop.js"></script>
+   <script src="../assets/js/appear.min.js"></script>
+   <script src="../assets/js/wow.min.js"></script>
+   <script src="../assets/js/lightcase.js"></script>
+   <script src="../assets/js/owl.carousel.min.js"></script>
+   <script src="../assets/js/swiper.min.js"></script>
+   <script src="../assets/js/imagesloaded-pkgd.js"></script>
+   <script src="../assets/js/isotope.pkgd.min.js"></script>
+   <script src="../assets/js/odometer.min.js"></script>
+   <script src="../assets/js/magnific-popup.js"></script>
+   <script src="../assets/js/validate.min.js"></script>
+   <script src="../assets/js/meanmenu.js"></script>
+   <script src="../assets/js/main.js"></script>
+</body>
+
+</html> 

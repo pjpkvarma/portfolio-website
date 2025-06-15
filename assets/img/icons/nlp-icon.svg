@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="nlp-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3F51B5"/>
+      <stop offset="100%" stop-color="#1A237E"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="64" cy="64" r="58" fill="url(#nlp-gradient)" stroke="#1A237E" stroke-width="2"/>
+  
+  <!-- Speech bubbles -->
+  <g>
+    <!-- Left speech bubble -->
+    <path d="M 30,45 C 23,45 18,50 18,56 C 18,62 23,67 30,67 L 32,67 L 32,75 L 42,67 L 50,67 C 57,67 62,62 62,56 C 62,50 57,45 50,45 Z" 
+          fill="#C5CAE9" stroke="#1A237E" stroke-width="1"/>
+          
+    <!-- Right speech bubble -->
+    <path d="M 98,80 C 105,80 110,75 110,69 C 110,63 105,58 98,58 L 96,58 L 96,50 L 86,58 L 78,58 C 71,58 66,63 66,69 C 66,75 71,80 78,80 Z" 
+          fill="#C5CAE9" stroke="#1A237E" stroke-width="1"/>
+  </g>
+  
+  <!-- Text processing elements -->
+  <g>
+    <!-- Text lines in left bubble -->
+    <line x1="25" y1="52" x2="55" y2="52" stroke="#7986CB" stroke-width="2" stroke-linecap="round"/>
+    <line x1="25" y1="59" x2="50" y2="59" stroke="#7986CB" stroke-width="2" stroke-linecap="round"/>
+    
+    <!-- Text lines in right bubble -->
+    <line x1="73" y1="65" x2="103" y2="65" stroke="#7986CB" stroke-width="2" stroke-linecap="round"/>
+    <line x1="78" y1="72" x2="98" y2="72" stroke="#7986CB" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Brain/neural network in center -->
+  <g>
+    <!-- Brain outline -->
+    <path d="M 64,30 C 50,30 45,40 45,48 C 45,55 48,60 54,65 C 59,69 64,73 64,85 C 64,73 69,69 74,65 C 80,60 83,55 83,48 C 83,40 78,30 64,30 Z" 
+          fill="#5C6BC0" stroke="#C5CAE9" stroke-width="1"/>
+    
+    <!-- Neural connections (nodes and links) -->
+    <g fill="#C5CAE9">
+      <!-- Left hemisphere nodes -->
+      <circle cx="53" cy="40" r="2.5"/>
+      <circle cx="50" cy="50" r="2.5"/>
+      <circle cx="55" cy="60" r="2.5"/>
+      <circle cx="60" cy="70" r="2.5"/>
+      
+      <!-- Right hemisphere nodes -->
+      <circle cx="75" cy="40" r="2.5"/>
+      <circle cx="78" cy="50" r="2.5"/>
+      <circle cx="73" cy="60" r="2.5"/>
+      <circle cx="68" cy="70" r="2.5"/>
+      
+      <!-- Cross connections -->
+      <g stroke="#C5CAE9" stroke-width="0.7" fill="none">
+        <path d="M 53,40 L 75,40"/>
+        <path d="M 53,40 L 78,50"/>
+        <path d="M 53,40 L 73,60"/>
+        <path d="M 50,50 L 75,40"/>
+        <path d="M 50,50 L 78,50"/>
+        <path d="M 50,50 L 73,60"/>
+        <path d="M 55,60 L 78,50"/>
+        <path d="M 55,60 L 73,60"/>
+        <path d="M 55,60 L 68,70"/>
+        <path d="M 60,70 L 73,60"/>
+        <path d="M 60,70 L 68,70"/>
+      </g>
+    </g>
+  </g>
+  
+  <!-- NLP concepts visualization -->
+  <g>
+    <!-- Word tokens with POS tags -->
+    <g transform="translate(34, 95)" font-family="monospace">
+      <text x="0" y="0" font-size="6" fill="#C5CAE9">The</text>
+      <text x="0" y="6" font-size="4" fill="#9FA8DA">DET</text>
+      
+      <text x="15" y="0" font-size="6" fill="#C5CAE9">quick</text>
+      <text x="15" y="6" font-size="4" fill="#9FA8DA">ADJ</text>
+      
+      <text x="35" y="0" font-size="6" fill="#C5CAE9">fox</text>
+      <text x="35" y="6" font-size="4" fill="#9FA8DA">NOUN</text>
+      
+      <text x="50" y="0" font-size="6" fill="#C5CAE9">jumps</text>
+      <text x="50" y="6" font-size="4" fill="#9FA8DA">VERB</text>
+    </g>
+    
+    <!-- Sentiment analysis visualization -->
+    <g transform="translate(94, 95)">
+      <rect x="-9" y="-8" width="18" height="15" rx="2" fill="#5C6BC0" stroke="#C5CAE9" stroke-width="0.5"/>
+      <text x="-6" y="0" font-family="monospace" font-size="5" fill="#C5CAE9">+0.8</text>
+      <path d="M -4,5 C -2,8 2,8 4,5" stroke="#C5CAE9" stroke-width="1" fill="none"/>
+      <circle cx="-3" cy="-3" r="1" fill="#C5CAE9"/>
+      <circle cx="3" cy="-3" r="1" fill="#C5CAE9"/>
+    </g>
+  </g>
+  
+  <!-- NLP algorithms reference -->
+  <g font-family="monospace" font-size="3.5" fill="#C5CAE9">
+    <text x="12" y="115">BERT</text>
+    <text x="32" y="115">GPT</text>
+    <text x="50" y="115">RNN</text>
+    <text x="70" y="115">LSTM</text>
+    <text x="90" y="115">CRF</text>
+    <text x="108" y="115">T5</text>
+  </g>
+  
+  <!-- Language symbols -->
+  <g fill="#9FA8DA" font-family="serif">
+    <text x="22" y="30" font-size="8">α</text>
+    <text x="35" y="35" font-size="8">β</text>
+    <text x="93" y="30" font-size="8">ñ</text>
+    <text x="105" y="35" font-size="8">ü</text>
+    <text x="22" y="97" font-size="8">语</text>
+    <text x="103" y="97" font-size="8">文</text>
+  </g>
+  
+  <!-- Label -->
+  <text x="64" y="123" font-family="Arial" font-size="8" fill="#FFFFFF" text-anchor="middle" font-weight="bold">Natural Language Processing</text>
+</svg> 

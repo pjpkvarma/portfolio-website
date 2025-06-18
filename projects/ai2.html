@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+   <meta charset="utf-8" />
+   <meta http-equiv="x-ua-compatible" content="ie=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="Vision Transformer for Object Detection - A lightweight, attention-based architecture for efficient object recognition using ViT" />
+
+   <title>Vision Transformer Detection - J P K Varma Pothuri</title>
+   <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+   <link rel="stylesheet" href="../assets/css/main.css" />
+   <link rel="stylesheet" href="../assets/css/font-awesome-pro.min.css" />
+   <link rel="stylesheet" href="../assets/css/animate.min.css" />
+</head>
+
+<body class="absolute_header">
+<header class="tj-header-area style-2 header-absolute">
+   <div class="container">
+      <div class="row">
+         <div class="col-12 d-flex flex-wrap align-items-center">
+            <div class="logo-box">
+               <a href="../index.html">
+                  <img src="../assets/img/logo/logo.png" alt="" />
+               </a>
+            </div>
+            <div class="header-info-list d-none d-md-inline-block">
+               <ul class="ul-reset">
+                  <li><a href="mailto:jpkvarmapothuri@gmail.com">jpkvarmapothuri@gmail.com</a></li>
+               </ul>
+            </div>
+            <div class="header-menu" id="headerMenu">
+               <nav>
+                  <ul>
+                     <li><a href="../index.html">Home</a></li>
+                     <li><a href="../about.html">About Me</a></li>
+                     <li><a href="../portfolio.html" class="current-menu-item">Projects</a></li>
+                     <li><a href="../publications.html">Publications</a></li>
+                     <li><a href="../contact.html">Contact</a></li>
+                  </ul>
+               </nav>
+            </div>
+            <div class="mobile-menu d-lg-none"></div>
+            <div class="header-button">
+               <a href="../assets/resume/jpkvarma_resume_ai.pdf" class="tj-btn-primary-2">Resume
+                  <span class="icon_box">
+                     <i class="flaticon-download icon_first"></i>
+                     <i class="flaticon-download icon_second"></i>
+                  </span>
+               </a>
+            </div>
+            <div class="menu-bar d-lg-none">
+               <button>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+               </button>
+            </div>
+         </div>
+      </div>
+   </div>
+</header>
+<!-- HEADER END -->
+
+<main class="site-content" id="content">
+   <!-- <section class="breadcrumb_area" data-bg-color="#140C1C">
+      <div class="container">
+         <div class="row">
+            <div class="col">
+               <div class="breadcrumb_content d-flex flex-column align-items-center">
+                  <h2 class="title">Vision Transformer Detection</h2>
+                  <div class="breadcrumb_navigation">
+                     <span><a href="../index.html">Home</a></span>
+                     <i class="far fa-long-arrow-right"></i>
+                     <span class="current-item">Vision Transformer Detection</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section> -->
+         <!-- START: Breadcrumb Area -->
+      <section class="breadcrumb_area" data-bg-image="../assets/img/breadcrumb/bg.png"
+         data-bg-color="#140C1C">
+         <div class="container">
+            <div class="row">
+               <div class="col">
+                  <div class="breadcrumb_content d-flex flex-column align-items-center">
+                     <h2 class="title wow fadeInUp" data-wow-delay=".3s">Vision Transformer Detection</h2>
+                     <div class="breadcrumb_navigation wow fadeInUp" data-wow-delay=".5s">
+                        <span><a href="../index.html">Home</a></span>
+                        <i class="far fa-long-arrow-right"></i>
+                        <span><a href="../portfolio.html">Projects</a></span>
+                        <i class="far fa-long-arrow-right"></i>
+                        <span class="current-item">Vision Transformer Detection</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- END: Breadcrumb Area -->
+
+   <section class="project-details-section" id="project-details" style="margin-top: 80px;">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-8">
+               <div class="project-details-content">
+                  <div class="project-overview mb-5">
+                     <h3 class="mb-4">Project Overview</h3>
+                     <p>This project explores the use of Vision Transformers (ViT) for object detection by applying self-attention mechanisms to image patches. The model emphasizes accuracy, computational efficiency, and explainability. It bridges the gap between CNN-based models and transformer-based architectures in the context of lightweight computer vision tasks.</p>
+                  </div>
+
+                  <div class="key-features mb-5">
+                     <h3 class="mb-4">Key Features</h3>
+                     <ul class="list-unstyled">
+                        <li><strong>Patch Embeddings:</strong> Converts image into 16x16 patches and projects them into embedding vectors.</li>
+                        <li><strong>Multi-Head Self Attention:</strong> Captures global context across all patches, enabling effective spatial reasoning.</li>
+                        <li><strong>Pretrained Backbones:</strong> Uses HuggingFace's ViT-B/16 pretrained weights for transfer learning.</li>
+                        <li><strong>Object Detection Head:</strong> A lightweight MLP head fine-tuned for binary/multi-class detection.</li>
+                     </ul>
+                  </div>
+
+                  <div class="methodology mb-5">
+                     <h3 class="mb-4">Methodology</h3>
+                     <p>Images were processed into patches and passed through a ViT encoder. The CLS token output was connected to a detection head trained using cross-entropy loss. Transfer learning enabled faster convergence on a small subset of annotated aerial drone images.</p>
+                     <p>We used an SGD optimizer with cosine annealing and conducted training for 10 epochs on a single GPU with early stopping and validation checkpoints.</p>
+                  </div>
+
+                  <div class="applications mb-5">
+                     <h3 class="mb-4">Applications</h3>
+                     <ul>
+                        <li>Lightweight UAV detection pipelines</li>
+                        <li>Vision-based robotics with limited compute</li>
+                        <li>Real-time object monitoring in resource-constrained settings</li>
+                     </ul>
+                  </div>
+
+                  <div class="project-conclusion">
+                     <h3 class="mb-4">Conclusion</h3>
+                     <p>This project demonstrates how Vision Transformers can be rapidly adapted for real-world detection tasks. The modular ViT-based pipeline shows promising results in low-data regimes and opens the door for scalable transformer-based perception systems in robotics.</p>
+                  </div>
+               </div>
+            </div>
+
+            <div class="col-lg-4">
+               <div class="project-sidebar">
+                  <div class="project-info-card mb-4">
+                     <h4 class="card-title border-bottom pb-3 mb-3">Project Information</h4>
+                     <ul class="list-unstyled">
+                        <li class="d-flex justify-content-between mb-3">
+                           <span class="fw-bold">Category:</span>
+                           <span>Vision Transformers</span>
+                        </li>
+                        <li class="d-flex justify-content-between mb-3">
+                           <span class="fw-bold">Duration:</span>
+                           <span>May 2025</span>
+                        </li>
+                        <li class="d-flex justify-content-between mb-3">
+                           <span class="fw-bold">Tools:</span>
+                           <span>PyTorch, HuggingFace</span>
+                        </li>
+                     </ul>
+                  </div>
+
+                  <div class="mb-5">
+                     <a href="https://github.com/pjpkvarma/vit-object-detection" class="btn tj-btn-primary-2" target="_blank">
+                        View on GitHub
+                        <span class="icon_box">
+                           <i class="fab fa-github icon_first"></i>
+                           <i class="fab fa-github icon_second"></i>
+                        </span>
+                     </a>
+                  </div>
+
+                  <div class="technologies-card mb-4">
+                     <h4 class="card-title border-bottom pb-3 mb-3">Technologies Used</h4>
+                     <ul>
+                        <li>Python</li>
+                        <li>PyTorch</li>
+                        <li>Vision Transformers (ViT)</li>
+                        <li>Matplotlib</li>
+                        <li>scikit-learn</li>
+                     </ul>
+                  </div>
+
+                  <div class="project-contact-card">
+                     <h4 class="card-title border-bottom pb-3 mb-3">Interested in this project?</h4>
+                     <p>Feel free to reach out for collaborations, improvements, or to deploy a real-time ViT-based solution for your robotics vision needs.</p>
+                     <a href="../contact.html" class="btn tj-btn-primary-2 w-100">Contact Me</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+</main>
+
+
+
+   <!-- FOOTER AREA START -->
+   <footer class="tj-footer-area style-2">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12 text-center">
+               <!-- <div class="footer-logo-box">
+                  <a href="#"><img src="../assets/img/logo/logo.png" alt="" /></a>
+               </div> -->
+               <div class="footer-menu">
+                  <nav>
+                     <ul>
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="../services.html">Services</a></li>
+                        <li><a href="../portfolio.html">Portfolios</a></li>
+                        <li><a href="../certificates.html">Certificates</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                     </ul>
+                  </nav>
+               </div>
+               <div class="copy-text style-2">
+                  <p>&copy; 2024 All rights reserved by <a href="#" target="_blank">J P K Varma Pothuri</a></p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+   <!-- FOOTER AREA END -->
+
+   <!-- JS here -->
+   <script src="../assets/js/jquery.min.js"></script>
+   <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+   <script src="../assets/js/gsap.min.js"></script>
+   <script src="../assets/js/gsap-scroll-to-plugin.min.js"></script>
+   <script src="../assets/js/gsap-scroll-trigger.min.js"></script>
+   <script src="../assets/js/gsap-split-text.min.js"></script>
+   <script src="../assets/js/lenis.min.js"></script>
+
+   <script src="../assets/js/nice-select.min.js"></script>
+   <script src="../assets/js/backToTop.js"></script>
+   <script src="../assets/js/appear.min.js"></script>
+   <script src="../assets/js/wow.min.js"></script>
+   <script src="../assets/js/lightcase.js"></script>
+   <script src="../assets/js/owl.carousel.min.js"></script>
+   <script src="../assets/js/swiper.min.js"></script>
+   <script src="../assets/js/imagesloaded-pkgd.js"></script>
+   <script src="../assets/js/isotope.pkgd.min.js"></script>
+   <script src="../assets/js/odometer.min.js"></script>
+   <script src="../assets/js/magnific-popup.js"></script>
+   <script src="../assets/js/validate.min.js"></script>
+   <script src="../assets/js/meanmenu.js"></script>
+   <script src="../assets/js/main.js"></script>
+</body>
+
+</html> 

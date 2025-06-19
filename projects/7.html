@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+   <meta charset="utf-8" />
+   <meta http-equiv="x-ua-compatible" content="ie=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="Structure from Motion (SfM) Pipeline - Reconstructing 3D structures from 2D image sequences using camera pose estimation, triangulation, and bundle adjustment." />
+
+   <!-- Site Title -->
+   <title>Structure from Motion - J P K Varma Pothuri</title>
+
+   <!-- Place favicon.ico in the root directory -->
+   <link rel="apple-touch-icon" href="../assets/img/favicon.png" />
+   <link rel="shortcut icon" type="image/png" href="../assets/img/favicon.png" />
+
+   <!-- CSS here -->
+   <link rel="stylesheet" href="../assets/css/animate.min.css" />
+   <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+   <link rel="stylesheet" href="../assets/css/font-awesome-pro.min.css" />
+   <link rel="stylesheet" href="../assets/css/flaticon_gerold.css" />
+   <link rel="stylesheet" href="../assets/css/nice-select.css" />
+   <link rel="stylesheet" href="../assets/css/backToTop.css" />
+   <link rel="stylesheet" href="../assets/css/owl.carousel.min.css" />
+   <link rel="stylesheet" href="../assets/css/swiper.min.css" />
+   <link rel="stylesheet" href="../assets/css/odometer-theme-default.css" />
+   <link rel="stylesheet" href="../assets/css/magnific-popup.css" />
+   <link rel="stylesheet" href="../assets/css/main.css" />
+   <link rel="stylesheet" href="../assets/css/main-2.css" />
+   <link rel="stylesheet" href="../assets/css/main-3.css" />
+   <link rel="stylesheet" href="../assets/css/light-mode.css" />
+   <link rel="stylesheet" href="../assets/css/meanmenu.css" />
+   <link rel="stylesheet" href="../assets/css/responsive.css" />
+   <link rel="stylesheet" href="../assets/css/responsive-2.css" />
+   <link rel="stylesheet" href="../assets/css/responsive-3.css" />
+</head>
+
+<body class="absolute_header">
+   <!-- Preloader Area Start -->
+   <div class="preloader">
+      <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+         <path id="preloaderSvg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
+      </svg>
+
+      <div class="preloader-heading">
+         <div class="load-text">
+            <span>L</span>
+            <span>o</span>
+            <span>a</span>
+            <span>d</span>
+            <span>i</span>
+            <span>n</span>
+            <span>g</span>
+         </div>
+      </div>
+   </div>
+   <!-- Preloader Area End -->
+
+   <!-- start: Back To Top -->
+   <div class="progress-wrap" id="scrollUp">
+      <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+         <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+      </svg>
+   </div>
+   <!-- end: Back To Top -->
+
+<!-- HEADER START -->
+<header class="tj-header-area style-2 header-absolute">
+   <div class="container">
+      <div class="row">
+         <div class="col-12 d-flex flex-wrap align-items-center">
+            <div class="logo-box">
+               <a href="../index.html">
+                  <img src="../assets/img/logo/logo.png" alt="" />
+               </a>
+            </div>
+            <div class="header-info-list d-none d-md-inline-block">
+               <ul class="ul-reset">
+                  <li><a href="mailto:jpkvarmapothuri@gmail.com">jpkvarmapothuri@gmail.com</a></li>
+               </ul>
+            </div>
+            <div class="header-menu" id="headerMenu">
+               <nav>
+                  <ul>
+                     <li><a href="../index.html">Home</a></li>
+                     <li><a href="../about.html">About Me</a></li>
+                     <li><a href="../portfolio.html" class="current-menu-item">Projects</a></li>
+                     <li><a href="../publications.html">Publications</a></li>
+                     <li><a href="../contact.html">Contact</a></li>
+                  </ul>
+               </nav>
+            </div>
+            <div class="mobile-menu d-lg-none"></div>
+            <div class="header-button">
+               <a href="../assets/resume/jpkvarma_resume_ai.pdf" class="tj-btn-primary-2">Resume
+                  <span class="icon_box">
+                     <i class="flaticon-download icon_first"></i>
+                     <i class="flaticon-download icon_second"></i>
+                  </span>
+               </a>
+            </div>
+            <div class="menu-bar d-lg-none">
+               <button>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+               </button>
+            </div>
+         </div>
+      </div>
+   </div>
+</header>
+<!-- HEADER END -->
+
+<!-- START: Breadcrumb Area -->
+<section class="breadcrumb_area" data-bg-image="../assets/img/breadcrumb/bg.png"
+   data-bg-color="#140C1C">
+   <div class="container">
+      <div class="row">
+         <div class="col">
+            <div class="breadcrumb_content d-flex flex-column align-items-center">
+               <h2 class="title wow fadeInUp" data-wow-delay=".3s">Structure from Motion</h2>
+               <div class="breadcrumb_navigation wow fadeInUp" data-wow-delay=".5s">
+                  <span><a href="../index.html">Home</a></span>
+                  <i class="far fa-long-arrow-right"></i>
+                  <span><a href="../portfolio.html">Projects</a></span>
+                  <i class="far fa-long-arrow-right"></i>
+                  <span class="current-item">Structure from Motion</span>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+<!-- END: Breadcrumb Area -->
+
+<!-- PROJECT DETAILS SECTION START -->
+<section class="project-details-section" id="project-details" style="margin-top: 80px;">
+   <div class="container">
+      <div class="row">
+         <div class="col-lg-8">
+            <div class="project-details-content">
+               <div class="project-overview mb-5">
+                  <h3 class="mb-4">Project Overview</h3>
+                  <p>This project implements a complete Structure from Motion (SfM) pipeline for 3D reconstruction from 2D images. By combining feature detection, camera pose estimation, triangulation, and bundle adjustment, the pipeline generates sparse and dense 3D point clouds from sequential image inputs.</p>
+               </div>
+
+               <div class="key-features mb-5">
+                  <h3 class="mb-4">Key Features</h3>
+                  <ul class="list-unstyled">
+                     <li class="mb-3"><i class="fas fa-check-circle me-2"></i> Robust feature detection using SIFT</li>
+                     <li class="mb-3"><i class="fas fa-check-circle me-2"></i> RANSAC-based Fundamental Matrix estimation</li>
+                     <li class="mb-3"><i class="fas fa-check-circle me-2"></i> Essential Matrix-based pose recovery</li>
+                     <li class="mb-3"><i class="fas fa-check-circle me-2"></i> Graph-based triangulation and sparse reconstruction</li>
+                     <li class="mb-3"><i class="fas fa-check-circle me-2"></i> Bundle adjustment for pose and point optimization</li>
+                     <li class="mb-3"><i class="fas fa-check-circle me-2"></i> Dense reconstruction using feature matching</li>
+                  </ul>
+               </div>
+
+               <div class="methodology mb-5">
+                  <h3 class="mb-4">Methodology</h3>
+                  <p>The SfM pipeline is executed through the following steps:</p>
+                  <ol>
+                     <li><strong>Image Acquisition:</strong> Images are loaded and resized as needed. Camera intrinsics are provided.</li>
+                     <li><strong>Feature Detection & Matching:</strong> SIFT features are extracted, matched, and filtered using RANSAC.</li>
+                     <li><strong>Pose Estimation:</strong> Fundamental and Essential matrices are computed to derive relative camera poses.</li>
+                     <li><strong>Triangulation:</strong> Matched feature points are triangulated to estimate 3D coordinates.</li>
+                     <li><strong>Bundle Adjustment:</strong> Non-linear optimization is applied to refine camera poses and 3D points.</li>
+                     <li><strong>Dense Reconstruction:</strong> Dense matching adds more 3D points, forming a high-resolution point cloud.</li>
+                  </ol>
+               </div>
+
+               <div class="results mb-5">
+                  <h3 class="mb-4">Results and Visualizations</h3>
+                  <p>The pipeline successfully reconstructed several indoor and outdoor scenes, producing both sparse and dense 3D point clouds. Results were validated through reprojection error metrics and visual inspections.</p>
+                  <ul>
+                     <li>Reconstruction 1: Indoor lab setup</li>
+                     <li>Reconstruction 2: Outdoor garden scene</li>
+                     <li>Reconstruction 3: Office corridor walkthrough</li>
+                  </ul>
+               </div>
+
+               <div class="project-conclusion">
+                  <h3 class="mb-4">Conclusion</h3>
+                  <p>This SfM pipeline demonstrates the capability to convert 2D image sequences into accurate 3D reconstructions using a structured computer vision workflow. Its modular nature allows integration with SLAM systems or photogrammetry software for advanced applications.</p>
+               </div>
+            </div>
+         </div>
+
+         <div class="col-lg-4">
+            <div class="project-sidebar">
+               <div class="project-info-card mb-4">
+                  <h4 class="card-title border-bottom pb-3 mb-3">Project Information</h4>
+                  <ul class="list-unstyled">
+                     <li class="d-flex justify-content-between mb-3">
+                        <span class="fw-bold">Category:</span>
+                        <span>Computer Vision</span>
+                     </li>
+                     <li class="d-flex justify-content-between mb-3">
+                        <span class="fw-bold">Duration:</span>
+                        <span>1 month</span>
+                     </li>
+                     <li class="d-flex justify-content-between mb-3">
+                        <span class="fw-bold">Completed:</span>
+                        <span>2023</span>
+                     </li>
+                     <li class="d-flex justify-content-between mb-3">
+                        <span class="fw-bold">Institution:</span>
+                        <span>University at Buffalo</span>
+                     </li>
+                     <li class="d-flex justify-content-between">
+                        <span class="fw-bold">Framework:</span>
+                        <span>Custom Python Pipeline</span>
+                     </li>
+                  </ul>
+               </div>
+
+               <div class="technologies-card mb-4">
+                  <h4 class="card-title border-bottom pb-3 mb-3">Technologies Used</h4>
+                  <div class="row">
+                     <div class="col-6 mb-3">
+                        <div class="tech-item d-flex align-items-center">
+                           <i class="fab fa-python fa-fw me-2"></i>
+                           <span>Python</span>
+                        </div>
+                     </div>
+                     <div class="col-6 mb-3">
+                        <div class="tech-item d-flex align-items-center">
+                           <i class="fas fa-eye fa-fw me-2"></i>
+                           <span>OpenCV</span>
+                        </div>
+                     </div>
+                     <div class="col-6 mb-3">
+                        <div class="tech-item d-flex align-items-center">
+                           <i class="fas fa-cogs fa-fw me-2"></i>
+                           <span>NumPy</span>
+                        </div>
+                     </div>
+                     <div class="col-6 mb-3">
+                        <div class="tech-item d-flex align-items-center">
+                           <i class="fas fa-chart-line fa-fw me-2"></i>
+                           <span>Matplotlib</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <div class="mb-5">
+                  <a href="https://github.com/pjpkvarma/Structure-From-Motion" class="btn tj-btn-primary-2" target="_blank">
+                     View on GitHub
+                     <span class="icon_box">
+                        <i class="fab fa-github icon_first"></i>
+                        <i class="fab fa-github icon_second"></i>
+                     </span>
+                  </a>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+
+
+<!-- PROJECT DETAILS SECTION END -->
+  <!-- FOOTER AREA START -->
+   <footer class="tj-footer-area style-2">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12 text-center">
+               <!-- <div class="footer-logo-box">
+                  <a href="#"><img src="../assets/img/logo/logo.png" alt="" /></a>
+               </div> -->
+               <div class="footer-menu">
+                  <nav>
+                     <ul>
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="../services.html">Services</a></li>
+                        <li><a href="../portfolio.html">Portfolios</a></li>
+                        <li><a href="../certificates.html">Certificates</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                     </ul>
+                  </nav>
+               </div>
+               <div class="copy-text style-2">
+                  <p>&copy; 2025 All rights reserved by <a href="#" target="_blank">J P K Varma Pothuri</a></p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+   <!-- FOOTER AREA END -->
+
+   <!-- JS here -->
+   <script src="../assets/js/jquery.min.js"></script>
+   <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+   <script src="../assets/js/gsap.min.js"></script>
+   <script src="../assets/js/gsap-scroll-to-plugin.min.js"></script>
+   <script src="../assets/js/gsap-scroll-trigger.min.js"></script>
+   <script src="../assets/js/gsap-split-text.min.js"></script>
+   <script src="../assets/js/lenis.min.js"></script>
+
+   <script src="../assets/js/nice-select.min.js"></script>
+   <script src="../assets/js/backToTop.js"></script>
+   <script src="../assets/js/appear.min.js"></script>
+   <script src="../assets/js/wow.min.js"></script>
+   <script src="../assets/js/lightcase.js"></script>
+   <script src="../assets/js/owl.carousel.min.js"></script>
+   <script src="../assets/js/swiper.min.js"></script>
+   <script src="../assets/js/imagesloaded-pkgd.js"></script>
+   <script src="../assets/js/isotope.pkgd.min.js"></script>
+   <script src="../assets/js/odometer.min.js"></script>
+   <script src="../assets/js/magnific-popup.js"></script>
+   <script src="../assets/js/validate.min.js"></script>
+   <script src="../assets/js/meanmenu.js"></script>
+   <script src="../assets/js/main.js"></script>
+</body>
+
+</html> 

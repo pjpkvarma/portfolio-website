@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+   <meta charset="utf-8" />
+   <meta http-equiv="x-ua-compatible" content="ie=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="ViT-based Image Captioning - A vision-language model that generates captions for images using a transformer encoder-decoder architecture." />
+   <title>ViT-based Image Captioning - J P K Varma Pothuri</title>
+
+   <link rel="apple-touch-icon" href="../assets/img/favicon.png" />
+   <link rel="shortcut icon" type="image/png" href="../assets/img/favicon.png" />
+
+   <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+   <link rel="stylesheet" href="../assets/css/font-awesome-pro.min.css" />
+   <link rel="stylesheet" href="../assets/css/main.css" />
+</head>
+
+<body class="absolute_header">
+<header class="tj-header-area style-2 header-absolute">
+   <div class="container">
+      <div class="row">
+         <div class="col-12 d-flex flex-wrap align-items-center">
+            <div class="logo-box">
+               <a href="../index.html">
+                  <img src="../assets/img/logo/logo.png" alt="" />
+               </a>
+            </div>
+            <div class="header-info-list d-none d-md-inline-block">
+               <ul class="ul-reset">
+                  <li><a href="mailto:jpkvarmapothuri@gmail.com">jpkvarmapothuri@gmail.com</a></li>
+               </ul>
+            </div>
+            <div class="header-menu" id="headerMenu">
+               <nav>
+                  <ul>
+                     <li><a href="../index.html">Home</a></li>
+                     <li><a href="../about.html">About Me</a></li>
+                     <li><a href="../portfolio.html" class="current-menu-item">Projects</a></li>
+                     <li><a href="../publications.html">Publications</a></li>
+                     <li><a href="../contact.html">Contact</a></li>
+                  </ul>
+               </nav>
+            </div>
+         </div>
+      </div>
+   </div>
+</header>
+
+<main class="site-content" id="content">
+   <section class="breadcrumb_area" data-bg-image="../assets/img/breadcrumb/bg.png" data-bg-color="#140C1C">
+      <div class="container">
+         <div class="row">
+            <div class="col">
+               <div class="breadcrumb_content d-flex flex-column align-items-center">
+                  <h2 class="title">Vision Transformer based Image Captioning</h2>
+                  <div class="breadcrumb_navigation">
+                     <span><a href="../index.html">Home</a></span>
+                     <i class="far fa-long-arrow-right"></i>
+                     <span><a href="../portfolio.html">Projects</a></span>
+                     <i class="far fa-long-arrow-right"></i>
+                     <span class="current-item">ViT-based Image Captioning</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section class="project-details-section" id="project-details" style="margin-top: 80px;">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-8">
+               <div class="project-details-content">
+                  <div class="project-overview mb-5">
+                     <h3>Project Overview</h3>
+                     <p>This project presents an end-to-end vision-language model that generates captions for images using a transformer-based architecture. It leverages a ViT encoder and transformer decoder trained on the Flickr8k dataset for natural image description.</p>
+                  </div>
+
+                  <div class="key-features mb-5">
+                     <h3>Key Features</h3>
+                     <ul>
+                        <li>ViT-based image encoding</li>
+                        <li>Transformer decoder for natural language generation</li>
+                        <li>Custom PyTorch Dataset for Flickr8k</li>
+                        <li>Integration with Hugging Face Transformers</li>
+                        <li>Evaluation using image-captioning benchmarks</li>
+                     </ul>
+                  </div>
+
+                  <div class="methodology mb-5">
+                     <h3>Methodology</h3>
+                     <p>The model uses the ViTFeatureExtractor to process raw images and AutoTokenizer to handle caption tokens. A custom PyTorch Dataset class is used to load and pair images with their captions. The EncoderDecoderModel is fine-tuned using teacher forcing and evaluates the model’s captioning ability using BLEU and accuracy metrics.</p>
+                  </div>
+
+                  <div class="technical-details mb-5">
+                     <h3>Technical Implementation</h3>
+                     <ul>
+                        <li><strong>Dataset:</strong> Flickr8k</li>
+                        <li><strong>Encoder:</strong> Vision Transformer (ViT)</li>
+                        <li><strong>Decoder:</strong> GPT2-style decoder from Hugging Face</li>
+                        <li><strong>Training:</strong> Cross-entropy loss, Adam optimizer</li>
+                        <li><strong>Evaluation:</strong> BLEU score, qualitative caption comparison</li>
+                     </ul>
+                  </div>
+
+                  <div class="applications mb-5">
+                     <h3>Applications</h3>
+                     <ul>
+                        <li>Image accessibility and narration</li>
+                        <li>Vision-language understanding</li>
+                        <li>Caption-based human-UAV interaction</li>
+                        <li>Visual storytelling</li>
+                     </ul>
+                  </div>
+
+                  <div class="results mb-5">
+                     <h3>Results</h3>
+                     <p>The model demonstrates promising caption quality with coherent and contextually relevant descriptions. Fine-tuning yielded better fluency and semantic accuracy compared to baseline CNN-RNN setups.</p>
+                  </div>
+
+                  <div class="project-conclusion">
+                     <h3>Conclusion</h3>
+                     <p>This project showcases a scalable and modular framework for image captioning, leveraging modern transformer architectures for vision and language fusion. It lays the foundation for more advanced V-L-A (Vision-Language-Action) systems.</p>
+                  </div>
+               </div>
+            </div>
+
+            <div class="col-lg-4">
+               <div class="project-sidebar">
+                  <div class="project-info-card mb-4">
+                     <h4 class="card-title">Project Information</h4>
+                     <ul>
+                        <li><strong>Category:</strong> Vision-Language</li>
+                        <li><strong>Duration:</strong> 1 week</li>
+                        <li><strong>Completed:</strong> 2025</li>
+                        <li><strong>Dataset:</strong> Flickr8k</li>
+                        <li><strong>Tools:</strong> PyTorch, Hugging Face</li>
+                     </ul>
+                  </div>
+
+                  <div class="technologies-card mb-4">
+                     <h4 class="card-title">Technologies Used</h4>
+                     <ul>
+                        <li>Python</li>
+                        <li>PyTorch</li>
+                        <li>Transformers</li>
+                        <li>OpenCV</li>
+                        <li>ViT</li>
+                     </ul>
+                  </div>
+
+                  <div class="mb-4">
+                     <a href="https://github.com/pjpkvarma/vision-transformer-based-image-captioning" class="btn tj-btn-primary-2" target="_blank">
+                        View on GitHub
+                        <span class="icon_box">
+                           <i class="fab fa-github icon_first"></i>
+                           <i class="fab fa-github icon_second"></i>
+                        </span>
+                     </a>
+                  </div>
+
+                  <div class="project-contact-card">
+                     <h4 class="card-title">Interested in this project?</h4>
+                     <p>If you'd like to collaborate or discuss potential applications, feel free to reach out!</p>
+                     <a href="../contact.html" class="btn tj-btn-primary-2 w-100">Contact Me</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+</main>
+
+   <!-- FOOTER AREA START -->
+   <footer class="tj-footer-area style-2">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12 text-center">
+               <!-- <div class="footer-logo-box">
+                  <a href="#"><img src="../assets/img/logo/logo.png" alt="" /></a>
+               </div> -->
+               <div class="footer-menu">
+                  <nav>
+                     <ul>
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="../services.html">Services</a></li>
+                        <li><a href="../portfolio.html">Portfolios</a></li>
+                        <li><a href="../certificates.html">Certificates</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                     </ul>
+                  </nav>
+               </div>
+               <div class="copy-text style-2">
+                  <p>&copy; 2025 All rights reserved by <a href="#" target="_blank">J P K Varma Pothuri</a></p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+   <!-- FOOTER AREA END -->
+
+   <!-- JS here -->
+   <script src="../assets/js/jquery.min.js"></script>
+   <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+   <script src="../assets/js/gsap.min.js"></script>
+   <script src="../assets/js/gsap-scroll-to-plugin.min.js"></script>
+   <script src="../assets/js/gsap-scroll-trigger.min.js"></script>
+   <script src="../assets/js/gsap-split-text.min.js"></script>
+   <script src="../assets/js/lenis.min.js"></script>
+
+   <script src="../assets/js/nice-select.min.js"></script>
+   <script src="../assets/js/backToTop.js"></script>
+   <script src="../assets/js/appear.min.js"></script>
+   <script src="../assets/js/wow.min.js"></script>
+   <script src="../assets/js/lightcase.js"></script>
+   <script src="../assets/js/owl.carousel.min.js"></script>
+   <script src="../assets/js/swiper.min.js"></script>
+   <script src="../assets/js/imagesloaded-pkgd.js"></script>
+   <script src="../assets/js/isotope.pkgd.min.js"></script>
+   <script src="../assets/js/odometer.min.js"></script>
+   <script src="../assets/js/magnific-popup.js"></script>
+   <script src="../assets/js/validate.min.js"></script>
+   <script src="../assets/js/meanmenu.js"></script>
+   <script src="../assets/js/main.js"></script>
+</body>
+</html>

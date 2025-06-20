@@ -1,0 +1,314 @@
+<!-- PART 1: HEADER & METADATA -->
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+   <meta charset="utf-8" />
+   <meta http-equiv="x-ua-compatible" content="ie=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="Building an LLM from Scratch - A foundational deep learning project combining tokenization, transformer blocks, and autoregressive text generation using PyTorch" />
+   <title>Building an LLM from Scratch - J P K Varma Pothuri</title>
+   <link rel="apple-touch-icon" href="../assets/img/favicon.png" />
+   <link rel="shortcut icon" type="image/png" href="../assets/img/favicon.png" />
+   <link rel="stylesheet" href="../assets/css/animate.min.css" />
+   <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+   <link rel="stylesheet" href="../assets/css/font-awesome-pro.min.css" />
+   <link rel="stylesheet" href="../assets/css/main.css" />
+   <link rel="stylesheet" href="../assets/css/responsive.css" />
+</head>
+<body class="absolute_header">
+   <header class="tj-header-area style-2 header-absolute">
+      <div class="container">
+         <div class="row">
+            <div class="col-12 d-flex flex-wrap align-items-center">
+               <div class="logo-box">
+                  <a href="../index.html">
+                     <img src="../assets/img/logo/logo.png" alt="Logo" />
+                  </a>
+               </div>
+               <div class="header-info-list d-none d-md-inline-block">
+                  <ul class="ul-reset">
+                     <li><a href="mailto:jpkvarmapothuri@gmail.com">jpkvarmapothuri@gmail.com</a></li>
+                  </ul>
+               </div>
+               <div class="header-menu" id="headerMenu">
+                  <nav>
+                     <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about.html">About Me</a></li>
+                        <li><a href="../portfolio.html" class="current-menu-item">Projects</a></li>
+                        <li><a href="../publications.html">Publications</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                     </ul>
+                  </nav>
+               </div>
+               <div class="header-button">
+                  <a href="../assets/resume/jpkvarma_resume_ai.pdf" class="tj-btn-primary-2">Resume</a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </header>
+
+   <main class="site-content" id="content">
+      <section class="breadcrumb_area" data-bg-image="../assets/img/breadcrumb/bg.png" data-bg-color="#140C1C">
+         <div class="container">
+            <div class="row">
+               <div class="col">
+                  <div class="breadcrumb_content d-flex flex-column align-items-center">
+                     <h2 class="title wow fadeInUp" data-wow-delay=".3s">Building an LLM from Scratch</h2>
+                     <div class="breadcrumb_navigation wow fadeInUp" data-wow-delay=".5s">
+                        <span><a href="../index.html">Home</a></span>
+                        <i class="far fa-long-arrow-right"></i>
+                        <span><a href="../portfolio.html">Projects</a></span>
+                        <i class="far fa-long-arrow-right"></i>
+                        <span class="current-item">LLM From Scratch</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- PROJECT DETAILS SECTION START -->
+      <section class="project-details-section" id="project-details" style="margin-top: 80px;">
+         <div class="container">
+            <div class="row">
+               <!-- Main Content -->
+               <div class="col-lg-8">
+                  <div class="project-details-content">
+                     <div class="project-overview mb-5">
+                        <h3 class="mb-4">Project Overview</h3>
+                        <p>This project walks through the end-to-end process of implementing a transformer-based language model from scratch. It covers tokenization using GPT-2's BPE tokenizer, positional and token embeddings, masked multi-head attention, and training an autoregressive model using Harry Potter text data. The final model is capable of generating coherent text completions based on input prompts.</p>
+                     </div>
+
+                     <div class="key-features mb-5">
+                        <h3 class="mb-4">Key Features</h3>
+                        <ul class="list-unstyled">
+                           <li class="mb-3"><i class="fas fa-check-circle me-2"></i> Custom GPT-style architecture with multi-head attention and residual connections</li>
+                           <li class="mb-3"><i class="fas fa-check-circle me-2"></i> Uses tiktoken for efficient byte-pair encoding (BPE) tokenization</li>
+                           <li class="mb-3"><i class="fas fa-check-circle me-2"></i> Implements causal masking for autoregressive text prediction</li>
+                           <li class="mb-3"><i class="fas fa-check-circle me-2"></i> Trained on the Harry Potter book series for 2 weeks with early stopping and sampling</li>
+                           <li class="mb-3"><i class="fas fa-check-circle me-2"></i> Simple text generation function to query the model with prompts</li>
+                        </ul>
+                     </div>
+
+                     <div class="methodology mb-5">
+                        <h3 class="mb-4">Methodology</h3>
+                        <p>The development follows a bottom-up approach, starting from raw text preprocessing to defining transformer blocks and training procedures. Token IDs are generated using tiktoken’s GPT-2 encoding. Training data is formed using a sliding window over token sequences. The model is implemented in PyTorch with positional and token embeddings followed by multiple transformer layers and a linear output head.</p>
+
+                        <h5 class="mt-4">Training</h5>
+                        <p>The model is trained using CrossEntropy loss and AdamW optimizer. The dataset is chunked using a stride method, and the training is carried out with batch-wise iterations over several epochs. Overfitting is avoided using dropout and validation-based early stopping.</p>
+
+                        <h5 class="mt-4">Generation</h5>
+                        <p>Once trained, the model can generate coherent continuations for prompts. The sampling process uses greedy decoding or can be enhanced with top-k/top-p sampling strategies to generate diverse completions.</p>
+                     </div>
+
+                     <div class="technical-details mb-5">
+                        <h3 class="mb-4">Technical Implementation</h3>
+                        <h5 class="mt-4">Core Components</h5>
+                        <p>The implementation uses PyTorch to build each part of the transformer model from scratch:</p>
+                        <ol>
+                           <li><strong>Embedding Layer:</strong> Includes token and positional embeddings of size 768.</li>
+                           <li><strong>Transformer Blocks:</strong> Each block includes LayerNorm, masked multi-head self-attention, GELU activations, feed-forward networks, and residual connections.</li>
+                           <li><strong>Loss Function:</strong> CrossEntropy loss with label shifting to predict the next token.</li>
+                           <li><strong>Optimizer:</strong> AdamW with weight decay, optimized for training large language models.</li>
+                        </ol>
+                        <h5 class="mt-4">Dataset and Tokenizer</h5>
+                        <p>Used the first four books of the Harry Potter series as training data. The text is tokenized using OpenAI's <code>tiktoken</code> with GPT-2 vocabulary. Data is split into training and validation using a 90/10 ratio.</p>
+                        <h5 class="mt-4">Training Details</h5>
+                        <p>The model was trained over two weeks on a GPU setup. Batch size was set to 32, context length 128, and sequence stride 64. The model reaches convergence with a training loss below 1.5.</p>
+                     </div>
+
+                     <div class="results mb-5">
+                        <h3 class="mb-4">Results and Sample Outputs</h3>
+                        <ul class="list-unstyled">
+                           <li class="mb-3"><i class="fas fa-chart-line me-2"></i> Perplexity reduced to below 20 by epoch 5</li>
+                           <li class="mb-3"><i class="fas fa-chart-line me-2"></i> Coherent generation for character-driven prompts from the Harry Potter universe</li>
+                           <li class="mb-3"><i class="fas fa-chart-line me-2"></i> Stable convergence and robust text continuation ability</li>
+                           <li class="mb-3"><i class="fas fa-chart-line me-2"></i> Examples: “Harry walked into the room and said...” → full paragraph generation</li>
+                        </ul>
+                     </div>
+
+                     <div class="project-conclusion mb-5">
+                        <h3 class="mb-4">Conclusion</h3>
+                        <p>This project demonstrates that with a fundamental understanding of transformers and proper training strategies, it is possible to build a capable LLM from scratch. The pipeline, while minimal, serves as an excellent educational foundation for building more advanced models like GPT-2 and beyond.</p>
+                     </div>
+                  </div>
+               </div>
+               <!-- Sidebar -->
+               <div class="col-lg-4">
+                  <div class="project-sidebar">
+                     <div class="project-info-card mb-4">
+                        <h4 class="card-title border-bottom pb-3 mb-3">Project Information</h4>
+                        <ul class="list-unstyled">
+                           <li class="d-flex justify-content-between mb-3">
+                              <span class="fw-bold">Category:</span>
+                              <span>Natural Language Processing</span>
+                           </li>
+                           <li class="d-flex justify-content-between mb-3">
+                              <span class="fw-bold">Duration:</span>
+                              <span>2 weeks</span>
+                           </li>
+                           <li class="d-flex justify-content-between mb-3">
+                              <span class="fw-bold">Completed:</span>
+                              <span>2025</span>
+                           </li>
+                           <li class="d-flex justify-content-between mb-3">
+                              <span class="fw-bold">Institution:</span>
+                              <span>University at Buffalo</span>
+                           </li>
+                           <!-- <li class="d-flex justify-content-between">
+                              <span class="fw-bold">Publication:</span>
+                              <span>In Progress</span>
+                           </li> -->
+                        </ul>
+                     </div>
+
+                     <div class="technologies-card mb-4">
+                        <h4 class="card-title border-bottom pb-3 mb-3">Technologies Used</h4>
+                        <div class="row">
+                           <div class="col-6 mb-3">
+                              <div class="tech-item d-flex align-items-center">
+                                 <i class="fab fa-python fa-fw me-2"></i>
+                                 <span>Python</span>
+                              </div>
+                           </div>
+                           <div class="col-6 mb-3">
+                              <div class="tech-item d-flex align-items-center">
+                                 <i class="fas fa-brain fa-fw me-2"></i>
+                                 <span>PyTorch</span>
+                              </div>
+                           </div>
+                           <div class="col-6 mb-3">
+                              <div class="tech-item d-flex align-items-center">
+                                 <i class="fas fa-spell-check fa-fw me-2"></i>
+                                 <span>tiktoken</span>
+                              </div>
+                           </div>
+                           <div class="col-6 mb-3">
+                              <div class="tech-item d-flex align-items-center">
+                                 <i class="fas fa-terminal fa-fw me-2"></i>
+                                 <span>Jupyter Notebook</span>
+                              </div>
+                           </div>
+                           <div class="col-6 mb-3">
+                              <div class="tech-item d-flex align-items-center">
+                                 <i class="fas fa-file-code fa-fw me-2"></i>
+                                 <span>HTML</span>
+                              </div>
+                           </div>
+                           <div class="col-6 mb-3">
+                              <div class="tech-item d-flex align-items-center">
+                                 <i class="fab fa-github fa-fw me-2"></i>
+                                 <span>GitHub</span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="mb-5">
+                        <a href="https://github.com/pjpkvarma/LLM-from-Scratch" class="btn tj-btn-primary-2" target="_blank">
+                           View on GitHub
+                           <span class="icon_box">
+                              <i class="fab fa-github icon_first"></i>
+                              <i class="fab fa-github icon_second"></i>
+                           </span>
+                        </a>
+                     </div>
+
+                     <!-- <div class="related-projects-card mb-4">
+                        <h4 class="card-title border-bottom pb-3 mb-3">Related Projects</h4>
+                        <div class="related-project-item d-flex align-items-center mb-3">
+                           <div>
+                              <h6 class="mb-0"><a href="vision-transformer.html">Vision Transformer for Detection</a></h6>
+                              <small>Computer Vision</small>
+                           </div>
+                        </div>
+                        <div class="related-project-item d-flex align-items-center mb-3">
+                           <div>
+                              <h6 class="mb-0"><a href="image-captioning-vit.html">ViT-based Image Captioning</a></h6>
+                              <small>Vision + Language</small>
+                           </div>
+                        </div>
+                        <div class="related-project-item d-flex align-items-center">
+                           <div>
+                              <h6 class="mb-0"><a href="conversational-agent.html">Conversational Agent with Tools</a></h6>
+                              <small>LLM Applications</small>
+                           </div>
+                        </div>
+                     </div> -->
+
+                     <div class="project-contact-card">
+                        <h4 class="card-title border-bottom pb-3 mb-3">Interested in this project?</h4>
+                        <p>If you're curious about how this LLM was built from the ground up, or if you want to collaborate on future deep learning and NLP research, feel free to reach out!</p>
+                        <a href="../contact.html" class="btn tj-btn-primary-2 w-100">
+                           Contact Me
+                           <span class="icon_box">
+                              <i class="fa-regular fa-arrow-right icon_first"></i>
+                              <i class="fa-regular fa-arrow-right icon_second"></i>
+                           </span>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+               <!-- End Sidebar -->
+            </div>
+         </div>
+      </section>
+   </main>
+
+   <!-- FOOTER AREA START -->
+   <footer class="tj-footer-area style-2">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12 text-center">
+               <!-- <div class="footer-logo-box">
+                  <a href="#"><img src="../assets/img/logo/logo.png" alt="" /></a>
+               </div> -->
+               <div class="footer-menu">
+                  <nav>
+                     <ul>
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="../services.html">Services</a></li>
+                        <li><a href="../portfolio.html">Portfolios</a></li>
+                        <li><a href="../certificates.html">Certificates</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                     </ul>
+                  </nav>
+               </div>
+               <div class="copy-text style-2">
+                  <p>&copy; 2025 All rights reserved by <a href="#" target="_blank">J P K Varma Pothuri</a></p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+   <!-- FOOTER AREA END -->
+
+   <!-- JS here -->
+   <script src="../assets/js/jquery.min.js"></script>
+   <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+   <script src="../assets/js/gsap.min.js"></script>
+   <script src="../assets/js/gsap-scroll-to-plugin.min.js"></script>
+   <script src="../assets/js/gsap-scroll-trigger.min.js"></script>
+   <script src="../assets/js/gsap-split-text.min.js"></script>
+   <script src="../assets/js/lenis.min.js"></script>
+
+   <script src="../assets/js/nice-select.min.js"></script>
+   <script src="../assets/js/backToTop.js"></script>
+   <script src="../assets/js/appear.min.js"></script>
+   <script src="../assets/js/wow.min.js"></script>
+   <script src="../assets/js/lightcase.js"></script>
+   <script src="../assets/js/owl.carousel.min.js"></script>
+   <script src="../assets/js/swiper.min.js"></script>
+   <script src="../assets/js/imagesloaded-pkgd.js"></script>
+   <script src="../assets/js/isotope.pkgd.min.js"></script>
+   <script src="../assets/js/odometer.min.js"></script>
+   <script src="../assets/js/magnific-popup.js"></script>
+   <script src="../assets/js/validate.min.js"></script>
+   <script src="../assets/js/meanmenu.js"></script>
+   <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

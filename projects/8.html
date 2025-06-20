@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+   <meta charset="utf-8" />
+   <meta http-equiv="x-ua-compatible" content="ie=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="Hybrid Object Tracker - Real-time drone tracking using YOLOv8 for detection and KCF with APCE for robust correlation-based tracking." />
+   <title>Hybrid Object Tracker - J P K Varma Pothuri</title>
+
+   <link rel="stylesheet" href="../assets/css/animate.min.css" />
+   <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+   <link rel="stylesheet" href="../assets/css/font-awesome-pro.min.css" />
+   <link rel="stylesheet" href="../assets/css/flaticon_gerold.css" />
+   <link rel="stylesheet" href="../assets/css/nice-select.css" />
+   <link rel="stylesheet" href="../assets/css/backToTop.css" />
+   <link rel="stylesheet" href="../assets/css/owl.carousel.min.css" />
+   <link rel="stylesheet" href="../assets/css/swiper.min.css" />
+   <link rel="stylesheet" href="../assets/css/odometer-theme-default.css" />
+   <link rel="stylesheet" href="../assets/css/magnific-popup.css" />
+   <link rel="stylesheet" href="../assets/css/main.css" />
+   <link rel="stylesheet" href="../assets/css/main-2.css" />
+   <link rel="stylesheet" href="../assets/css/main-3.css" />
+   <link rel="stylesheet" href="../assets/css/light-mode.css" />
+   <link rel="stylesheet" href="../assets/css/meanmenu.css" />
+   <link rel="stylesheet" href="../assets/css/responsive.css" />
+   <link rel="stylesheet" href="../assets/css/responsive-2.css" />
+   <link rel="stylesheet" href="../assets/css/responsive-3.css" />
+</head>
+
+<body class="absolute_header">
+   <!-- Preloader Area Start -->
+   <div class="preloader">
+      <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
+         <path id="preloaderSvg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
+      </svg>
+      <div class="preloader-heading">
+         <div class="load-text">
+            <span>L</span><span>o</span><span>a</span><span>d</span><span>i</span><span>n</span><span>g</span>
+         </div>
+      </div>
+   </div>
+   <!-- Preloader Area End -->
+
+   <!-- start: Back To Top -->
+   <div class="progress-wrap" id="scrollUp">
+      <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+         <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+      </svg>
+   </div>
+   <!-- end: Back To Top -->
+
+   <!-- HEADER START -->
+   <header class="tj-header-area style-2 header-absolute">
+      <div class="container">
+         <div class="row">
+            <div class="col-12 d-flex flex-wrap align-items-center">
+               <div class="logo-box">
+                  <a href="../index.html">
+                     <img src="../assets/img/logo/logo.png" alt="" />
+                  </a>
+               </div>
+               <div class="header-info-list d-none d-md-inline-block">
+                  <ul class="ul-reset">
+                     <li><a href="mailto:jpkvarmapothuri@gmail.com">jpkvarmapothuri@gmail.com</a></li>
+                  </ul>
+               </div>
+               <div class="header-menu" id="headerMenu">
+                  <nav>
+                     <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about.html">About Me</a></li>
+                        <li><a href="../portfolio.html" class="current-menu-item">Projects</a></li>
+                        <li><a href="../publications.html">Publications</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                     </ul>
+                  </nav>
+               </div>
+               <div class="mobile-menu d-lg-none"></div>
+               <div class="header-button">
+                  <a href="../assets/resume/jpkvarma_resume_ai.pdf" class="tj-btn-primary-2">Resume
+                     <span class="icon_box">
+                        <i class="flaticon-download icon_first"></i>
+                        <i class="flaticon-download icon_second"></i>
+                     </span>
+                  </a>
+               </div>
+               <div class="menu-bar d-lg-none">
+                  <button>
+                     <span></span><span></span><span></span><span></span>
+                  </button>
+               </div>
+            </div>
+         </div>
+      </div>
+   </header>
+   <!-- HEADER END -->
+
+   <!-- START: Breadcrumb Area -->
+   <section class="breadcrumb_area" data-bg-image="../assets/img/breadcrumb/bg.png" data-bg-color="#140C1C">
+      <div class="container">
+         <div class="row">
+            <div class="col">
+               <div class="breadcrumb_content d-flex flex-column align-items-center">
+                  <h2 class="title wow fadeInUp" data-wow-delay=".3s">Hybrid Object Tracker</h2>
+                  <div class="breadcrumb_navigation wow fadeInUp" data-wow-delay=".5s">
+                     <span><a href="../index.html">Home</a></span>
+                     <i class="far fa-long-arrow-right"></i>
+                     <span><a href="../portfolio.html">Projects</a></span>
+                     <i class="far fa-long-arrow-right"></i>
+                     <span class="current-item">Hybrid Object Tracker</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- END: Breadcrumb Area -->
+
+
+ <main class="site-content" id="content">
+  <section class="project-details-section pt-5 pb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <h3 class="mb-4">Project Overview</h3>
+          <p>This project introduces a Hybrid Object Tracker framework that intelligently combines deep learning-based detection with traditional correlation tracking. YOLOv11, a high-speed and accurate object detector, is used to detect the drone at intervals. Kernelized Correlation Filter (KCF), known for its real-time performance, handles the tracking between detections. To ensure reliability, the Average Peak-to-Correlation Energy (APCE) metric is used to evaluate the confidence of the KCF tracker and trigger re-detection when necessary.</p>
+
+          <h3 class="mt-5 mb-4">Key Features</h3>
+          <ul>
+            <li><strong>YOLOv11 Detection:</strong> A powerful, fast object detector optimized for UAV applications. YOLOv11 provides initial and fallback detections.</li>
+            <li><strong>KCF Tracker:</strong> A lightweight tracker using HOG features and cyclic shifts. KCF ensures real-time speed and low latency. It's ideal when continuous detections aren't computationally viable.</li>
+            <li><strong>APCE Metric:</strong> Ensures tracking stability by measuring the sharpness of the correlation response. Low APCE values indicate unreliable tracking and trigger reinitialization using YOLOv11.</li>
+            <li><strong>Dynamic Switching:</strong> Seamlessly transitions between detection and tracking modes, adapting to occlusion, drift, or target loss.</li>
+          </ul>
+
+          <h3 class="mt-5 mb-4">Why Use KCF?</h3>
+          <p>KCF is a computationally efficient tracker that enables fast object localization using Fourier transforms and dense sampling. It is extremely lightweight and can run at over 100 FPS on standard CPUs, making it ideal for embedded systems or real-time UAV deployments where power and compute are limited.</p>
+
+          <h3 class="mt-5 mb-4">Why YOLOv11?</h3>
+          <p>YOLOv11 offers a balance of speed and accuracy tailored for edge applications. It detects UAVs or dynamic objects in a single forward pass, eliminating the need for region proposals and improving efficiency. It is used here for initial localization and failsafe re-detection when tracking fails.</p>
+
+          <h3 class="mt-5 mb-4">How APCE Works</h3>
+          <p>APCE measures the reliability of the correlation response map produced by KCF. A high APCE indicates a distinct peak and confident tracking, while a low APCE suggests noise or drift. If the APCE score drops below a threshold, the system switches to YOLOv11 to re-localize the object.</p>
+
+          <h3 class="mt-5 mb-4">Technical Implementation</h3>
+          <p><strong>Modules:</strong></p>
+          <ol>
+            <li>YOLOv11: Custom-trained for drone detection.</li>
+            <li>KCF Tracker: Tracks between detections using fast correlation methods.</li>
+            <li>APCE Validator: Ensures only high-confidence tracks are retained.</li>
+          </ol>
+
+          <p><strong>Performance Metrics:</strong></p>
+          <ul>
+            <li>~30 FPS on 1080p video inputs using CPU.</li>
+            <li>YOLO triggered every 20 frames or on APCE-based failure.</li>
+            <li>Reduced drift and improved robustness compared to pure KCF.</li>
+          </ul>
+
+          <h3 class="mt-5 mb-4">Applications</h3>
+          <ul>
+            <li>Real-time UAV object tracking</li>
+            <li>Surveillance in dynamic environments</li>
+            <li>Autonomous drone perception systems</li>
+          </ul>
+
+          <h3 class="mt-5 mb-4">Conclusion</h3>
+          <p>This hybrid tracking framework offers a robust and efficient solution for UAV object tracking. By leveraging YOLOv11's detection strength and KCF’s speed, along with intelligent switching through APCE, the system maintains accuracy even in the presence of occlusions or motion blur, making it suitable for real-world aerial robotics deployments.</p>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="project-info">
+            <h4 class="mb-3">Project Information</h4>
+            <ul>
+              <li><strong>Category:</strong> Computer Vision, UAV Tracking</li>
+              <li><strong>Duration:</strong> 2 months</li>
+              <li><strong>Completed:</strong> 2025</li>
+              <li><strong>Institution:</strong> University at Buffalo</li>
+              <li><strong>Publication:</strong> Internal Research</li>
+            </ul>
+
+            <h4 class="mt-4 mb-3">Technologies Used</h4>
+            <ul>
+              <li>Python</li>
+              <li>OpenCV</li>
+              <li>Ultralytics YOLOv11</li>
+              <li>Numpy</li>
+            </ul>
+
+            <div class="mb-5">
+                  <a href="https://github.com/pjpkvarma/Hybrid-Object-Tracker" class="btn tj-btn-primary-2" target="_blank">
+                     View on GitHub
+                     <span class="icon_box">
+                        <i class="fab fa-github icon_first"></i>
+                        <i class="fab fa-github icon_second"></i>
+                     </span>
+                  </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+   <!-- FOOTER AREA START -->
+   <footer class="tj-footer-area style-2">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12 text-center">
+               <!-- <div class="footer-logo-box">
+                  <a href="#"><img src="../assets/img/logo/logo.png" alt="" /></a>
+               </div> -->
+               <div class="footer-menu">
+                  <nav>
+                     <ul>
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="../services.html">Services</a></li>
+                        <li><a href="../portfolio.html">Portfolios</a></li>
+                        <li><a href="../certificates.html">Certificates</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                     </ul>
+                  </nav>
+               </div>
+               
+            </div>
+         </div>
+      </div>
+   </footer>
+   <!-- FOOTER AREA END -->
+
+   <!-- JS here -->
+   <script src="../assets/js/jquery.min.js"></script>
+   <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
+   <script src="../assets/js/gsap.min.js"></script>
+   <script src="../assets/js/gsap-scroll-to-plugin.min.js"></script>
+   <script src="../assets/js/gsap-scroll-trigger.min.js"></script>
+   <script src="../assets/js/gsap-split-text.min.js"></script>
+   <script src="../assets/js/lenis.min.js"></script>
+
+   <script src="../assets/js/nice-select.min.js"></script>
+   <script src="../assets/js/backToTop.js"></script>
+   <script src="../assets/js/appear.min.js"></script>
+   <script src="../assets/js/wow.min.js"></script>
+   <script src="../assets/js/lightcase.js"></script>
+   <script src="../assets/js/owl.carousel.min.js"></script>
+   <script src="../assets/js/swiper.min.js"></script>
+   <script src="../assets/js/imagesloaded-pkgd.js"></script>
+   <script src="../assets/js/isotope.pkgd.min.js"></script>
+   <script src="../assets/js/odometer.min.js"></script>
+   <script src="../assets/js/magnific-popup.js"></script>
+   <script src="../assets/js/validate.min.js"></script>
+   <script src="../assets/js/meanmenu.js"></script>
+   <script src="../assets/js/main.js"></script>
+</body>
+
+</html> 

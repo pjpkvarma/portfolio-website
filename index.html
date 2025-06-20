@@ -794,6 +794,33 @@
    <script src="assets/js/validate.min.js"></script>
    <script src="assets/js/meanmenu.js"></script>
    <script src="assets/js/main.js"></script>
+
+
+<!-- EmailJS SDK -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+<script>
+  // Initialize EmailJS
+  (function () {
+    emailjs.init("q2RNzmNFApW42Fbkv"); // Replace with your EmailJS Public Key (starts with a capital letter)
+  })();
+
+  // Handle form submission
+  document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    emailjs.sendForm("service_qci83we", "template_d2wf0rp", this)
+      .then(function () {
+        alert("Message sent successfully!");
+        document.getElementById("contact-form").reset();
+      }, function (error) {
+        console.error("Failed...", error);
+        alert("Failed to send message." +  JSON.stringify(error));
+      });
+  });
+</script>
+
+
 </body>
 
 </html>

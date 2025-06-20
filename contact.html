@@ -32,6 +32,15 @@
    <link rel="stylesheet" href="assets/css/responsive.css" />
    <link rel="stylesheet" href="assets/css/responsive-2.css" />
    <link rel="stylesheet" href="assets/css/responsive-3.css" />
+
+   <!-- EmailJS SDK -->
+   <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+   <script type="text/javascript">
+   (function () {
+      emailjs.init("q2RNzmNFApW42Fbkv"); // Replace with your EmailJS Public Key
+   })();
+   </script>
+
 </head>
 
 <body class="absolute_header">
@@ -350,6 +359,21 @@
    <script src="assets/js/validate.min.js"></script>
    <script src="assets/js/meanmenu.js"></script>
    <script src="assets/js/main.js"></script>
+
+   <script>
+   document.getElementById('contact-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      emailjs.sendForm('service_qci83we', 'template_d2wf0rp', this)
+         .then(function () {
+            alert('Message sent successfully!');
+            document.getElementById('contact-form').reset();
+         }, function (error) {
+            alert('Failed to send message: ' + JSON.stringify(error));
+         });
+   });
+</script>
+
 </body>
 
 </html>
